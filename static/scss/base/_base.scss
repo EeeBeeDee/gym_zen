@@ -1,0 +1,29 @@
+// GENERAL RESETS
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0%;
+    box-sizing: inherit;
+}
+
+html {
+    width: 100vw;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.overflow-wrapper {
+    width: 100vw;
+    overflow-x: hidden !important;
+}

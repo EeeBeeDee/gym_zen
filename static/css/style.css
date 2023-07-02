@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0%;
+  box-sizing: inherit;
+}
+
+html {
+  width: 100vw;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.overflow-wrapper {
+  width: 100vw;
+  overflow-x: hidden !important;
+}
+
+.primary-color {
+  color: #67DB5C !important;
+}
+
+.primary-color-dark {
+  color: #368F2E;
+}
+
+.primary-color-darker {
+  color: #17421E;
+}
+
+.primary-bg {
+  background-color: #67DB5C;
+}
+
+.primary-bg-dark {
+  background-color: #368F2E;
+}
+
+.primary-bg-darker {
+  background-color: #17421E;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100vw;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+}
+
+.navbar-dark {
+  background-color: #000;
+  transition: all 1s;
+}
+
+.navbar-items {
+  background-color: transparent;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-collapse {
+  background-color: transparent;
+  padding: 2rem;
+  width: 100vw;
+  flex-direction: row-reverse;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.nav-item {
+  padding: 0 1rem;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.chevron-1 {
+  transform: translateY(-20%);
+}
+
+.chevron-2 {
+  margin: 0;
+  padding: 0;
+  transform: translate(-112%, 30%);
+}
+
+.dropdown-dark {
+  background-color: #000;
+  border-radius: 2rem;
+  transform: translateY(-100%);
+  transition: all 1s ease-in;
+}
+
+.dropdown-dark.show {
+  transform: translateY(0%);
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.dropdown-dark.show li {
+  transition: all 0.2s;
+  transform: translateX(0%);
+}
+
+.dropdown-dark li {
+  transition: all 0.2s;
+  padding: 0 1rem;
+  transform: translateX(-100%);
+}
+
+.dropdown-dark a {
+  color: #67DB5C !important;
+  font-size: 1.6rem;
+}
+
+.index-title {
+  color: blue;
+  background-color: red;
+}
