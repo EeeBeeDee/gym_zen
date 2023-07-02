@@ -50,6 +50,104 @@ body {
   background-color: #17421E;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  min-height: 550px;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-video::after {
+  content: '';
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 0, 65vw 0, 20vw 100%, 0 100%);
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn-hollow {
+  width: 30rem;
+  font-size: 2rem;
+  color: #67DB5C;
+  background-color: transparent;
+  border: #67DB5C 3px solid;
+  padding: 1rem 2.3rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-hollow i {
+  transform: translateX(200%);
+}
+
+.btn-hollow--white {
+  color: #fff;
+  background-color: transparent;
+  border: #fff 3px solid;
+}
+
+.rects {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 60vh;
+  right: -8rem;
+  height: auto;
+  width: auto;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 100%);
+  transform: rotate(-37deg);
+}
+
+.rects:has(.rect.stretch) {
+  clip-path: none;
+}
+
+.rect {
+  margin-top: 2rem;
+  display: block;
+  width: 40rem;
+  height: 4rem;
+  transform: scaleX(1);
+  z-index: -10;
+}
+
+.rect.stretch {
+  transition: all 2.5s ease-out;
+  transform: scaleX(25);
+}
+
+.grey-rect {
+  width: 20rem;
+  background-color: #d9d9d9;
+}
+
+.black-rect {
+  width: 30rem;
+  background-color: #000;
+  z-index: -10;
+}
+
+.green-rect {
+  background-color: #67DB5C;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -131,6 +229,38 @@ body {
 .dropdown-dark a {
   color: #67DB5C !important;
   font-size: 1.6rem;
+}
+
+.hero {
+  height: 80vh;
+  min-height: 60rem;
+  overflow: hidden;
+}
+
+.hero__content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #368F2E;
+  background-color: transparent;
+  padding-left: 10rem;
+  margin-top: -5rem;
+  overflow: hidden;
+}
+
+.hero p {
+  color: #67DB5C;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 5.4rem;
+  width: 60rem;
 }
 
 .index-title {

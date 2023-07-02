@@ -2,14 +2,14 @@
 {% load static %} 
 
 {% block extra_js %} 
-<script src="{% static 'home/js/scroll_animations.js' %}"></script>
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
 {% endblock %} 
 
 {% block content %}
 <section class="hero">
     <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
-            <source src="media/pexels-pavel-danilyuk-4367643-1920x1080-30fps.mp4" type="video/mp4">
+            <source src="/media/pexels-pavel-danilyuk.mp4" type="video/mp4">
             Your Browser is not supported!
         </video>
     </div>
@@ -97,4 +97,6 @@
         </div>
     </div>
 </div>
+
+<div style="height: 200vh;"></div>
 {% endblock %}

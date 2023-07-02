@@ -1,0 +1,38 @@
+.hero {
+    height: 80vh;
+    min-height: 60rem;
+    overflow: hidden;
+
+
+    &__content {
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #368F2E;
+        background-color: transparent;
+        padding-left: 10rem;
+        margin-top: -5rem;
+        overflow: hidden;
+
+        
+        
+    }
+
+    p {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        margin: 0;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 5.4rem;
+        width: 60rem;
+    }
+
+
+}

@@ -7,7 +7,12 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/bg-video";
+@import "components/btn-hollow";
+@import "components/hero-stripes";
+
 @import "layout/navigation";
+@import "layout/hero";
 
 @import "pages/index";
 
