@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 *,
 *::after,
 *::before {
@@ -85,7 +86,7 @@ body {
   color: #67DB5C;
   background-color: transparent;
   border: #67DB5C 3px solid;
-  padding: 1rem 2.3rem;
+  padding: 1.4rem 2.3rem;
   border-radius: 2rem;
   text-align: center;
   margin-top: 1rem;
@@ -99,6 +100,16 @@ body {
   color: #fff;
   background-color: transparent;
   border: #fff 3px solid;
+}
+
+.dot {
+  position: absolute;
+  display: inline-block;
+  background-color: #368F2E;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .rects {
@@ -173,6 +184,11 @@ body {
   transition-delay: 2s;
   transition: opacity 3s ease-in;
   z-index: 10;
+}
+
+.index-info__box h2 {
+  font-size: calc(1.325rem + .9vw);
+  font-weight: 500;
 }
 
 .index-info__grid {
