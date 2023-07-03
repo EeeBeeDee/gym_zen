@@ -356,6 +356,41 @@ body {
   width: 60rem;
 }
 
+.services {
+  position: relative;
+  width: 90vw;
+  margin: 15rem auto;
+  z-index: 10;
+}
+
+.services__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60vw;
+  align-items: center;
+  background-color: #17421E;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem #67DB5C;
+}
+
+.services i {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+
+.services h3 {
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.services p {
+  text-align: center;
+}
+
 .index-title {
   color: blue;
   background-color: red;
