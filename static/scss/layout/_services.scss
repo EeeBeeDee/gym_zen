@@ -1,0 +1,36 @@
+.services {
+    position: relative;
+    width: 90vw;
+    margin: 15rem auto;
+    z-index: 10;
+
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 60vw;
+        align-items: center;
+        background-color: $primary-color-darker;
+        color: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: .5rem .5rem 1rem $primary-color;
+    }
+
+    i {
+        font-size: 5rem;
+        margin: 1rem 0;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    p {
+        text-align: center;
+    }
+
+}
