@@ -241,6 +241,48 @@ body {
   object-fit: contain;
 }
 
+.classes {
+  position: relative;
+  background-color: #67DB5C;
+  width: 100%;
+}
+
+.classes__info {
+  margin: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.classes__title {
+  font-size: 3rem;
+}
+
+.classes__title small {
+  font-weight: 900;
+}
+
+.classes__blurb {
+  margin-left: 2.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.classes__logobox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.classes__logo {
+  margin-left: auto;
+  height: 100%;
+  width: 40rem;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -354,6 +396,22 @@ body {
   color: #fff;
   font-size: 5.4rem;
   width: 60rem;
+}
+
+@media screen and (max-width: 770px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__content {
+    padding-left: 3rem;
+    overflow: hidden;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
 }
 
 .services {

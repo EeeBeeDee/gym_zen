@@ -35,4 +35,20 @@
     }
 
 
+    @media screen and (max-width: 770px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__content {
+            padding-left: 3rem;
+            overflow: hidden;
+        }
+         
+        h1 {
+            font-size: 3rem;
+
+        }
+    }
 }
