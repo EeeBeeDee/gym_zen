@@ -219,6 +219,12 @@ body {
   color: #fff;
 }
 
+.index-info__logo-img {
+  width: 8rem;
+  height: 100%;
+  object-fit: contain;
+}
+
 .navbar {
   position: fixed;
   top: 0;
