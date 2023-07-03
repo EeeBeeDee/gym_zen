@@ -51,6 +51,8 @@ for (let i = 0; i < dotRowCount; i++) {
 let alreadyScrolled1 = false
 let alreadyScrolled2 = false
 
+// Dot matrix animations event listeners
+
 window.addEventListener('scroll', () => {
     if (alreadyScrolled1 === false) {
         if (window.scrollY > 350) {
