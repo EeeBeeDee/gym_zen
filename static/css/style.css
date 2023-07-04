@@ -328,9 +328,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #000;
-  margin-top: 20vh;
   padding: clamp(1rem, 5vw, 6rem);
   z-index: 1000;
+  height: 100vh;
 }
 
 .nav__link {
@@ -340,6 +340,10 @@ body {
   text-decoration: none;
   position: relative;
   transition: all 0.1s ease-in-out;
+}
+
+.nav__link:first-child {
+  margin-top: 20vh;
 }
 
 .nav__link > span {
@@ -371,7 +375,6 @@ body {
   transform: translate(-50%, -50%) scale(0.5);
   transition: transform .25s, opacity .25s;
   pointer-events: none;
-  width: 80rem;
 }
 
 .hero {

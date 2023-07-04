@@ -1,25 +1,45 @@
+const nav = document.getElementById('nav')
 const navbar = document.getElementById('navbar')
 const bars = document.querySelectorAll('.rect')
 const fadeBox = document.getElementById('fade-box')
 const dotGrid = document.querySelectorAll('.dot-grid')
 
-console.log(dotGrid)
+for(const link of nav.getElementsByTagName('a')) {
+    link.onmousemove = (e) => {
+        const rect = link.getBoundingClientRect()
+        img = link.querySelector("img")
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        navbar.classList.add('navbar-dark')
-    } else {
-        navbar.classList.remove('navbar-dark')
+        img.style.left = `${e.clientX - rect.left}px`
+        img.style.top = `${e.clientY - rect.top}px`
     }
-})
+}
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        bars.forEach(bar => {
-            bar.classList.add('stretch')
-        })
-    } 
-})
+window.onmousemove = e => {
+    const percent = e.clientY / window.innerHeight;
+    
+    nav.animate({
+      transform: `translateY(${percent * nav.offsetHeight * -1}px)`
+    }, {
+      fill: "forwards",
+      duration: 4000
+    })
+  }
+
+// window.addEventListener('scroll', () => {
+//     if (window.scrollY > 300) {
+//         navbar.classList.add('navbar-dark')
+//     } else {
+//         navbar.classList.remove('navbar-dark')
+//     }
+// })
+
+// window.addEventListener('scroll', () => {
+//     if (window.scrollY > 400) {
+//         bars.forEach(bar => {
+//             bar.classList.add('stretch')
+//         })
+//     } 
+// })
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
