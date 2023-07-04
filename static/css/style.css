@@ -348,6 +348,7 @@ body {
   border-top: 1px solid transparent;
   position: relative;
   transition: all 0.2s ease-in-out;
+  z-index: 1001;
 }
 
 .nav__link:hover {
@@ -359,8 +360,18 @@ body {
   border-bottom-color: #368F2E;
 }
 
+.nav__link:hover > img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .nav__img {
-  width: 20rem;
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform .25s, opacity .25s;
+  pointer-events: none;
+  width: 80rem;
 }
 
 .hero {
