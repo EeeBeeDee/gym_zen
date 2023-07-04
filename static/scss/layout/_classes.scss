@@ -22,7 +22,6 @@
     }
 
     &__blurb {
-        margin-left: 2.5rem;
         font-size: 1.2rem;
         margin-bottom: 2rem;
     }
@@ -43,4 +42,26 @@
     // .btn-hollow {
     //     margin-left: 5rem;
     // }
+
+    @media  screen and (min-width: 900px) {
+        &_blurb {
+            margin-left: 2.5rem;
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+       
+
+        .btn-hollow {
+            margin-left: 0;
+        }
+
+        &__info {
+            padding: 0 3rem;
+        }
+
+        &__logo {
+            margin: 0;
+        }
+    }
 }

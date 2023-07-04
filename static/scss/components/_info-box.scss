@@ -81,5 +81,29 @@
         object-fit: contain;
     }
 
+    @media screen and (max-width:900px) {
+            &__grid {
+                display: none;
     
+                &--classes {
+                    display: none;
+                }
+            }
+    }
+
+    @media screen and (max-width: 770px) {
+        &__heading {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            padding: 0 ;
+        }
+
+        .btn-hollow {
+            width: 20rem;
+
+            i {
+                transform: translateX(100%);
+            }
+        }
+    }
 }
