@@ -1,86 +1,45 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    width: 100vw;
-    height: 6rem;
-    padding: 0;
-    margin: 0;
-    z-index: 100;
-}
-
-.navbar-dark {
+.nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #000;
-    transition: all 1s;
-}
+    margin-top: 20vh;
+    padding: clamp(1rem, 5vw, 6rem);
+    z-index: 1000;
 
-
-.navbar-items {
-    background-color: transparent;
-}
-
-.nav-link {
-    color: white !important;
-}
-
-.navbar-collapse {
-    background-color: transparent;
-    padding: 2rem;
-    width: 100vw;
-    flex-direction: row-reverse;
-}
-
-.container-fluid {
-    padding: 0;
-}
-
-.nav-item {
-    padding: 0 1rem;
-}
-
-.dropdown-toggle::after {
-    display: none;
-}
-
-// Navbar
-
-.chevron-1 {
-    transform: translateY(-20%);
-}
-
-.chevron-2 {
-    margin: 0;
-    padding: 0;
-    transform: translate(-112%, 30%);
-}
-
-.dropdown-dark {
-    background-color: #000;
-    border-radius: 2rem;
-    transform: translateY(-100%);
-    transition: all 1s ease-in;
-    
-    &.show {
-        transform: translateY(0%);
-        transition: all 0.2s;
-        overflow: hidden;
+    &__link {
+        font-size: clamp(3rem, 8vw, 10rem);
+        font-weight: 100;
+        color: $grey-color;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.1s ease-in-out;
         
-        li {
-            transition: all 0.2s;
-            transform: translateX(0%);
+        & > span {
+            display: block;
+            border-bottom: 1px solid transparent;
+            border-top: 1px solid transparent;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
         }
-        
+
+        &:hover {
+            color: $primary-color;
+
+            & > span {
+                border-top-color: $primary-color-dark;
+                border-bottom-color: $primary-color-dark;
+            }
+        }
     }
-    
-    li {
-        transition: all 0.2s;
-        padding: 0 1rem;
-        transform: translateX(-100%);
-    }
-    
-    a {
-        color: $primary-color !important;
-        font-size: 1.6rem;
+
+    &__img {
+        position: absolute;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        transition: transform .25s, opacity .25s;
+        width: min(50vw, 800px);
+
     }
 }
