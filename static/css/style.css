@@ -330,7 +330,26 @@ body {
   background-color: #000;
   padding: clamp(1rem, 5vw, 6rem);
   z-index: 1000;
-  height: 100vh;
+  height: 200vh;
+}
+
+.nav.hide {
+  display: none;
+}
+
+.nav__close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: #fff;
+  padding: 3rem;
+  z-index: 2000;
+  border-radius: 50%;
+}
+
+.nav__close:hover {
+  color: #67DB5C;
 }
 
 .nav__link {
@@ -343,13 +362,15 @@ body {
 }
 
 .nav__link:first-child {
-  margin-top: 20vh;
+  margin-top: 40vh;
 }
 
 .nav__link > span {
   display: block;
+  text-align: center;
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
+  padding: 5rem 0;
   position: relative;
   transition: all 0.2s ease-in-out;
   z-index: 1001;
@@ -375,6 +396,7 @@ body {
   transform: translate(-50%, -50%) scale(0.5);
   transition: transform .25s, opacity .25s;
   pointer-events: none;
+  object-fit: contain;
 }
 
 .hero {

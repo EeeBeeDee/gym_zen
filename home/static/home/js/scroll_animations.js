@@ -1,8 +1,14 @@
 const nav = document.getElementById('nav')
+const navCloseBtn = document.getElementById('nav-close-btn')
 const navbar = document.getElementById('navbar')
 const bars = document.querySelectorAll('.rect')
 const fadeBox = document.getElementById('fade-box')
 const dotGrid = document.querySelectorAll('.dot-grid')
+
+navCloseBtn.addEventListener('click', () => {
+    nav.classList.toggle('hide')
+    navCloseBtn.style.display = 'none'
+})
 
 for(const link of nav.getElementsByTagName('a')) {
     link.onmousemove = (e) => {
