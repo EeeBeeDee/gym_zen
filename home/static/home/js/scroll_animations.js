@@ -39,13 +39,13 @@ window.onmousemove = e => {
 //     }
 // })
 
-// window.addEventListener('scroll', () => {
-//     if (window.scrollY > 400) {
-//         bars.forEach(bar => {
-//             bar.classList.add('stretch')
-//         })
-//     } 
-// })
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        bars.forEach(bar => {
+            bar.classList.add('stretch')
+        })
+    } 
+})
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
