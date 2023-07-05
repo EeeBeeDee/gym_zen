@@ -26,20 +26,20 @@ window.onmousemove = e => {
     const percent = e.clientY / window.innerHeight;
     
     nav.animate({
-      transform: `translateY(${(percent * nav.offsetHeight /3) * -1}px)`
+      transform: `translateY(${(percent * nav.offsetHeight /2.5) * -1}px)`
     }, {
       fill: "forwards",
       duration: 4000
     })
   }
 
-// window.addEventListener('scroll', () => {
-//     if (window.scrollY > 300) {
-//         navbar.classList.add('navbar-dark')
-//     } else {
-//         navbar.classList.remove('navbar-dark')
-//     }
-// })
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        navbar.classList.add('navbar-dark')
+    } else {
+        navbar.classList.remove('navbar-dark')
+    }
+})
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 400) {
