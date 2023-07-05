@@ -1,9 +1,11 @@
 const nav = document.getElementById('nav')
-const navCloseBtn = document.getElementById('nav-close-btn')
 const navbar = document.getElementById('navbar')
+const navCloseBtn = document.getElementById('nav-close-btn')
 const bars = document.querySelectorAll('.rect')
 const fadeBox = document.getElementById('fade-box')
 const dotGrid = document.querySelectorAll('.dot-grid')
+
+// Expanded nav JS
 
 navCloseBtn.addEventListener('click', () => {
     nav.classList.toggle('hide')
@@ -24,7 +26,7 @@ window.onmousemove = e => {
     const percent = e.clientY / window.innerHeight;
     
     nav.animate({
-      transform: `translateY(${percent * nav.offsetHeight * -1}px)`
+      transform: `translateY(${(percent * nav.offsetHeight /3) * -1}px)`
     }, {
       fill: "forwards",
       duration: 4000
