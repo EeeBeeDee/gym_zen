@@ -1,5 +1,6 @@
 const nav = document.getElementById('nav')
 const navbar = document.getElementById('navbar')
+const navBtn = document.getElementById('navbar-toggler')
 const navCloseBtn = document.getElementById('nav-close-btn')
 const bars = document.querySelectorAll('.rect')
 const fadeBox = document.getElementById('fade-box')
@@ -7,9 +8,23 @@ const dotGrid = document.querySelectorAll('.dot-grid')
 
 // Expanded nav JS
 
+const navSlideDown = [
+    { transform: "translateY(0)" },
+    { transform: "translateY(1000%)" },
+  ];
+
+navBtn.addEventListener('click', () => {
+    nav.classList.toggle('hide')
+    nav.classList.add('animate')
+    navCloseBtn.style.visibility = 'visible'
+    navCloseBtn.style.opacity = 1
+    navbar.animate(navSlideDown, {duration: 500});
+})
+
 navCloseBtn.addEventListener('click', () => {
     nav.classList.toggle('hide')
-    navCloseBtn.style.display = 'none'
+    navCloseBtn.style.visibility = 'hidden'
+    navCloseBtn.style.opacity = 0
 })
 
 for(const link of nav.getElementsByTagName('a')) {
