@@ -102,6 +102,48 @@ body {
   border: #fff 3px solid;
 }
 
+.carousel__container {
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  max-width: 100rem;
+  display: flex;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.carousel img {
+  min-width: 100%;
+  object-fit: fill;
+}
+
+.carousel__nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5rem 2rem;
+  background-color: #d9d9d9;
+  opacity: 0.7;
+}
+
+.carousel__nav-btn--right {
+  right: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.carousel__nav-btn--left {
+  left: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.carousel__nav-btn > i {
+  color: #67DB5C;
+  font-size: 3rem;
+  opacity: 1;
+}
+
 .dot {
   position: absolute;
   display: inline-block;

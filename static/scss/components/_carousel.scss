@@ -1,0 +1,44 @@
+.carousel {
+
+    &__container{
+        position: relative;
+        height: 60vh;
+        width: 100vw;
+        max-width: 100rem;
+        display: flex;
+        overflow-x: hidden;
+        margin: 0 auto;
+    }
+
+    & img {
+        min-width: 100%;
+        object-fit: fill;
+    }
+
+    &__nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5rem 2rem;
+        background-color: $grey-color;
+        opacity: 0.7;
+        
+        &--right {
+            right: 0;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+        
+        &--left {
+            left: 0;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+
+        & > i {
+            color: $primary-color;
+            font-size: 3rem;
+            opacity: 1;
+        }
+    }
+}

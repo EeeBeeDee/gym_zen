@@ -41,7 +41,7 @@ window.onmousemove = e => {
     const percent = e.clientY / window.innerHeight;
     
     nav.animate({
-      transform: `translateY(${(percent * nav.offsetHeight /2.5) * -1}px)`
+      transform: `translateY(${(percent * nav.offsetHeight /2) * -1}px)`
     }, {
       fill: "forwards",
       duration: 4000
