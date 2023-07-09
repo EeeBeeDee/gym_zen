@@ -1,10 +1,19 @@
+// Nav Elements
 const nav = document.getElementById('nav')
 const navbar = document.getElementById('navbar')
 const navBtn = document.getElementById('navbar-toggler')
 const navCloseBtn = document.getElementById('nav-close-btn')
+
+// Dot matrix animations Elements
 const bars = document.querySelectorAll('.rect')
 const fadeBox = document.getElementById('fade-box')
 const dotGrid = document.querySelectorAll('.dot-grid')
+
+// Carousel elements
+const carousel = document.getElementById('carousel')
+const carouselBtnLeft = document.getElementById('carousel-left')
+const carouselBtnRight = document.getElementById('carousel-right')
+
 
 // Expanded nav JS
 
@@ -140,7 +149,35 @@ window.addEventListener('scroll', () => {
     }
 } )
 
-console.log('hello')
+
+//  Carousel JS
+
+let carouselIndex = 1
+const carouselFlex = document.getElementById('carousel-flex')
+let imgArr = carouselFlex.querySelectorAll('img')
+
+carouselBtnRight.addEventListener('click', () => {
+    if (carouselIndex > carouselFlex.children.length -1) {
+        carouselFlex.style.transform = `translateX(0%)`
+        carouselIndex = 1
+    } else {
+        carouselFlex.style.transform = `translateX(-${carouselIndex * 100}% )`
+        carouselIndex ++
+    }
+    console.log(carouselIndex)
+})
+
+carouselBtnLeft.addEventListener('click', () => {
+    if (carouselIndex == 1) {
+        carouselFlex.style.transform = `translateX(-${100 * (carouselFlex.children.length -1)}%)`
+        carouselIndex = carouselFlex.children.length 
+    } else {
+        carouselIndex --
+        carouselFlex.style.transform = `translateX(-${(carouselIndex - 1) * 100}% )`
+    }
+    console.log(carouselIndex)
+    
+})
 
 
 

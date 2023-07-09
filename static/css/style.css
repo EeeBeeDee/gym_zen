@@ -106,15 +106,21 @@ body {
   position: relative;
   height: 60vh;
   width: 100vw;
-  max-width: 100rem;
+  max-width: 132rem;
   display: flex;
   overflow-x: hidden;
   margin: 0 auto;
 }
 
+.carousel ul {
+  padding: 0;
+  list-style: none;
+  transition: transform .8s ease-in-out;
+}
+
 .carousel img {
   min-width: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .carousel__nav-btn {
@@ -124,6 +130,7 @@ body {
   padding: 5rem 2rem;
   background-color: #d9d9d9;
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .carousel__nav-btn--right {
