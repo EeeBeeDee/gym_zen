@@ -155,6 +155,14 @@ window.addEventListener('scroll', () => {
 let carouselIndex = 1
 const carouselFlex = document.getElementById('carousel-flex')
 let imgArr = carouselFlex.querySelectorAll('img')
+const carouselBlurbs = document.querySelectorAll('.carousel__blurb')
+
+const changeCarouselInfobox = () => {
+    carouselBlurbs.forEach(blurb => {
+        blurb.classList.remove('active')
+    })
+    carouselBlurbs[carouselIndex - 1].classList.add('active')
+}
 
 carouselBtnRight.addEventListener('click', () => {
     if (carouselIndex > carouselFlex.children.length -1) {
@@ -164,7 +172,8 @@ carouselBtnRight.addEventListener('click', () => {
         carouselFlex.style.transform = `translateX(-${carouselIndex * 100}% )`
         carouselIndex ++
     }
-    console.log(carouselIndex)
+
+    changeCarouselInfobox()
 })
 
 carouselBtnLeft.addEventListener('click', () => {
@@ -175,8 +184,9 @@ carouselBtnLeft.addEventListener('click', () => {
         carouselIndex --
         carouselFlex.style.transform = `translateX(-${(carouselIndex - 1) * 100}% )`
     }
-    console.log(carouselIndex)
     
+    changeCarouselInfobox()
+
 })
 
 
