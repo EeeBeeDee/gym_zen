@@ -2,7 +2,8 @@
     margin: 5rem auto;
     padding: 5rem;
     position: relative;
-    max-width: 150rem;
+    width: 100vw;
+    // max-width: 150rem;
 
     // // Glass BG
     // backdrop-filter: contrast(130%) brightness(120%) blur(2px);
@@ -53,14 +54,14 @@
     & img {
         min-width: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: center center;
     }
 
     &__nav-btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        padding: 5rem 2rem;
+        padding: 4rem 1rem;
         background-color: rgba($grey-color, 0.6);
         cursor: pointer;
         
@@ -68,12 +69,20 @@
             right: 0;
             border-top-left-radius: 50%;
             border-bottom-left-radius: 50%;
+
+            &:active {
+                transform: translateX(10%) translateY(-50%);
+            }
         }
         
         &--left {
             left: 0;
             border-top-right-radius: 50%;
             border-bottom-right-radius: 50%;
+
+            &:active {
+                transform: translateX(-10%) translateY(-50%);
+            }
         }
 
         & > i {
@@ -82,9 +91,6 @@
             opacity: 1;
         }
 
-        &:active {
-            transform: scale(0.9) translateY(-50%);
-        }
     }
 
     &__info {

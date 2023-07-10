@@ -1,0 +1,39 @@
+.footer {
+    height: 40rem;
+    background-color: $primary-color-darker;
+    // height: 50vh;
+    font-size: 1.6rem;
+    color: #fff;
+
+    & ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    & a {
+        text-decoration: none;
+        color: $grey-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+    }
+
+    &__social-icon {
+        margin: 0 2rem;
+        border: 1px solid $grey-color;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all 0.2s;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
