@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_sass',
     'home',
+    'products',
 ]
 
 AUTHENTICATION_BACKENDS = [
