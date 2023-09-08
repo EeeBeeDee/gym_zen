@@ -457,6 +457,14 @@ body {
 
 .footer__socials {
   padding-bottom: 10rem !important;
+  flex-wrap: wrap;
+  max-height: 30rem;
+}
+
+@media (min-width: 768px) {
+  .footer__socials li {
+    margin: 3rem 0;
+  }
 }
 
 .footer__social-icon {

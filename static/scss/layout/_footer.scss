@@ -24,6 +24,15 @@
 
     &__socials {
         padding-bottom: 10rem !important;
+        flex-wrap: wrap;
+        max-height: 30rem;
+
+        & li {
+            @include atMedium {
+                margin: 3rem 0;
+            }
+        }
+      
     }
 
     &__social-icon {
@@ -33,6 +42,8 @@
         border-radius: 50%;
         transition: all 0.2s;
         font-size: 1.6rem;
+
+        
 
         &:first-child {
             margin-left: 0;
