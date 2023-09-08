@@ -433,7 +433,8 @@ body {
 }
 
 .footer {
-  height: 40rem;
+  position: relative;
+  min-height: 50rem;
   background-color: #17421E;
   font-size: 1.6rem;
   color: #fff;
@@ -454,12 +455,17 @@ body {
   color: #67DB5C;
 }
 
+.footer__socials {
+  padding-bottom: 10rem !important;
+}
+
 .footer__social-icon {
   margin: 0 2rem;
   border: 1px solid #d9d9d9;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 50%;
   transition: all 0.2s;
+  font-size: 1.6rem;
 }
 
 .footer__social-icon:first-child {
@@ -468,6 +474,13 @@ body {
 
 .footer__social-icon:hover {
   border-color: transparent;
+  font-size: 2.5rem;
+}
+
+.footer__bottom-row {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3rem;
 }
 
 .navbar {

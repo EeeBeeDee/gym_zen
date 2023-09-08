@@ -1,5 +1,6 @@
 .footer {
-    height: 40rem;
+    position: relative;
+    min-height: 50rem;
     background-color: $primary-color-darker;
     // height: 50vh;
     font-size: 1.6rem;
@@ -21,12 +22,17 @@
 
     }
 
+    &__socials {
+        padding-bottom: 10rem !important;
+    }
+
     &__social-icon {
         margin: 0 2rem;
         border: 1px solid $grey-color;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 50%;
         transition: all 0.2s;
+        font-size: 1.6rem;
 
         &:first-child {
             margin-left: 0;
@@ -34,6 +40,13 @@
 
         &:hover {
             border-color: transparent;
+            font-size: 2.5rem;
         }
+    }
+
+    &__bottom-row {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 3rem;
     }
 }
