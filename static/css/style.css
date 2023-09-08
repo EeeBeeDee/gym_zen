@@ -227,7 +227,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 60vh;
+  bottom: -4.2rem;
   right: -8rem;
   height: auto;
   width: auto;
@@ -254,7 +254,7 @@ body {
 }
 
 .grey-rect {
-  width: 20rem;
+  width: 30rem;
   background-color: #d9d9d9;
 }
 
@@ -645,7 +645,7 @@ body {
 .hero {
   height: 80vh;
   min-height: 60rem;
-  overflow: hidden;
+  position: relative;
 }
 
 .hero__content {
