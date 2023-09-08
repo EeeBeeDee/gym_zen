@@ -17,6 +17,10 @@
         margin-top: -5rem;
         overflow: hidden;
 
+        @include atLarge {
+            padding-left: 25rem;
+        }
+
         
         
     }

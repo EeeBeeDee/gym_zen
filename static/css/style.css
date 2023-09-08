@@ -107,6 +107,7 @@ body {
   padding: 5rem;
   position: relative;
   width: 100vw;
+  z-index: 10;
 }
 
 .carousel::before {
@@ -659,6 +660,12 @@ body {
   padding-left: 10rem;
   margin-top: -5rem;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .hero__content {
+    padding-left: 25rem;
+  }
 }
 
 .hero p {
