@@ -455,10 +455,25 @@ body {
   color: #67DB5C;
 }
 
+.footer__logo-link {
+  height: 100%;
+  width: 100%;
+}
+
+.footer__logo-img {
+  width: 15rem;
+  height: 100%;
+  object-fit: contain;
+}
+
 .footer__socials {
   padding-bottom: 10rem !important;
   flex-wrap: wrap;
   max-height: 30rem;
+}
+
+.footer__socials li {
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -483,12 +498,6 @@ body {
 .footer__social-icon:hover {
   border-color: transparent;
   font-size: 2.5rem;
-}
-
-.footer__bottom-row {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 3rem;
 }
 
 .navbar {

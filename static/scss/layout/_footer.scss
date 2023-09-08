@@ -2,7 +2,7 @@
     position: relative;
     min-height: 50rem;
     background-color: $primary-color-darker;
-    // height: 50vh;
+
     font-size: 1.6rem;
     color: #fff;
 
@@ -22,12 +22,25 @@
 
     }
 
+    &__logo-link {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    &__logo-img {
+        width: 15rem;
+        height: 100%;
+        object-fit: contain;
+    }
+
     &__socials {
         padding-bottom: 10rem !important;
         flex-wrap: wrap;
         max-height: 30rem;
 
         & li {
+            margin-bottom: 5rem;
             @include atMedium {
                 margin: 3rem 0;
             }
@@ -56,8 +69,7 @@
     }
 
     &__bottom-row {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 3rem;
+
+        // margin-bottom: 3rem;
     }
 }
