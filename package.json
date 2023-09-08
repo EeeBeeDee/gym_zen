@@ -1,16 +1,16 @@
 {
   "name": "gym_zen",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "python3 manage.py sass static/scss/main.scss static/css/style.css --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EeeBeeDee/gym_zen.git"
   },
-  "author": "",
+  "author": "Eoghan Behan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EeeBeeDee/gym_zen/issues"
@@ -18,5 +18,7 @@
   "homepage": "https://github.com/EeeBeeDee/gym_zen#readme",
   "dependencies": {
     "bootstrap": "^5.3.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
