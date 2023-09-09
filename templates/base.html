@@ -17,8 +17,13 @@
         {% endblock %} 
 
         {% block core_css %}
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Custom bootstrap // grid and utilities -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-custom.css' %}">
+        
+        <!-- Personal CSS -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         {% endblock %} 
 
@@ -41,26 +46,13 @@
         <title>Gym Zen |{% block extra_title %}{% endblock %}</title>
     </head>
     <body>
-        
 
+        {% include 'includes/nav.html' %}
+        
+        
         {% block content %}
-        {% endblock %} 
+        {% endblock %}
 
-        
-        {% block corejs %}
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous" defer></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-            crossorigin="anonymous"
-            defer
-        ></script>
-        <script src="https://kit.fontawesome.com/c800ac2a06.js" crossorigin="anonymous" defer></script>
-        <script src="https://js.stripe.com/v3/" defer></script>
-        {% endblock %} 
-        
-        {% block extra_js %} 
-        {% endblock %} 
-
+        {% include 'includes/footer.html' %}
         </body>
 </html>

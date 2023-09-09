@@ -1,0 +1,21 @@
+.btn-hollow {
+    width: 30rem;
+    font-size: 2rem;
+    color: $primary-color;
+    background-color: transparent;
+    border: $primary-color 3px solid;
+    padding: 1.4rem 2.3rem;
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+
+    i {
+        transform: translateX(200%);
+    }
+
+    &--white {
+        color: #fff;
+        background-color: transparent;
+        border: #fff 3px solid;
+    }
+}

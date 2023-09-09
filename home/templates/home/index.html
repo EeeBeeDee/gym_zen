@@ -1,2 +1,145 @@
 {%extends 'base.html'%}
 {% load static %} 
+
+{% block extra_js %} 
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
+{% block content %}
+<section class="hero">
+    <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+            <source src="/media/pexels-pavel-danilyuk.mp4" type="video/mp4">
+            Your Browser is not supported!
+        </video>
+    </div>
+    <div class="hero__content">
+        <p>Cheap prices, blah blah</p>
+        <h1>Gym Zen, come <br> train with us. Lorem <br> ipsum let</h1>
+        <button class="btn-hollow"> Read More 
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+    <div class="rects">
+        <div class="rect green-rect"></div>
+        <div class="rect black-rect"></div>
+        <div class="rect grey-rect"></div>
+    </div>
+</section>
+
+<section class="index-info" id="index-info">
+    <div class="container">
+        <div class="index-info__content">
+            <div class="index-info__grid dot-grid"></div>
+            <div class="index-info__sun">
+            </div>
+            <div class="index-info__box" id="fade-box">
+                <a href="#" class="index-info__logo">
+                    <img class="index-info__logo-img" src="media/alpha-logo-no-mark.png" alt="Company logo">
+                </a>
+                <h2 class="index-info__heading">Personal training at prices that won't make you lose your cool</h2>
+                <button class="btn-hollow">Read More
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="row gy-5">
+        <div class="col-sm-12 col-md-4  px-4">
+            <div class="services__card mx-auto">
+                <i class="fas fa-lightbulb"></i>
+                <h2>Lorem Ipsum</h2>
+                <h3>Blah Biddidly Blah Blah</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nemo odit eligendi est eaque illo recusandae delectus vel sint quod.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 px-4">
+            <div class="services__card mx-auto">
+                <i class="fas fa-lightbulb"></i>
+                <h2>Lorem Ipsum</h2>
+                <h3>Blah Biddidly Blah Blah</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nemo odit eligendi est eaque illo recusandae delectus vel sint quod.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 px-4">
+            <div class="services__card mx-auto">
+                <i class="fas fa-lightbulb"></i>
+                <h2>Lorem Ipsum</h2>
+                <h3>Blah Biddidly Blah Blah</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nemo odit eligendi est eaque illo recusandae delectus vel sint quod.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="classes">
+    <div class="container">
+        <div class="index-info__grid--classes dot-grid"></div>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 classes__info">
+                <div class="classes__title mb-5">Classes every day <br> fun <small>&</small> fat burning</div>
+                <div class="classes__blurb">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ut, quod ipsa placeat, deserunt similique quo officia inventore adipisci consequuntur ipsum rem unde a, doloribus sint blanditiis velit minima iure.
+                </div>
+                <button class="btn-hollow btn-hollow--white">Read More
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-sm-12 mx-sm-0 col-md-6 justify-self-end">
+            <div class="classes__logobox">
+                <img class="classes__logo" src="media/alpha-logo-no-mark.png" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="carousel">
+    <div class="carousel__container" id="carousel">
+
+        <ul class="d-flex" id="carousel-flex">
+            <img src="https://source.unsplash.com/random" id="slide-image" alt="">
+            <img src="https://source.unsplash.com/random/?water" alt="" id="slide-image">
+            <img src="https://source.unsplash.com/random/?flower" alt="" id="slide-image">
+            <img src="https://source.unsplash.com/random/?car" alt="" id="slide-image">
+            <img src="https://source.unsplash.com/random/?sky" alt="" id="slide-image">
+        </ul>
+        <div class="carousel__nav-btn carousel__nav-btn--left" id="carousel-left">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="carousel__nav-btn carousel__nav-btn--right" id="carousel-right">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="carousel__info">
+            <div class="carousel__blurb active">
+                <h3>BLAH BLAH</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
+            </div>
+            <div class="carousel__blurb">
+                <h3>BLAH BLAH 222</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
+            </div>
+            <div class="carousel__blurb">
+                <h3>BLAH BLAH 333</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
+            </div>
+            <div class="carousel__blurb">
+                <h3>BLAH BLAH 444</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
+            </div>
+            <div class="carousel__blurb">
+                <h3>BLAH BLAH 555</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div style="height: 200vh;"></div>
+{% endblock %}

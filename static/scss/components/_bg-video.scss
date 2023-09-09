@@ -1,0 +1,29 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    min-height: 550px;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        background-color: #000;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(0 0, 65vw 0, 20vw 100%, 0 100%);
+        // clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    }
+ 
+    &__content {
+       height: 100%;
+       width: 100%;
+       object-fit: cover;
+    }
+ }

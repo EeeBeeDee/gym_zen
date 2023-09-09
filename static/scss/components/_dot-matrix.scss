@@ -1,0 +1,12 @@
+// Needs home/static scroll-animations.js dotgird to work 
+
+.dot {
+    position: absolute;
+    display: inline-block;
+    background-color: $primary-color-dark;
+    width: 10px;
+    height: 10px;
+    // box-shadow: 0 0 3px #2CBAFC;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}

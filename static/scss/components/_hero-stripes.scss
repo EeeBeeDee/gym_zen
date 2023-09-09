@@ -1,0 +1,51 @@
+.rects {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: -4.2rem;
+    // top: 60vh;
+    right: -8rem;
+    height: auto;
+    width: auto;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 100%);
+    transform: rotate(-37deg);
+
+    &:has(.rect.stretch) {
+        clip-path: none;
+    }
+
+}
+
+.rect {
+    margin-top: 2rem;
+    display: block;
+    width: 40rem;
+    height: 4rem;
+    transform: scaleX(1);
+    z-index: -10;
+
+    &.stretch {
+        transition: all 2.5s ease-out;
+        transform: scaleX(25);
+
+    }
+}
+
+.grey-rect {
+    width: 30rem;
+    background-color: #d9d9d9;
+}
+
+.black-rect {
+    width: 30rem;
+    background-color: #000;
+    z-index: -10;
+}
+
+.green-rect {
+    background-color: $primary-color;
+    
+
+}
