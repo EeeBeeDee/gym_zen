@@ -374,6 +374,20 @@ body {
   }
 }
 
+.product-card {
+  height: 100%;
+  display: flex;
+}
+
+.product-card__img-container {
+  height: 30rem;
+}
+
+.product-card__img {
+  height: 100%;
+  object-fit: contain;
+}
+
 .classes {
   position: relative;
   background-color: #67DB5C;

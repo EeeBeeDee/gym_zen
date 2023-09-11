@@ -7,7 +7,25 @@
 
 {% block content %}
 
-<h1>hi</h1>
+<div style="height: 100vh; background-color: green;">
+    <div class="container">
+        <div style="height: 20vh; background-color: darkgreen;">
+        
+        </div>
+        <div class="row">
+            {% for product in products %}
+            <div class="col-3">
+                <div class="product-card primary-bg-darker">
+                    <div class="product-card__img-container">
+                        <img class="product-card__img" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
+                    </div>
+                    <h1>{{ product.name }}</h1>
+                </div>
+            </div>
+            {%  endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
