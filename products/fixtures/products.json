@@ -2,65 +2,164 @@
     "pk": 1,
     "model": "products.product",
     "fields": {
-      "name": "Arizona Original Bootcut Jeans",
-      "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+      "name": "Gym Zen backpack",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
-      "category": 6,
-      "image": "DP0709201205510679M.jpg"
+      "category": 2,
+      "image": "backpack.png"
     }
   },
 {
-    "pk": 1,
+    "pk": 2,
     "model": "products.product",
     "fields": {
-      "name": "Arizona Original Bootcut Jeans",
-      "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+      "name": "Black Towel",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
-      "category": 6,
-      "image": "DP0709201205510679M.jpg"
+      "category": 5,
+      "image": "black-towel.png"
     }
   },
 {
-    "pk": 1,
+    "pk": 3,
     "model": "products.product",
     "fields": {
-      "name": "Arizona Original Bootcut Jeans",
-      "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+      "name": "boxter-bottle",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
-      "category": 6,
-      "image": "DP0709201205510679M.jpg"
+      "category": 3,
+      "image": "boxter-bottle.png"
     }
   },
 {
-    "pk": 1,
+    "pk": 4,
     "model": "products.product",
     "fields": {
-      "name": "Arizona Original Bootcut Jeans",
-      "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+      "name": "Green Baseball Cap",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
-      "category": 6,
-      "image": "DP0709201205510679M.jpg"
+      "category": 1,
+      "image": "cap-green.png"
     }
   },
 {
-    "pk": 1,
+    "pk": 5,
     "model": "products.product",
     "fields": {
-      "name": "Arizona Original Bootcut Jeans",
-      "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+      "name": "White Baseball Cap",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
-      "category": 6,
-      "image": "DP0709201205510679M.jpg"
+      "category": 1,
+      "image": "cap-white.png"
     }
   },
 {
-    "pk": 1,
+    "pk": 6,
     "model": "products.product",
     "fields": {
-      "name": "Arizona Original Bootcut Jeans",
-      "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+      "name": "Gym Zen Polo",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
-      "category": 6,
-      "image": "DP0709201205510679M.jpg"
+      "category": 4,
+      "image": "dark-polo.png"
+    }
+  },
+{
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "name": "Duffle Bag",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 2,
+      "image": "duffle-bag.png"
+    }
+  },
+{
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "name": "Black Gym Zen Beanie",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 1,
+      "image": "hat-black.png"
+    }
+  },
+{
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "name": "White Protein Shaker",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 3,
+      "image": "protein-mixer-white.png"
+    }
+  },
+{
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Protein Shaker",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 3,
+      "image": "protein-mixer.png"
+    }
+  },
+{
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Sports Bib",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 4,
+      "image": "sports-bib-green.png"
+    }
+  },
+{
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "name": "Blue Sports Bib",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 4,
+      "image": "sports-bib-blue.png"
+    }
+  },
+{
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "name": "Sports Bag",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 2,
+      "image": "sports-bag.png"
+    }
+  },
+{
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Gym Zen Water Bottle",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 3,
+      "image": "water-bottle.png"
+    }
+  },
+{
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "name": "White Towel",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "price": 53.99,
+      "category": 5,
+      "image": "white-towel.png"
     }
   },

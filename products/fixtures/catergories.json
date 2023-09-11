@@ -20,15 +20,15 @@
       "model": "products.category",
       "fields": {
         "name": "shakers",
-        "friendly_name": "Shakers"
+        "friendly_name": "Shakers & Water bottles"
       }
     },
     {
       "pk": 4,
       "model": "products.category",
       "fields": {
-        "name": "shirts",
-        "friendly_name": "Shirts"
+        "name": "sportwear",
+        "friendly_name": "Sportwear"
       }
     },
     {
