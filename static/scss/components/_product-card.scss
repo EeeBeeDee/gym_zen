@@ -1,13 +1,52 @@
 .product-card {
-    height: 100%;
     display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    margin: 0 4rem;
+    overflow: hidden;
+    border-radius: 10rem;
+    border: 3px solid $primary-color;
+    outline: 2rem solid #fff;
+    
+
 
     &__img-container {
-        height: 30rem;
+        height: 100%;
+        width: 100%;
     }
-
+    
     &__img {
+        width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    &__info-box {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__category-btn {
+       display: inline-block;
+       margin-top: -2.5rem;
+       text-decoration: none;
+       font-size: 1.6rem;
+       padding: 1rem 2.3rem;
+       border: 3px solid $primary-color;
+       background-color: $grey-color;
+       color: $primary-color;
+       border-radius: 2rem;
+
+       &:hover {
+        background-color: $primary-color;
+        color: #fff;
+       }
+
+    }
+
+    &__title {
+
     }
 }
