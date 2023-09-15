@@ -1,31 +1,31 @@
-{% extends 'base.html'%}
-{% load static %} 
-
-{% block extra_js %} 
+{% extends 'base.html'%} {% load static %} {% block extra_js %}
 <script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
-{% endblock %} 
+{% endblock %} {% block content %}
 
-{% block content %}
-
-<div style="height: 100vh; background-color: green;">
+<div style="height: 100vh; background-color: green">
     <div class="container">
-        <div style="height: 20vh; background-color: darkgreen;">
-        
-        </div>
+        <div style="height: 20vh; background-color: darkgreen"></div>
         <div class="row">
             {% for product in products %}
             <div class="col-3">
                 <div class="product-card primary-bg-darker">
-                    <div class="product-card__img-container">
-                        <img class="product-card__img" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <div class="product-card__img-container">
+                            <img
+                                class="product-card__img"
+                                src="{{ MEDIA_URL }}{{ product.image }}"
+                                alt="{{ product.name }}"
+                            />
+                        </div>
+                    </a>
+                    <div class="product-card__info-box">
+                        <h1>{{ product.name }}</h1>
                     </div>
-                    <h1>{{ product.name }}</h1>
                 </div>
             </div>
-            {%  endfor %}
+            {% endfor %}
         </div>
     </div>
 </div>
 
 {% endblock %}
-
