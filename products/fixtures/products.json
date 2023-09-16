@@ -28,7 +28,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 3,
-      "image": "boxter-bottle.png"
+      "image": "boxter-bottle-removebg.png"
     }
   },
 {
@@ -39,7 +39,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 1,
-      "image": "cap-green.png"
+      "image": "cap-green-removebg.png"
     }
   },
 {
@@ -50,7 +50,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 1,
-      "image": "cap-white.png"
+      "image": "cap-white-removebg.png"
     }
   },
 {
@@ -61,7 +61,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 4,
-      "image": "dark-polo.png"
+      "image": "dark-polo-removebg.png"
     }
   },
 {
@@ -72,7 +72,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 2,
-      "image": "duffle-bag.png"
+      "image": "duffle-bag-removebg.png"
     }
   },
 {
@@ -83,7 +83,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 1,
-      "image": "hat-black.png"
+      "image": "hat-black-removebg.png"
     }
   },
 {
@@ -94,7 +94,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 3,
-      "image": "protein-mixer-white.png"
+      "image": "protein-mixer-white-removebg.png"
     }
   },
 {
@@ -105,7 +105,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 3,
-      "image": "protein-mixer.png"
+      "image": "protein-mixer-removebg.png"
     }
   },
 {
@@ -116,7 +116,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 4,
-      "image": "sports-bib-green.png"
+      "image": "sports-bib-green-removebg.png"
     }
   },
 {
@@ -127,7 +127,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 4,
-      "image": "sports-bib-blue.png"
+      "image": "sports-bib-blue-removebg.png"
     }
   },
 {
@@ -138,7 +138,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 2,
-      "image": "sports-bag.png"
+      "image": "sports-bag-removebg.png"
     }
   },
 {
@@ -149,7 +149,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 3,
-      "image": "water-bottle.png"
+      "image": "water-bottle-removebg.png"
     }
   },
 {
@@ -160,7 +160,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
       "price": 53.99,
       "category": 5,
-      "image": "white-towel.png"
+      "image": "white-towel-removebg.png"
     }
   }
 ]

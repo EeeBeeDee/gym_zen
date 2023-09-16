@@ -12,6 +12,15 @@
         <div style="height: 20vh; background-color: darkgreen;">
         
         </div>
+        <div class="row">
+            <div class="col">
+                {% for category in categories %}
+                    <a href="{% url 'products' %}?category={{ category.name }}" class="category-badge text-decoration-none">
+                        <span class="p-2 mt-2 mx-1">{{ category.friendly_name }}</span>
+                    </a>
+                 {% endfor %}
+            </div>
+        </div>
         <div class="row my-5 px-5">
             {% for product in products %}
             <div class="col-4 my-5">
