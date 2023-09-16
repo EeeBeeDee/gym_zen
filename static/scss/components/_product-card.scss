@@ -8,8 +8,6 @@
     border-radius: 10rem;
     border: 5px solid $primary-color;
     outline: 1rem solid $grey-color;
-    // outline-offset: 1rem;
-    // box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
 
@@ -25,10 +23,11 @@
         height: 100%;
         object-fit: contain;
         transition: .8s ease-in-out;
+        animation: jiggle 1s ease;
+        animation-iteration-count: 1;
 
         &:hover {
-            transform: scale(1.4);
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            transform: scale(1.2);
         }
     }
 
