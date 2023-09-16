@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@keyframes jiggle {
+  10%, 40% {
+    transform: scale(1, 1);
+  }
+  20% {
+    transform: scale(1.1, 0.9);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translate(0, -5px);
+  }
+  35% {
+    transform: scale(1, 1) translate(0, -3px);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.075);
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -398,13 +419,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: .8s ease-in-out;
-  animation: jiggle 1s ease;
-  animation-iteration-count: 1;
 }
 
 .product-card__img:hover {
-  transform: scale(1.2);
+  animation: jiggle 1s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  transform: scale(1.075);
 }
 
 .product-card__info-box {
