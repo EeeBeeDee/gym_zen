@@ -23,8 +23,8 @@
                     </a>
                     <div class="product-card__info-box">
                         {% if product.category %}
-                        <a href="#" class="product-card__category-btn mx-auto">
-                            {{ product.category }}
+                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="product-card__category-btn mx-auto">
+                            {{ product.category.friendly_name }}
                         </a>
                         {% endif %}
                         <h1 class="product-card__title">{{ product.name }}</h1>

@@ -20,7 +20,7 @@
       "model": "products.category",
       "fields": {
         "name": "shakers",
-        "friendly_name": "Shakers & Water bottles"
+        "friendly_name": "Shakers & Bottles"
       }
     },
     {

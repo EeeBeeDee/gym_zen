@@ -6,7 +6,17 @@ from .models import Category, Product
 
 def all_products(request):
 
+    """
+    View used to display all products and to also filter product selection.
+    """
+
     products = Product.objects.all()
+    categories = None
+
+    if 'category' in request.GET:
+        categories = request.GET['category'].split(',')
+        products = products.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
     context = {
         'products': products,
