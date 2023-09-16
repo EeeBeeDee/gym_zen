@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100%;
-    margin: 0 4rem;
+    height: 60rem;
+    margin: 0 2rem;
     overflow: hidden;
     border-radius: 10rem;
-    border: 3px solid $primary-color;
-    outline: 2rem solid #fff;
+    border: 5px solid $primary-color;
+    outline: 1rem solid $grey-color;
+    outline-offset: 1rem;
     
 
 
@@ -35,7 +36,7 @@
        font-size: 1.6rem;
        padding: 1rem 2.3rem;
        border: 3px solid $primary-color;
-       background-color: $grey-color;
+       background-color: #fff;
        color: $primary-color;
        border-radius: 2rem;
 
