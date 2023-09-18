@@ -36,7 +36,22 @@
                             {{ product.category.friendly_name }}
                         </a>
                         {% endif %}
-                        <h1 class="product-card__title">{{ product.name }}</h1>
+                        <a href="{% url 'product_detail' product.id %}">
+                            <h1 class="product-card__title">{{ product.name }}</h1>
+
+                        </a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="product-card__price product-card__price--strikeout">${{ product.price }}</span>
+                            </div>
+                            <div class="col-4">
+                                <span class="product-card__price">With Gold:</span>
+                            </div>
+                            <div class="col-4">
+                                <span class="product-card__price">${{ product.price }}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
