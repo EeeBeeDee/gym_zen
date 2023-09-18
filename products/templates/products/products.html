@@ -1,5 +1,8 @@
 {% extends 'base.html'%}
 {% load static %} 
+{% load mathfilters %} 
+{% load humanize %} 
+
 
 {% block extra_js %} 
 <script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
@@ -46,10 +49,10 @@
                                 <span class="product-card__price product-card__price--strikeout">${{ product.price }}</span>
                             </div>
                             <div class="col-4">
-                                <span class="product-card__price">With Gold:</span>
+                                <span class="product-card__membership">With Gold:</span>
                             </div>
                             <div class="col-4">
-                                <span class="product-card__price">${{ product.price }}</span>
+                                <span class="product-card__price">${{ product.price|mul:0.85|floatformat:2 }}</span>
                             </div>
                         </div>
                     </div>
