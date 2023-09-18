@@ -432,6 +432,7 @@ body {
 .product-card__info-box {
   display: flex;
   flex-direction: column;
+  min-height: 50%;
 }
 
 .product-card__category-btn {
