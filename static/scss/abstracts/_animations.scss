@@ -54,3 +54,12 @@
         transform: scale(1.075);
       }
 }
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #368F2E, 0 0 40px #368F2E, 0 0 50px #368F2E;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #67DB5C, 0 0 40px #67DB5C, 0 0 50px #67DB5C, 0 0 60px #67DB5C;
+    }
+  }
