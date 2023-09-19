@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
+import random 
 
 # Create your views here.
 
@@ -12,6 +13,11 @@ def all_products(request):
 
     products = Product.objects.all()
     categories = Category.objects.all()
+    slideshow_products = [
+        get_object_or_404(Product, pk=random.randint(1, 5)),
+        get_object_or_404(Product, pk=random.randint(6, 10)),
+        get_object_or_404(Product, pk=random.randint(11, 15)),
+    ]
 
     if 'category' in request.GET:
         categories = None
@@ -22,6 +28,7 @@ def all_products(request):
     context = {
         'products': products,
         'categories': categories,
+        'slideshow_products': slideshow_products,
     }
 
     return render(request, 'products/products.html', context)

@@ -11,17 +11,22 @@
 {% block content %}
 
 
+<div class="product-slider__container">
     <div class="container">
-        <div style="height: 20vh; background-color: darkgreen;">
+        {% for product in slideshow_products  %}
+        <h1>{{ product.name }}</h1>
+        {% endfor %}
+    </div>
+</div>
+    <div class="container">
         
-        </div>
         <div class="row">
             <div class="col">
                 {% for category in categories %}
-                    <a href="{% url 'products' %}?category={{ category.name }}" class="category-badge text-decoration-none">
-                        <span class="p-2 mt-2 mx-1">{{ category.friendly_name }}</span>
-                    </a>
-                 {% endfor %}
+                <a href="{% url 'products' %}?category={{ category.name }}" class="category-badge text-decoration-none">
+                    <span class="p-2 mt-2 mx-1">{{ category.friendly_name }}</span>
+                </a>
+                {% endfor %}
             </div>
         </div>
         <div class="row my-5 px-5">
@@ -71,7 +76,9 @@
             {%  endfor %}
         </div>
     </div>
-
-
-{% endblock %}
-
+        
+        
+        
+        {% endblock %}
+        
+        

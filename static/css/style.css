@@ -520,6 +520,11 @@ body {
   margin-right: -7rem;
 }
 
+.product-slider__container {
+  height: 60vh;
+  background-color: #17421E;
+}
+
 .classes {
   position: relative;
   background-color: #67DB5C;
