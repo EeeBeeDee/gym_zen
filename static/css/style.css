@@ -399,7 +399,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 60rem;
+  min-height: 60rem;
   margin: 0 2rem;
   overflow: hidden;
   border-radius: 10rem;
@@ -436,7 +436,6 @@ body {
 .product-card__info-box {
   display: flex;
   flex-direction: column;
-  min-height: 50%;
   margin: 0 2rem;
 }
 
@@ -461,6 +460,11 @@ body {
   margin-top: 1rem;
   color: #000;
   text-align: center;
+  transition: 0.1s ease-in;
+}
+
+.product-card__title:hover {
+  transform: scale(1.1);
 }
 
 .product-card__price {
@@ -471,6 +475,49 @@ body {
 
 .product-card__price--strikeout {
   text-decoration: line-through;
+}
+
+.product-card__membership {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #17421E;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.product-card__membership span {
+  display: inline-block;
+  margin: auto 0;
+}
+
+.product-card__bottom-row {
+  margin: 0;
+  width: 100%;
+}
+
+.product-card__add-to-cart {
+  border: none;
+  border-top: 5px solid #17421E;
+  width: 50%;
+  background-color: #17421E;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 2rem 2rem 4rem 3rem;
+}
+
+.product-card__buy-now {
+  width: 49%;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 1.6rem;
+  padding: 2rem 3rem 4rem 2rem;
+  margin-right: -7rem;
 }
 
 .classes {

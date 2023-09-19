@@ -49,12 +49,22 @@
                                 <span class="product-card__price product-card__price--strikeout">${{ product.price }}</span>
                             </div>
                             <div class="col-4">
-                                <span class="product-card__membership">With Gold:</span>
+                                <div class="product-card__membership">
+                                    <span>
+                                        With ZEN:
+                                    </span>
+                                </div>
                             </div>
                             <div class="col-4">
                                 <span class="product-card__price">${{ product.price|mul:0.85|floatformat:2 }}</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="product-card__bottom-row mt-4">
+                        <button class="product-card__add-to-cart">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="product-card__buy-now">
+                            Buy Now   <i class="fa-solid fa-bag-shopping"></i>   
+                        </button>
                     </div>
                 </div>
             </div>
