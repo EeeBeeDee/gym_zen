@@ -966,3 +966,20 @@ body {
   color: blue;
   background-color: red;
 }
+
+.category-btn {
+  text-decoration: none;
+  padding: 1.4rem 2.3rem;
+  margin: 0 2rem;
+  background-color: #368F2E;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  border: 5px solid #368F2E;
+}
+
+.category-btn:hover {
+  background-color: #fff;
+  color: #368F2E;
+  border-radius: 2rem;
+}

@@ -1,0 +1,16 @@
+.category-btn {
+    text-decoration: none;
+    padding: 1.4rem 2.3rem;
+    margin: 0 2rem;
+    background-color: $primary-color-dark;
+    color: #fff;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    border: 5px solid $primary-color-dark;
+
+    &:hover {
+        background-color: #fff;
+        color: $primary-color-dark;
+        border-radius: 2rem;
+    }
+}
