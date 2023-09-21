@@ -43,7 +43,7 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
-    slideshow_products = [
+    recommended_products = [
         get_object_or_404(Product, pk=random.randint(1, 5)),
         get_object_or_404(Product, pk=random.randint(6, 10)),
         get_object_or_404(Product, pk=random.randint(11, 15)),
@@ -51,7 +51,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'slideshow_products': slideshow_products,
+        'recommended_products': recommended_products,
     }
 
     return render(request, 'products/product_detail.html', context)

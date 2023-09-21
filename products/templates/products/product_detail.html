@@ -1,6 +1,10 @@
 {% extends 'base.html'%}
 {% load static %} 
 
+{% block extra_js %} 
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
 
 {% block content %}
 
@@ -8,7 +12,7 @@
 
     <div class="container">
         <div class="row">
-            <ul class="detail-breadcrumb">
+            <ul class="detail__breadcrumb">
                 <a href="{% url 'products' %}">Merch</a>
                 <span>/</span>
                 <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }}</a>
@@ -16,12 +20,26 @@
         </div>
         
         <div class="row my-5">
-            <div class="col-6 my-5">
-                <div class="detail-img-container">
+            <div class="col-12 col-md-6">
+                <div class="detail__img-container">
                     <img src="{{ MEDIA_URL}}{{ product.image }}"></img>
                 </div>
             </div>
-            <div class="col-6"></div>
+            <div class="col-12 col-md-6 detail__info">
+                <h1>{{ product.name }}</h1>
+                <h2>${{ product.price }}</h2>
+                <p>{{ product.description }}</p>
+                <!-- ADD FORM TO ADD TO BAG HERE -->
+                <a href="{% url 'products' %}?category={{ category.name }}" class="category-btn">
+                    <span class="p-2 mt-2 mx-1">Add To Cart<i class="fa-solid fa-cart-shopping"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="detail__recommends">
+                {% for products in recommended_products %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 
