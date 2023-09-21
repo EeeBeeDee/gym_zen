@@ -970,12 +970,18 @@ body {
 .category-btn {
   text-decoration: none;
   padding: 1.4rem 2.3rem;
-  margin: 0 2rem;
+  margin: 1rem 2rem;
   background-color: #368F2E;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
   transition: all 0.3s ease;
   border: 5px solid #368F2E;
+}
+
+@media (min-width: 768px) {
+  .category-btn {
+    font-size: 2rem;
+  }
 }
 
 .category-btn:hover {
@@ -985,6 +991,12 @@ body {
 }
 
 .merch-title {
-  font-size: 5rem;
+  font-size: 3rem;
   letter-spacing: .5rem;
+}
+
+@media (min-width: 768px) {
+  .merch-title {
+    font-size: 5rem;
+  }
 }

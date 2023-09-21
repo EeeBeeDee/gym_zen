@@ -42,7 +42,7 @@
                 <h2 class="merch-title">All Merchandise</h2>
             </div>
             {% endif %}
-            <div class="col d-flex justify-content-center mt-5">
+            <div class="col d-flex justify-content-start justify-content-md-center flex-wrap mt-5">
                 {% for category in categories %}
                 <a href="{% url 'products' %}?category={{ category.name }}" class="category-btn">
                     <span class="p-2 mt-2 mx-1">{{ category.friendly_name }}</span>
