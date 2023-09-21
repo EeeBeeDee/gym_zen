@@ -31,14 +31,24 @@
                 <p>{{ product.description }}</p>
                 <!-- ADD FORM TO ADD TO BAG HERE -->
                 <a href="{% url 'products' %}?category={{ category.name }}" class="category-btn">
-                    <span class="p-2 mt-2 mx-1">Add To Cart<i class="fa-solid fa-cart-shopping"></i></span>
+                    <span class="p-2 mt-2 mx-1">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></span>
                 </a>
             </div>
         </div>
         <div class="row">
             <div class="detail__recommends">
-                {% for products in recommended_products %}
+                <h2>We Recommend</h2>
+                <div class="row mt-5">
+                {% for product in recommended_products %}
+                <div class="col-4">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL}}{{ product.image }}" alt="">
+                        <h3>{{ product.name }}</h3>
+                        <h3>${{ product.price }}</h3>
+                    </a>
+                </div>
                 {% endfor %}
+                </div>
             </div>
         </div>
     </div>

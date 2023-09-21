@@ -1086,6 +1086,17 @@ body {
 }
 
 .detail__recommends {
-  display: flex;
-  height: 40vh;
+  min-height: 40vh;
+  margin-top: 8rem;
+  border-top: 0.3rem solid #d9d9d9;
+}
+
+.detail__recommends h2 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #5a5a5a;
+}
+
+.detail__recommends img {
+  height: 60%;
 }
