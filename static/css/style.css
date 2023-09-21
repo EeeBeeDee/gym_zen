@@ -1092,11 +1092,26 @@ body {
 }
 
 .detail__recommends h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  letter-spacing: 3px;
   margin-top: 2rem;
   color: #5a5a5a;
 }
 
 .detail__recommends img {
   height: 60%;
+}
+
+.detail__recommends a {
+  text-decoration: none;
+}
+
+.detail__recommends a:hover h3 {
+  color: #000;
+}
+
+.detail__recommends h3 {
+  color: #5a5a5a;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }

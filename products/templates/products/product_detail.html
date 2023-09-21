@@ -44,8 +44,8 @@
                     <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ MEDIA_URL}}{{ product.image }}" alt="">
                         <h3>{{ product.name }}</h3>
-                        <h3>${{ product.price }}</h3>
                     </a>
+                    <h3>${{ product.price }}</h3>
                 </div>
                 {% endfor %}
                 </div>
