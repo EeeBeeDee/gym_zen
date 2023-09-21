@@ -4,20 +4,24 @@
 
 {% block content %}
 
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-3">
-                <div class="product-card primary-bg-darker">
-                    <div class="product-card__img-container">
-                        <img class="product-card__img" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
-                    </div>
-                    <div class="product-card__info-box">
-                        <h1>{{ product.name }}</h1>
+<div class="mobile-filler"></div>
 
-                    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="detail-breadcrumb">
+                <a href="{% url 'products' %}">Merch</a>
+                <span>/</span>
+                <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }}</a>
+            </ul>
+        </div>
+        
+        <div class="row my-5">
+            <div class="col-6 my-5">
+                <div class="detail-img-container">
+                    <img src="{{ MEDIA_URL}}{{ product.image }}"></img>
                 </div>
             </div>
+            <div class="col-6"></div>
         </div>
     </div>
 

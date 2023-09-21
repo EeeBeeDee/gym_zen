@@ -58,7 +58,7 @@ window.onmousemove = e => {
   }
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 200) {
         navbar.classList.add('navbar-dark')
     } else {
         navbar.classList.remove('navbar-dark')

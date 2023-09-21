@@ -5,6 +5,8 @@ import random
 # Create your views here.
 
 
+
+
 def all_products(request):
 
     """
@@ -41,9 +43,15 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
+    slideshow_products = [
+        get_object_or_404(Product, pk=random.randint(1, 5)),
+        get_object_or_404(Product, pk=random.randint(6, 10)),
+        get_object_or_404(Product, pk=random.randint(11, 15)),
+    ]
 
     context = {
         'product': product,
+        'slideshow_products': slideshow_products,
     }
 
     return render(request, 'products/product_detail.html', context)

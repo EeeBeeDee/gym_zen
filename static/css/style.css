@@ -697,6 +697,7 @@ body {
   position: relative;
   min-height: 50rem;
   background-color: #17421E;
+  margin-top: auto;
   font-size: 1.6rem;
   color: #fff;
 }
@@ -999,7 +1000,7 @@ body {
 
 .mobile-filler {
   background-color: #17421E;
-  height: 8vh;
+  height: 6rem;
 }
 
 .category-btn {
@@ -1034,4 +1035,13 @@ body {
   .merch-title {
     font-size: 5rem;
   }
+}
+
+.detail-img-container {
+  height: 40rem;
+}
+
+.detail-breadcrumb {
+  display: flex;
+  margin-top: 1rem;
 }
