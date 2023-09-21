@@ -10,8 +10,9 @@
 
 {% block content %}
 
+<div class="d-md-none mobile-filler"></div>
 
-<div class="product-slider__bg">
+<div class="product-slider__bg d-none d-md-block">
     <div class="container h-100">
         <div class="product-slider__container h-100">
             <div class="product-slider">
@@ -28,7 +29,7 @@
                 </a>
                 {% endfor %}
             </div>
-            <div class="product-slider__featured">
+            <div class="product-slider__featured text-center">
                 <h2>Checkout our f<span class="neon">eatur</span>ed gear here!</h2>
             </div>
         </div>
