@@ -38,11 +38,13 @@
         <div class="row">
             <div class="detail__recommends">
                 <h2>We Recommend</h2>
-                <div class="row mt-5">
+                <div class="row flex-column flex-lg-row justify-content-center align-items-center my-5">
                 {% for product in recommended_products %}
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ MEDIA_URL}}{{ product.image }}" alt="">
+                    </a>
+                    <a href="{% url 'product_detail' product.id %}">
                         <h3>{{ product.name }}</h3>
                     </a>
                     <h3>${{ product.price }}</h3>
