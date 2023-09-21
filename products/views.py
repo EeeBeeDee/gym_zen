@@ -18,17 +18,21 @@ def all_products(request):
         get_object_or_404(Product, pk=random.randint(6, 10)),
         get_object_or_404(Product, pk=random.randint(11, 15)),
     ]
+    merch_heading = ''
 
     if 'category' in request.GET:
         categories = None
         categories = request.GET['category'].split(',')
         products = products.filter(category__name__in=categories)
         categories = Category.objects.filter(name__in=categories)
+    else:
+        merch_heading = True
 
     context = {
         'products': products,
         'categories': categories,
         'slideshow_products': slideshow_products,
+        'merch_heading': merch_heading,
     }
 
     return render(request, 'products/products.html', context)

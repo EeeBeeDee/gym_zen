@@ -37,6 +37,11 @@
     <div class="container">
         
         <div class="row">
+            {% if merch_heading %}
+            <div class="col-12 text-center mt-5">
+                <h2 class="merch-title">All Merchandise</h2>
+            </div>
+            {% endif %}
             <div class="col d-flex justify-content-center mt-5">
                 {% for category in categories %}
                 <a href="{% url 'products' %}?category={{ category.name }}" class="category-btn">

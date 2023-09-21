@@ -983,3 +983,8 @@ body {
   color: #368F2E;
   border-radius: 2rem;
 }
+
+.merch-title {
+  font-size: 5rem;
+  letter-spacing: .5rem;
+}
