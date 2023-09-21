@@ -3,8 +3,8 @@
     "model": "products.product",
     "fields": {
       "name": "Gym Zen backpack",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our Sleek, Stylish backpack has a deceptive amount of space inside, with a separate waterproof section for towels or used gym gear it is perfect not only for the gym but travel or everyday use!",
+      "price": 74.99,
       "category": 2,
       "image": "backpack-removebg.png"
     }
@@ -14,8 +14,8 @@
     "model": "products.product",
     "fields": {
       "name": "Black Towel",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our hybrid fibre towels are extremely absorbent, they don't lose their water retention with age plus they're machine washable! Their resilience has been put to the test so whether it be in the gym or just after a shower you use them they won't let you down.",
+      "price": 21.99,
       "category": 5,
       "image": "black-towel-removebg.png"
     }
@@ -25,8 +25,8 @@
     "model": "products.product",
     "fields": {
       "name": "boxter-bottle",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Capable of holding 1ltr of liquid, our boxter bottles are great way to fit some liquid into an already packed bag!",
+      "price": 9.99,
       "category": 3,
       "image": "boxter-bottle-removebg.png"
     }
@@ -36,8 +36,8 @@
     "model": "products.product",
     "fields": {
       "name": "Green Baseball Cap",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our caps are made from sweat resistant material which is also machine washable. Allow yourself some great looking comfort while you exersise in the sun.",
+      "price": 25,
       "category": 1,
       "image": "cap-green-removebg.png"
     }
@@ -47,21 +47,10 @@
     "model": "products.product",
     "fields": {
       "name": "White Baseball Cap",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our caps are made from sweat resistant material which is also machine washable. Allow yourself some great looking comfort while you exersise in the sun.",
+      "price": 25,
       "category": 1,
       "image": "cap-white-removebg.png"
-    }
-  },
-{
-    "pk": 6,
-    "model": "products.product",
-    "fields": {
-      "name": "Gym Zen Polo",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
-      "category": 4,
-      "image": "dark-polo-removebg.png"
     }
   },
 {
@@ -69,8 +58,8 @@
     "model": "products.product",
     "fields": {
       "name": "Duffle Bag",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Designed to fit everything you could possibly need into it, our gym duffle bags give you the space to bring a portable gym with you everywhere!",
+      "price": 85,
       "category": 2,
       "image": "duffle-bag-removebg.png"
     }
@@ -80,8 +69,8 @@
     "model": "products.product",
     "fields": {
       "name": "Black Gym Zen Beanie",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "The sweat resistant fibers give under armour a run for their money while keeping you toasty on a winter run, healthier for the wallet too!",
+      "price": 25,
       "category": 1,
       "image": "hat-black-removebg.png"
     }
@@ -91,8 +80,8 @@
     "model": "products.product",
     "fields": {
       "name": "White Protein Shaker",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our protein shakers have gone through multiple iterations to make sure you get the smoothest blend while shaking up your protein.",
+      "price": 20,
       "category": 3,
       "image": "protein-mixer-white-removebg.png"
     }
@@ -102,8 +91,8 @@
     "model": "products.product",
     "fields": {
       "name": "Green Protein Shaker",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our protein shakers have gone through multiple iterations to make sure you get the smoothest blend while shaking up your protein.",
+      "price": 20,
       "category": 3,
       "image": "protein-mixer-removebg.png"
     }
@@ -113,8 +102,8 @@
     "model": "products.product",
     "fields": {
       "name": "Green Sports Bib",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "You will see these being used in all our locations! An easy way to set up for all kind of team sports and events.",
+      "price": 5,
       "category": 4,
       "image": "sports-bib-green-removebg.png"
     }
@@ -124,8 +113,8 @@
     "model": "products.product",
     "fields": {
       "name": "Blue Sports Bib",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "You will see these being used in all our locations! An easy way to set up for all kind of team sports and events.",
+      "price": 5,
       "category": 4,
       "image": "sports-bib-blue-removebg.png"
     }
@@ -135,8 +124,8 @@
     "model": "products.product",
     "fields": {
       "name": "Sports Bag",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Smaller than our backpack, this bag is made to be form fitting and secure for any running, cycling or hiking excursions. With a built in boxter bottle which includes a tube to drink on the go there is nothing slowing you down.",
+      "price": 49.99,
       "category": 2,
       "image": "sports-bag-removebg.png"
     }
@@ -146,7 +135,7 @@
     "model": "products.product",
     "fields": {
       "name": "Green Gym Zen Water Bottle",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
+      "description": "Our metal 1ltr water bottles are dual layered to keep any liquid inside cool for up to 24 hours. Durable and easy to carry we made it so it never has to leave your side.",
       "price": 53.99,
       "category": 3,
       "image": "water-bottle-removebg.png"
@@ -157,8 +146,8 @@
     "model": "products.product",
     "fields": {
       "name": "White Towel",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, error ipsa? Dolor, et magni dolores minus quo cum repellat iste!",
-      "price": 53.99,
+      "description": "Our hybrid fibre towels are extremely absorbent, they don't lose their water retention with age plus they're machine washable! Their resilience has been put to the test so whether it be in the gym or just after a shower you use them they won't let you down.",
+      "price": 21.99,
       "category": 5,
       "image": "white-towel-removebg.png"
     }
