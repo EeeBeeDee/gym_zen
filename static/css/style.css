@@ -634,6 +634,12 @@ body {
   }
 }
 
+.qty-input__add-sub {
+  border: none;
+  background-color: transparent;
+  color: #368F2E;
+}
+
 .classes {
   position: relative;
   background-color: #67DB5C;
