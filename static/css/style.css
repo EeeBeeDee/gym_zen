@@ -634,10 +634,54 @@ body {
   }
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+.qty-input h2 {
+  border: none !important;
+}
+
+.qty-input__number {
+  width: 100%;
+  border: none;
+  border-bottom: 0.3rem solid #d9d9d9;
+  padding: 1rem 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #368F2E;
+  outline: 0;
+}
+
+.qty-input__number:focus {
+  border: none;
+  display: inline-block;
+  box-shadow: 0 0 0 2px #67DB5C;
+  border-radius: 2px;
+}
+
 .qty-input__add-sub {
   border: none;
   background-color: transparent;
-  color: #368F2E;
+  cursor: pointer;
+}
+
+.qty-input__add-sub svg {
+  stroke: #000;
+}
+
+.qty-input__add-sub:hover svg {
+  stroke: #368F2E;
+}
+
+.qty-input__add-sub:active svg {
+  stroke: #67DB5C;
+  transform: scale(0.98);
 }
 
 .classes {
