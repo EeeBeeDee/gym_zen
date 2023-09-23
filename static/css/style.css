@@ -132,6 +132,29 @@ body {
   border: #fff 3px solid;
 }
 
+.btn-rounding {
+  text-decoration: none;
+  padding: 1.4rem 2.3rem;
+  margin: 1rem 2rem;
+  background-color: #368F2E;
+  color: #fff;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  border: 5px solid #368F2E;
+}
+
+@media (min-width: 768px) {
+  .btn-rounding {
+    font-size: 2rem;
+  }
+}
+
+.btn-rounding:hover {
+  background-color: #fff;
+  color: #368F2E;
+  border-radius: 2rem;
+}
+
 .carousel {
   margin: 5rem auto 0;
   padding: 5rem;

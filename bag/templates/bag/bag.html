@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %} 
+
+{% block content %}
+
+<div class="mobile-filler"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="my-5 text-uppercase">Shopping Cart</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+
+            {% else %}
+            <h3 class="mb-5">You have nothing in your cart!</h3>
+            <a href="{% url 'products' %}" class="btn-rounding">
+                <i class="fas fa-chevron-left"></i> Keep Shopping
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
