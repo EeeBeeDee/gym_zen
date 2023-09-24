@@ -708,6 +708,27 @@ input[type=number] {
   transform: scale(0.98);
 }
 
+.qty-input--bag span {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.qty-input--bag .qty-input__number {
+  width: 50%;
+  margin-right: 10rem;
+  margin-bottom: 1rem;
+}
+
+.qty-input--bag .qty-input__add-sub {
+  height: 50%;
+  width: 5rem;
+}
+
+.qty-input--bag .qty-input__add-sub svg {
+  width: 100%;
+  height: 100%;
+}
+
 .classes {
   position: relative;
   background-color: #67DB5C;
