@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 {% load static %} 
+{% load mathfilters %} 
 
 {% block content %}
 
@@ -14,15 +15,26 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-8 p-5">
-            {% if bag_items %}
-                {% for item in bag_items %}
-                    <h2>{{ item.product.price }}</h2>
-                {% endfor %}
-            {% else %}
-            <h3 class="mb-5">You have nothing in your cart!</h3>
-           
-            {% endif %}
+        <div class="col-12 col-lg-8 p-5 bag-items">
+            <div class="row">
+                {% if bag_items %}
+                    {% for item in bag_items %}
+                    <div class="col-12 col-lg-6">
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img src="{{ MEDIA_URL}}{{ item.product.image }}" alt="">
+                        </a>
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <h3>{{ item.product.name }}</h3>
+                        </a>
+                        <h3>QTY: {{ item.quantity }}</h3>
+                        <h3>${{ item.product.price|mul:item.quantity }}</h3>
+                    </div>  
+                    {% endfor %}
+                {% else %}
+                <h3 class="mb-5">You have nothing in your cart!</h3>
+                {% endif %}
+
+            </div>
         </div>
         <div class="col-12 col-lg-4 ms-auto p-5 p-md-0">
             <h2 class="mb-5">GRAND TOTAL AND MEMBERSHIP DISCOUNT</h2>
