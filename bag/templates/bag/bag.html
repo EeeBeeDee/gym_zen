@@ -2,6 +2,11 @@
 {% load static %} 
 {% load mathfilters %} 
 
+{% block extra_js %} 
+<script src="{% static 'js/change_qty.js' %}" defer></script>
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
 {% block content %}
 
 <div class="mobile-filler"></div>
@@ -29,10 +34,10 @@
                         <div class=" qty-input--bag">
                             <span>QTY:</span>
                             <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
-                            <button class="qty-input__add-sub" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                            <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                 {% include 'includes/svg/plus-sign.html' %}
                             </button>
-                            <button class="qty-input__add-sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                            <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                 {% include 'includes/svg/minus-sign.html' %}
                             </button>
                         </div>
