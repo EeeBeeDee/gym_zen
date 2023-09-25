@@ -70,10 +70,12 @@ input[type=number] {
                 width: 50%;
                 margin: 0 auto;
                 margin-bottom: 1rem;
+                text-align: center;
                 
                 @include atLarge {
                     margin: 0;
                     margin-bottom: 1rem;
+                    text-align: left;
                 }
             }
             

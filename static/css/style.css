@@ -718,12 +718,14 @@ input[type=number] {
   width: 50%;
   margin: 0 auto;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
   .qty-input--bag .qty-input__number {
     margin: 0;
     margin-bottom: 1rem;
+    text-align: left;
   }
 }
 
