@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% load static %} 
+{% load mathfilters %} 
+
+{% block content %}
+
+<div class="mobile-filler"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col p-5">
+            <h1 class="my-5 text-uppercase">Shopping Cart</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-8 p-5 bag-items">
+            <div class="row">
+                {% if bag_items %}
+                    {% for item in bag_items %}
+                    <div class="col-12 col-lg-6">
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img src="{{ MEDIA_URL}}{{ item.product.image }}" alt="">
+                        </a>
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <h3 class="mb-0">{{ item.product.name }}</h3>
+                        </a>
+                        <div class=" qty-input--bag">
+                            <span>QTY:</span>
+                            <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
+                            <button class="qty-input__add-sub" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                {% include 'includes/svg/plus-sign.html' %}
+                            </button>
+                            <button class="qty-input__add-sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                {% include 'includes/svg/minus-sign.html' %}
+                            </button>
+                        </div>
+                        <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
+                    </div>  
+                    {% endfor %}
+                {% else %}
+                <h3 class="mb-5">You have nothing in your cart!</h3>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 ms-auto p-5 p-md-0">
+            <h2 class="mb-5">GRAND TOTAL AND MEMBERSHIP DISCOUNT</h2>
+            <h2 class="mb-5">CHECKOUT AND RETURN TO SHOPPING BUTTONS</h2>
+            <a href="{% url 'products' %}" class="btn-rounding m-0">
+                <i class="fas fa-chevron-left"></i> Keep Shopping
+            </a>
+        </div>
+    </div>
+
+    <div style="height: 50vh;"></div>
+</div>
+{% endblock %}

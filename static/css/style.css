@@ -132,6 +132,29 @@ body {
   border: #fff 3px solid;
 }
 
+.btn-rounding {
+  text-decoration: none;
+  padding: 1.4rem 2.3rem;
+  margin: 1rem 2rem;
+  background-color: #368F2E;
+  color: #fff;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  border: 5px solid #368F2E;
+}
+
+@media (min-width: 768px) {
+  .btn-rounding {
+    font-size: 2rem;
+  }
+}
+
+.btn-rounding:hover {
+  background-color: #fff;
+  color: #368F2E;
+  border-radius: 2rem;
+}
+
 .carousel {
   margin: 5rem auto 0;
   padding: 5rem;
@@ -634,6 +657,78 @@ body {
   }
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+.qty-input h2 {
+  border: none !important;
+}
+
+.qty-input__number {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: none;
+  border-bottom: 0.3rem solid #d9d9d9;
+  padding: 1rem 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #368F2E;
+  outline: 0;
+}
+
+.qty-input__number:focus {
+  border: none;
+  display: inline-block;
+  box-shadow: 0 0 0 2px #67DB5C;
+  border-radius: 2px;
+}
+
+.qty-input__add-sub {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.qty-input__add-sub svg {
+  stroke: #000;
+}
+
+.qty-input__add-sub:hover svg {
+  stroke: #368F2E;
+}
+
+.qty-input__add-sub:active svg {
+  stroke: #67DB5C;
+  transform: scale(0.98);
+}
+
+.qty-input--bag span {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.qty-input--bag .qty-input__number {
+  width: 50%;
+  margin-right: 10rem;
+  margin-bottom: 1rem;
+}
+
+.qty-input--bag .qty-input__add-sub {
+  height: 50%;
+  width: 5rem;
+}
+
+.qty-input--bag .qty-input__add-sub svg {
+  width: 100%;
+  height: 100%;
+}
+
 .classes {
   position: relative;
   background-color: #67DB5C;
@@ -991,6 +1086,45 @@ body {
 
 .services p {
   text-align: center;
+}
+
+.bag-items {
+  min-height: 40vh;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  .bag-items {
+    padding: 0;
+  }
+}
+
+.bag-items h2 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-top: 2rem;
+  color: #5a5a5a;
+  padding-top: 3rem;
+  border-top: 0.3rem solid #d9d9d9;
+}
+
+.bag-items img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bag-items a {
+  text-decoration: none;
+}
+
+.bag-items a:hover h3 {
+  color: #000;
+}
+
+.bag-items h3 {
+  color: #5a5a5a;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .index-title {

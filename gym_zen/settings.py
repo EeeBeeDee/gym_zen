@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     'home',
     'products',
+    'bag',
 ]
 
 CLOUDINARY_STORAGE = {
@@ -97,6 +98,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'bag.contexts.bag_contents',
             ],
         },
     },
@@ -165,3 +167,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# EXTRA GLOBAL VARIABLES
+
+ZEN_MEMBERSHIP_DISCOUNT = 15
