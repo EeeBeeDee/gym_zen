@@ -1249,7 +1249,7 @@ input[type=number] {
 
 .detail__recommends {
   min-height: 40vh;
-  margin-top: 12rem;
+  margin-top: 0;
   padding: 0 2rem;
 }
 
