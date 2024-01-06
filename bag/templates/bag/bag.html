@@ -44,14 +44,14 @@
                                         {% include 'includes/svg/minus-sign.html' %}
                                     </button>
                                 </div>
-                                <div class="row">
+                                <div class="row my-4">
                                     <div class="col-6">
-                                        <button type="submit" class="btn-rounding ms-0">
+                                        <button type="submit" class="btn-rounding m-0">
                                             <span class="">Update Cart</span>
                                         </button>    
                                     </div>
                                     <div class="col-6">
-                                        <a href="{% url 'remove_from_bag' item.item_id %}" class="btn-rounding d-block ms-0">
+                                        <a href="{% url 'remove_from_bag' item.item_id %}" class="btn-rounding btn-rounding--warning d-inline-block m-0">
                                             <span class="">Remove Item</span>
                                         </a>    
                                     </div>

@@ -155,6 +155,15 @@ body {
   border-radius: 2rem;
 }
 
+.btn-rounding--warning {
+  background-color: #8F2E30;
+  border: 5px solid #8F2E30;
+}
+
+.btn-rounding--warning:hover {
+  color: #8F2E30;
+}
+
 .carousel {
   margin: 5rem auto 0;
   padding: 5rem;
