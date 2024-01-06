@@ -27,7 +27,7 @@
                     <div class="col-12 col-lg-6 text-center text-lg-start">
                         <div class="mx-auto">
                             <a href="{% url 'product_detail' item.product.id %}">
-                                <img src="{{ MEDIA_URL}}{{ item.product.image }}" alt="">
+                                <img src="{{ MEDIA_BASE_URL }}{{ item.product.image }}" alt="">
                             </a>
                             <a href="{% url 'product_detail' item.product.id %}">
                                 <h3 class="mb-0">{{ item.product.name }}</h3>
