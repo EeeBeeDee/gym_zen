@@ -32,16 +32,32 @@
                             <a href="{% url 'product_detail' item.product.id %}">
                                 <h3 class="mb-0">{{ item.product.name }}</h3>
                             </a>
-                            <div class=" qty-input--bag">
-                                <span>QTY:</span>
-                                <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
-                                <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                    {% include 'includes/svg/plus-sign.html' %}
-                                </button>
-                                <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                    {% include 'includes/svg/minus-sign.html' %}
-                                </button>
-                            </div>
+                            <form class="form" action="{% url 'update_bag' item.item_id %}" method="POST">
+                                {% csrf_token %}
+                                <div class=" qty-input--bag">
+                                    <span>QTY:</span>
+                                    <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
+                                    <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        {% include 'includes/svg/plus-sign.html' %}
+                                    </button>
+                                    <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        {% include 'includes/svg/minus-sign.html' %}
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="submit" class="category-btn ms-0">
+                                            <span class="p-2 mt-2 mx-1">Update Cart</span>
+                                        </button>    
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="" class="category-btn ms-0">
+                                            <span class="p-2 mt-2 mx-1">Remove Item</span>
+                                        </button>    
+                                    </div>
+                                </div>
+                                <!-- <input type="hidden" name="redirect_url" value="{{ request.path }}"> -->
+                            </form>
                             <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
                         </div>
                     </div>  
@@ -61,6 +77,5 @@
         </div>
     </div>
 
-    <div style="height: 50vh;"></div>
 </div>
 {% endblock %}
