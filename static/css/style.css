@@ -1148,29 +1148,6 @@ input[type=number] {
   height: 6rem;
 }
 
-.category-btn {
-  text-decoration: none;
-  padding: 1.4rem 2.3rem;
-  margin: 1rem 2rem;
-  background-color: #368F2E;
-  color: #fff;
-  font-size: 1.6rem;
-  transition: all 0.3s ease;
-  border: 5px solid #368F2E;
-}
-
-@media (min-width: 768px) {
-  .category-btn {
-    font-size: 2rem;
-  }
-}
-
-.category-btn:hover {
-  background-color: #fff;
-  color: #368F2E;
-  border-radius: 2rem;
-}
-
 .merch-title {
   font-size: 3rem;
   letter-spacing: .5rem;

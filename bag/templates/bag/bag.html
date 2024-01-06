@@ -46,14 +46,14 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="category-btn ms-0">
-                                            <span class="p-2 mt-2 mx-1">Update Cart</span>
+                                        <button type="submit" class="btn-rounding ms-0">
+                                            <span class="">Update Cart</span>
                                         </button>    
                                     </div>
                                     <div class="col-6">
-                                        <button type="" class="category-btn ms-0">
-                                            <span class="p-2 mt-2 mx-1">Remove Item</span>
-                                        </button>    
+                                        <a href="{% url 'remove_from_bag' item.item_id %}" class="btn-rounding d-block ms-0">
+                                            <span class="">Remove Item</span>
+                                        </a>    
                                     </div>
                                 </div>
                                 <!-- <input type="hidden" name="redirect_url" value="{{ request.path }}"> -->
