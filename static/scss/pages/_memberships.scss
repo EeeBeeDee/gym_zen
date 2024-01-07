@@ -1,0 +1,32 @@
+.bg-memberships {
+    position: absolute;
+    background: $primary-color-dark;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    min-height: 550px;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        background: linear-gradient(130deg, $primary-color-dark 0%, transparent 99%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+    }
+}
+
+.memberships-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    // mix-blend-mode: luminosity;
+}

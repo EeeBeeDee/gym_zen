@@ -1152,6 +1152,37 @@ input[type=number] {
   background-color: red;
 }
 
+.bg-memberships {
+  position: absolute;
+  background: #368F2E;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  min-height: 550px;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-memberships::after {
+  content: '';
+  background: linear-gradient(130deg, #368F2E 0%, transparent 99%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.memberships-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .mobile-filler {
   background-color: #17421E;
   height: 6rem;
