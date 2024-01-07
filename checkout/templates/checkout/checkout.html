@@ -27,15 +27,20 @@
                 {% if bag_items %}
                     {% for item in bag_items %}
                     <div class="col-12 col-lg-6 text-center text-lg-start">
-                        <div class="mx-auto">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                        <div class="mx-auto mb-5 mb-lg-0 d-flex flex-lg-column">
+                            <a class="w-50 d-lg-none" href="{% url 'product_detail' item.product.id %}">
                                 <img src="{{ MEDIA_BASE_URL }}{{ item.product.image }}" alt="">
                             </a>
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                <h3 class="mb-0">{{ item.product.name }}</h3>
+                            <a class="d-none d-lg-block" href="{% url 'product_detail' item.product.id %}">
+                                <img src="{{ MEDIA_BASE_URL }}{{ item.product.image }}" alt="">
                             </a>
-                            <h3 class="my-2">Quantity: {{ item.quantity }}</h3>
-                            <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
+                            <div class="bag-items__info">
+                                <a href="{% url 'product_detail' item.product.id %}">
+                                    <h3 class="mb-0">{{ item.product.name }}</h3>
+                                </a>
+                                <h3 class="my-2">Quantity: {{ item.quantity }}</h3>
+                                <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
+                            </div>  
                         </div>
                     </div>  
                     {% endfor %}
