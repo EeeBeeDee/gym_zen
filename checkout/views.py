@@ -27,5 +27,11 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             print('Order form is valid')
+    else:
+        order_form = OrderForm()
 
-    return render(request, 'checkout/checkout.html')
+    context = {
+        'order_form': order_form,
+    }
+
+    return render(request, 'checkout/checkout.html', context)
