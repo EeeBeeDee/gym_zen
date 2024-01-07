@@ -18,4 +18,13 @@
         color: $primary-color-dark;
         border-radius: 2rem;
     }
+    
+    &--warning {
+        background-color: $warning-color;
+        border: 5px solid $warning-color;
+    }
+
+    &--warning:hover {
+        color: $warning-color;
+    }
 }

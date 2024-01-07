@@ -11,7 +11,7 @@
 
 <div class="mobile-filler"></div>
 
-    <div class="container">
+    <div class="container p-0">
         <div class="row">
             <ul class="detail__breadcrumb">
                 <a href="{% url 'products' %}">Merch</a>
@@ -23,19 +23,18 @@
         <div class="row my-5">
             <div class="col-12 col-md-6">
                 <div class="detail__img-container">
-                    <img src="{{ MEDIA_URL}}{{ product.image }}"></img>
+                    <img src="{{ MEDIA_BASE_URL }}{{ product.image }}"></img>
                 </div>
             </div>
             <div class="col-12 col-md-6 detail__info">
                 <h1>{{ product.name }}</h1>
                 <h2>${{ product.price }}</h2>
                 <p>{{ product.description }}</p>
-                <!-- ADD FORM TO ADD TO BAG HERE -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
-                        <div class="col-12">
-                            <div class="w-50 qty-input">
+                        <div class="col-6 cl-lg-12 align-self-center">
+                            <div class=" qty-input">
                                 <h2>Quantity:</h2>
                                 <input class="qty-input__number" name="quantity" type="number" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
                                 <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
@@ -47,7 +46,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="category-btn ms-0">
+                            <button type="submit" class="btn-rounding ms-0">
                                 <span class="p-2 mt-2 mx-1">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></span>
                             </button>    
                         </div>
@@ -63,7 +62,7 @@
                 {% for product in recommended_products %}
                 <div class="col-12 col-lg-4">
                     <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ MEDIA_URL}}{{ product.image }}" alt="">
+                        <img src="{{ MEDIA_BASE_URL}}{{ product.image }}" alt="">
                     </a>
                     <a href="{% url 'product_detail' product.id %}">
                         <h3>{{ product.name }}</h3>

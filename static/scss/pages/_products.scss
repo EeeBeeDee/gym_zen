@@ -3,28 +3,6 @@
     height: 6rem;
 }
 
-.category-btn {
-    text-decoration: none;
-    padding: 1.4rem 2.3rem;
-    margin: 1rem 2rem;
-    background-color: $primary-color-dark;
-    color: #fff;
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
-    border: 5px solid $primary-color-dark;
-    
-    @include atMedium {
-        font-size: 2rem;
-        
-    }
-    
-    &:hover {
-        background-color: #fff;
-        color: $primary-color-dark;
-        border-radius: 2rem;
-    }
-}
-
 .merch-title {
     font-size: 3rem;
     letter-spacing: .5rem;

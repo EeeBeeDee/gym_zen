@@ -2,6 +2,11 @@
 {% load static %} 
 {% load mathfilters %} 
 
+{% block extra_js %} 
+<script src="{% static 'js/change_qty.js' %}" defer></script>
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
 {% block content %}
 
 <div class="mobile-filler"></div>
@@ -19,24 +24,42 @@
             <div class="row">
                 {% if bag_items %}
                     {% for item in bag_items %}
-                    <div class="col-12 col-lg-6">
-                        <a href="{% url 'product_detail' item.product.id %}">
-                            <img src="{{ MEDIA_URL}}{{ item.product.image }}" alt="">
-                        </a>
-                        <a href="{% url 'product_detail' item.product.id %}">
-                            <h3 class="mb-0">{{ item.product.name }}</h3>
-                        </a>
-                        <div class=" qty-input--bag">
-                            <span>QTY:</span>
-                            <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
-                            <button class="qty-input__add-sub" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                {% include 'includes/svg/plus-sign.html' %}
-                            </button>
-                            <button class="qty-input__add-sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                {% include 'includes/svg/minus-sign.html' %}
-                            </button>
+                    <div class="col-12 col-lg-6 text-center text-lg-start">
+                        <div class="mx-auto">
+                            <a href="{% url 'product_detail' item.product.id %}">
+                                <img src="{{ MEDIA_BASE_URL }}{{ item.product.image }}" alt="">
+                            </a>
+                            <a href="{% url 'product_detail' item.product.id %}">
+                                <h3 class="mb-0">{{ item.product.name }}</h3>
+                            </a>
+                            <form class="form" action="{% url 'update_bag' item.item_id %}" method="POST">
+                                {% csrf_token %}
+                                <div class=" qty-input--bag">
+                                    <span>QTY:</span>
+                                    <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
+                                    <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        {% include 'includes/svg/plus-sign.html' %}
+                                    </button>
+                                    <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        {% include 'includes/svg/minus-sign.html' %}
+                                    </button>
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-6">
+                                        <button type="submit" class="btn-rounding m-0">
+                                            <span class="">Update Cart</span>
+                                        </button>    
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="{% url 'remove_from_bag' item.item_id %}" class="btn-rounding btn-rounding--warning d-inline-block m-0">
+                                            <span class="">Remove Item</span>
+                                        </a>    
+                                    </div>
+                                </div>
+                                <!-- <input type="hidden" name="redirect_url" value="{{ request.path }}"> -->
+                            </form>
+                            <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
                         </div>
-                        <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
                     </div>  
                     {% endfor %}
                 {% else %}
@@ -54,6 +77,5 @@
         </div>
     </div>
 
-    <div style="height: 50vh;"></div>
 </div>
 {% endblock %}

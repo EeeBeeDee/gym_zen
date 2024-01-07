@@ -21,7 +21,7 @@
                 <a href="{% url 'product_detail' product.id %}">
                     <div class="product-slider__card {% if forloop.counter == 2 %}product-slider__card--active{% endif %}">
                         <div class="product-slider__img ">
-                            <img src="{{ MEDIA_URL }}{{ product.image }}" alt="">
+                            <img src="{{ MEDIA_BASE_URL }}{{ product.image }}" alt="">
                         </div>
                         <div class="product-slider__info">
 
@@ -46,7 +46,7 @@
             {% endif %}
             <div class="col d-flex justify-content-start justify-content-md-center flex-wrap mt-5">
                 {% for category in categories %}
-                <a href="{% url 'products' %}?category={{ category.name }}" class="category-btn">
+                <a href="{% url 'products' %}?category={{ category.name }}" class="btn-rounding ">
                     <span class="p-2 mt-2 mx-1">{{ category.friendly_name }}</span>
                 </a>
                 {% endfor %}
@@ -58,7 +58,7 @@
                 <div class="product-card">
                     <a href="{% url 'product_detail' product.id %}">
                         <div class="product-card__img-container">
-                            <img class="product-card__img" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
+                            <img class="product-card__img" src="{{ MEDIA_BASE_URL }}{{ product.image }}" alt="{{ product.name }}">
                         </div>
                     </a>
                     <div class="product-card__info-box">

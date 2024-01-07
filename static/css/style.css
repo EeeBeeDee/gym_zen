@@ -155,6 +155,15 @@ body {
   border-radius: 2rem;
 }
 
+.btn-rounding--warning {
+  background-color: #8F2E30;
+  border: 5px solid #8F2E30;
+}
+
+.btn-rounding--warning:hover {
+  color: #8F2E30;
+}
+
 .carousel {
   margin: 5rem auto 0;
   padding: 5rem;
@@ -714,14 +723,25 @@ input[type=number] {
 }
 
 .qty-input--bag .qty-input__number {
+  display: block;
   width: 50%;
-  margin-right: 10rem;
+  margin: 0 auto;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .qty-input--bag .qty-input__number {
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
 }
 
 .qty-input--bag .qty-input__add-sub {
   height: 50%;
   width: 5rem;
+  text-align: left;
 }
 
 .qty-input--bag .qty-input__add-sub svg {
@@ -1137,29 +1157,6 @@ input[type=number] {
   height: 6rem;
 }
 
-.category-btn {
-  text-decoration: none;
-  padding: 1.4rem 2.3rem;
-  margin: 1rem 2rem;
-  background-color: #368F2E;
-  color: #fff;
-  font-size: 1.6rem;
-  transition: all 0.3s ease;
-  border: 5px solid #368F2E;
-}
-
-@media (min-width: 768px) {
-  .category-btn {
-    font-size: 2rem;
-  }
-}
-
-.category-btn:hover {
-  background-color: #fff;
-  color: #368F2E;
-  border-radius: 2rem;
-}
-
 .merch-title {
   font-size: 3rem;
   letter-spacing: .5rem;
@@ -1249,7 +1246,7 @@ input[type=number] {
 
 .detail__recommends {
   min-height: 40vh;
-  margin-top: 12rem;
+  margin-top: 0;
   padding: 0 2rem;
 }
 
