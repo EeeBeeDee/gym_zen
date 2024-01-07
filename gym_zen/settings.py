@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+    'checkout'
 ]
 
 CLOUDINARY_STORAGE = {
