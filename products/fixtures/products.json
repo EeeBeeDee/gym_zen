@@ -1,0 +1,155 @@
+[ {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "name": "Gym Zen backpack",
+      "description": "Our Sleek, Stylish backpack has a deceptive amount of space inside, with a separate waterproof section for towels or used gym gear it is perfect not only for the gym but travel or everyday use!",
+      "price": 74.99,
+      "category": 2,
+      "image": "media/backpack-removebg.png"
+    }
+  },
+{
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "name": "Black Towel",
+      "description": "Our hybrid fibre towels are extremely absorbent, they don't lose their water retention with age plus they're machine washable! Their resilience has been put to the test so whether it be in the gym or just after a shower you use them they won't let you down.",
+      "price": 21.99,
+      "category": 5,
+      "image": "media/black-towel-removebg.png"
+    }
+  },
+{
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "name": "boxter-bottle",
+      "description": "Capable of holding 1ltr of liquid, our boxter bottles are great way to fit some liquid into an already packed bag!",
+      "price": 9.99,
+      "category": 3,
+      "image": "media/boxter-bottle-removebg.png"
+    }
+  },
+{
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Baseball Cap",
+      "description": "Our caps are made from sweat resistant material which is also machine washable. Allow yourself some great looking comfort while you exersise in the sun.",
+      "price": 25,
+      "category": 1,
+      "image": "media/cap-green-removebg.png"
+    }
+  },
+{
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "name": "White Baseball Cap",
+      "description": "Our caps are made from sweat resistant material which is also machine washable. Allow yourself some great looking comfort while you exersise in the sun.",
+      "price": 25,
+      "category": 1,
+      "image": "media/cap-white-removebg.png"
+    }
+  },
+{
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "name": "Duffle Bag",
+      "description": "Designed to fit everything you could possibly need into it, our gym duffle bags give you the space to bring a portable gym with you everywhere!",
+      "price": 85,
+      "category": 2,
+      "image": "media/duffle-bag-removebg.png"
+    }
+  },
+{
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "name": "Black Gym Zen Beanie",
+      "description": "The sweat resistant fibers give under armour a run for their money while keeping you toasty on a winter run, healthier for the wallet too!",
+      "price": 25,
+      "category": 1,
+      "image": "media/hat-black-removebg.png"
+    }
+  },
+{
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "name": "White Protein Shaker",
+      "description": "Our protein shakers have gone through multiple iterations to make sure you get the smoothest blend while shaking up your protein.",
+      "price": 20,
+      "category": 3,
+      "image": "media/protein-mixer-white-removebg.png"
+    }
+  },
+{
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Protein Shaker",
+      "description": "Our protein shakers have gone through multiple iterations to make sure you get the smoothest blend while shaking up your protein.",
+      "price": 20,
+      "category": 3,
+      "image": "media/protein-mixer-removebg.png"
+    }
+  },
+{
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Sports Bib",
+      "description": "You will see these being used in all our locations! An easy way to set up for all kind of team sports and events.",
+      "price": 5,
+      "category": 4,
+      "image": "media/sports-bib-green-removebg.png"
+    }
+  },
+{
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "name": "Blue Sports Bib",
+      "description": "You will see these being used in all our locations! An easy way to set up for all kind of team sports and events.",
+      "price": 5,
+      "category": 4,
+      "image": "media/sports-bib-blue-removebg.png"
+    }
+  },
+{
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "name": "Sports Bag",
+      "description": "Smaller than our backpack, this bag is made to be form fitting and secure for any running, cycling or hiking excursions. With a built in boxter bottle which includes a tube to drink on the go there is nothing slowing you down.",
+      "price": 49.99,
+      "category": 2,
+      "image": "media/sports-bag-removebg.png"
+    }
+  },
+{
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "name": "Green Gym Zen Water Bottle",
+      "description": "Our metal 1ltr water bottles are dual layered to keep any liquid inside cool for up to 24 hours. Durable and easy to carry we made it so it never has to leave your side.",
+      "price": 53.99,
+      "category": 3,
+      "image": "media/water-bottle-removebg.png"
+    }
+  },
+{
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "name": "White Towel",
+      "description": "Our hybrid fibre towels are extremely absorbent, they don't lose their water retention with age plus they're machine washable! Their resilience has been put to the test so whether it be in the gym or just after a shower you use them they won't let you down.",
+      "price": 21.99,
+      "category": 5,
+      "image": "media/white-towel-removebg.png"
+    }
+  }
+]

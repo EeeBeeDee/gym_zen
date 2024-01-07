@@ -1,0 +1,42 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "headwear",
+        "friendly_name": "Headwear"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "bags",
+        "friendly_name": "Bags"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "shakers",
+        "friendly_name": "Shakers & Bottles"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "sportwear",
+        "friendly_name": "Sportwear"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "essentials",
+        "friendly_name": "Essentials"
+      }
+    }
+  ]

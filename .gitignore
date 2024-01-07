@@ -2,10 +2,14 @@ core.Microsoft*
 core.mongo*
 core.python*
 env.py
+gym_zen/__pycache__/
+**/__pycache__/*
+**/__pycache__/
 __pycache__/
 *.py[cod]
 node_modules/
 .github/
 cloudinary_python.txt
+db.sqlite3
 *.sqlite3
 *.pyc

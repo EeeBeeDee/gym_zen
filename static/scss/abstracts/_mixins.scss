@@ -22,4 +22,10 @@
     }
   }
 
+  @mixin atXXLarge {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+
   
