@@ -30,3 +30,41 @@
     object-fit: cover;
     // mix-blend-mode: luminosity;
 }
+
+.memberships {
+
+    margin: 10rem 0;
+    &__info {
+        z-index: -1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-right: -3rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 5rem;
+
+        & h3 {
+            // display: block;
+            width: 100%;
+            text-align: center;
+            color: #67DB5C;
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            margin: 0;
+            margin-top: 5rem;
+            padding: 1rem 0;
+            background-color: $grey-color-dark;
+        }
+
+        & h2 {
+            font-size: 4.8rem;
+            margin: 0;
+        }
+
+        & p {
+            width: 70%;
+            margin: 2rem 0;
+            font-size: 1.6rem;
+            text-align: center;
+
+        }
+    }
+}
