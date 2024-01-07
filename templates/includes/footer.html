@@ -21,11 +21,9 @@
             <div class="d-none d-lg-flex flex-column col-3 p-5">
                 <span class="pb-3 fs-2">Hottest Merch</span>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Merch</a></li>
-                    <li><a href="#">Membership</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    {% for product in recommended_product %}
+                        <li><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-12 col-md-6 p-5">

@@ -100,6 +100,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
                 'products.contexts.media_base_url',
+                'products.contexts.recommended_product',
             ],
         },
     },
