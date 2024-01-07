@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_sass',
     'mathfilters',
+    'crispy_forms',
 
 
     'home',
@@ -103,6 +104,10 @@ TEMPLATES = [
                 'products.contexts.media_base_url',
                 'products.contexts.recommended_product',
             ],
+             'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
