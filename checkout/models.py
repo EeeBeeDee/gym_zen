@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from django.db.models import Sum
 from products.models import Product
 
 
@@ -15,6 +16,15 @@ class Order(models.Model):
     country = models.CharField(max_length=40, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+
+    def update_grand_total(self):
+        """
+        Update grand total when lineitems are changed after order is saved through form
+        """
+
+        self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.save()
+
 
     def __str__(self):
         order_string = str(self.order_number)
