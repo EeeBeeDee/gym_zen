@@ -62,23 +62,23 @@ body {
 }
 
 .primary-color-dark {
-  color: #368F2E;
+  color: #368F2E !important;
 }
 
 .primary-color-darker {
-  color: #17421E;
+  color: #17421E !important;
 }
 
 .primary-bg {
-  background-color: #67DB5C;
+  background-color: #67DB5C !important;
 }
 
 .primary-bg-dark {
-  background-color: #368F2E;
+  background-color: #368F2E !important;
 }
 
 .primary-bg-darker {
-  background-color: #17421E;
+  background-color: #17421E !important;
 }
 
 .bg-video {
