@@ -19,7 +19,7 @@ class Order(models.Model):
 
     def update_grand_total(self):
         """
-        Update grand total when lineitems are changed after order is saved through form
+        Update grand total when lineitems are changed after order is saved through form. Creates a query set of all line items in the order, then uses the aggregate method to sum the lineitem_total field of each line item.
         """
 
         self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
