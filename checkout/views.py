@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.contrib import messages
 from django.conf import settings
 
@@ -46,6 +47,11 @@ def checkout(request):
                 order_line_item.save()
                 print("Checkout Success!")
     else:
+        bag = request.session.get('bag', {})
+        if not bag:
+            messages.error(request, "Your bag is empty at the moment!")
+            return redirect(reverse('products'))
+
         order_form = OrderForm()
 
     context = {
