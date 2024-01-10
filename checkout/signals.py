@@ -17,4 +17,4 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Uses the same method as above, now listening for the post_delete signal.
     """
-    instance.order.update_total()
+    instance.order.update_grand_total()
