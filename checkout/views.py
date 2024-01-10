@@ -1,7 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from django.conf import settings
 
+import os
 from .forms import OrderForm
-from .models import Order
+from .models import Order, OrderLineItem
+from products.models import Product
+
+import stripe
+import json
 
 # Create your views here.
 
@@ -10,6 +17,8 @@ def checkout(request):
     A view to return the checkout page when GET request is made,
     and process the order when POST request is made.
     """
+    stripe_public_key = os.environ.get('STRIPE_PUBLIC_KEY')
+    stripe_secret_key = os.environ.get('STRIPE_SECRET_KEY')
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
@@ -26,7 +35,16 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            print('Order form is valid')
+            order = order_form.save()
+            for item_id, item_data in bag.items():
+                product = Product.objects.get(id=item_id)
+                order_line_item = OrderLineItem(
+                    order=order,
+                    product=product,
+                    quantity=item_data,
+                )
+                order_line_item.save()
+                print("Checkout Success!")
     else:
         order_form = OrderForm()
 
