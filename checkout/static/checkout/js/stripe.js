@@ -25,6 +25,23 @@ let style = {
 let card = elements.create('card', {hidePostalCode: true, style: style})
 card.mount('#card-element')
 
+// Create realtime error handling on the card element
+
+card.addEventListener('change', function (e) {
+    let errorDiv = document.getElementById('card-errors')
+    if (e.error) {
+        let html = `
+        <span class="icon" role="alert">
+            <i class="fas fa-times"></i>
+        </span>
+        <span>${e.error.message}</span>
+        `
+        errorDiv.innerHTML = html
+    } else {
+        errorDiv.textContent = ''
+    }
+})
+
 // Change default form submit behaviour
 
 let form = document.getElementById('payment-form')
