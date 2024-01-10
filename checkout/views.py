@@ -46,7 +46,6 @@ def checkout(request):
                     quantity=item_data,
                 )
                 order_line_item.save()
-                print("Checkout Success!")
     else:
         bag = request.session.get('bag', {})
         if not bag:

@@ -48,7 +48,56 @@ let form = document.getElementById('payment-form')
 
 form.addEventListener('submit', function(e) {
     e.preventDefault()
+    card.update({'disabled': true})
+    let submitBtn = document.getElementById('submit-button')
+    submitBtn.disabled = true
+    submitBtn.classList.add('loading')
+    
 
-    // Grab the cs
+
+    // Grab the csrf token
     let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+    let postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+    }
+
+    let url = '/checkout/cache_checkout_data/'
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+    }).done(function() {
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: form.full_name.value.trim(),
+                }
+            }
+        })
+    }).then((result) => {
+        if (result.error) {
+            let errorDiv = document.getElementById('card-errors')
+            let html = `
+            <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${result.error.message}</span>
+            `
+            errorDiv.innerHTML = html
+            card.update({'disabled': false})
+            submitBtn.disabled = false
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit()
+            }
+        }
+    })
+
+    
 })
+
