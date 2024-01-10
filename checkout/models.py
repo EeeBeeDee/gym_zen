@@ -3,10 +3,6 @@ from django.db import models
 from django.db.models import Sum
 from products.models import Product
 
-import logging
-
-logger = logging.getLogger(__name__)
-
 
 class Order(models.Model):
     order_number = models.UUIDField(default=uuid.uuid4, editable=False)
@@ -26,12 +22,9 @@ class Order(models.Model):
         Update grand total when lineitems are changed after order is saved through form. Creates a query set of all line items in the order, then uses the aggregate method to sum the lineitem_total field of each line item.
         """
 
-        try:
-            self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-            self.save()
-            print("Grand total updated successfully")
-        except Exception as e:
-            logger.exception("Error updating grand total for order %s: %s", self.order_number, e)
+        self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.save()
+
 
     def __str__(self):
         order_string = str(self.order_number)
