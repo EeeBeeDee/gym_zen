@@ -93,6 +93,7 @@ form.addEventListener('submit', function(e) {
             submitBtn.disabled = false
         } else {
             if (result.paymentIntent.status === 'succeeded') {
+                console.log("hello")
                 form.submit()
             }
         }
