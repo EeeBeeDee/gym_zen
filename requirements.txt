@@ -6,8 +6,7 @@ psycopg2==2.9.1
 psycopg2-binary==2.9.6
 gunicorn==20.1.0
 dj3-cloudinary-storage==0.0.6
-allauth==0.45.0
-django-crispy-forms==1.12.0
+django-allauth==0.54.0
 django-countries==7.2.1
 django-storages==1.11.1
 django-profiles==0.2
