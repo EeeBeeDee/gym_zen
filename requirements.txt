@@ -1,5 +1,4 @@
 cloudinary==1.32.0
 dj_database_url==0.5.0
 Django==3.2.18
-Django==3.2.12
 stripe==5.4.0
