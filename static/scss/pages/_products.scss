@@ -1,0 +1,14 @@
+.mobile-filler {
+    background-color: $primary-color-darker;
+    height: 6rem;
+}
+
+.merch-title {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+
+    @include atMedium {
+        font-size: 5rem;
+
+    }
+}

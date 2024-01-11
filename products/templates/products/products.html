@@ -1,8 +1,107 @@
 {% extends 'base.html'%}
 {% load static %} 
+{% load mathfilters %} 
+{% load humanize %} 
+
+
+{% block extra_js %} 
+<script src="{% static 'js/change_qty.js' %}" defer></script>
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
 
 {% block content %}
 
-<h1>hi</h1>
+<div class="d-md-none mobile-filler"></div>
 
-{% endblock %}
+<div class="product-slider__bg d-none d-md-block">
+    <div class="container h-100">
+        <div class="product-slider__container h-100">
+            <div class="product-slider">
+                {% for product in slideshow_products %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <div class="product-slider__card {% if forloop.counter == 2 %}product-slider__card--active{% endif %}">
+                        <div class="product-slider__img ">
+                            <img src="{{ MEDIA_BASE_URL }}{{ product.image }}" alt="">
+                        </div>
+                        <div class="product-slider__info">
+
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="product-slider__featured text-center">
+                <h2>Checkout our f<span class="neon">eatur</span>ed gear here!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        
+        <div class="row">
+            {% if merch_heading %}
+            <div class="col-12 text-center mt-5">
+                <h2 class="merch-title">All Merchandise</h2>
+            </div>
+            {% endif %}
+            <div class="col d-flex justify-content-start justify-content-md-center flex-wrap mt-5">
+                {% for category in categories %}
+                <a href="{% url 'products' %}?category={{ category.name }}" class="btn-rounding ">
+                    <span class="p-2 mt-2 mx-1">{{ category.friendly_name }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row my-5 px-5">
+            {% for product in products %}
+            <div class=" col-12 col-lg-6 col-xxl-4 my-5">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <div class="product-card__img-container">
+                            <img class="product-card__img" src="{{ MEDIA_BASE_URL }}{{ product.image }}" alt="{{ product.name }}">
+                        </div>
+                    </a>
+                    <div class="product-card__info-box">
+                        {% if product.category %}
+                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="product-card__category-btn mx-auto">
+                            {{ product.category.friendly_name }}
+                        </a>
+                        {% endif %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <h1 class="product-card__title">{{ product.name }}</h1>
+
+                        </a>
+                        <hr>
+                        <div class="row mb-5">
+                            <div class="col-12 text-center col-sm-4">
+                                <span class="product-card__price product-card__price--strikeout">${{ product.price }}</span>
+                            </div>
+                            <div class=" d-none d-sm-block col-4">
+                                <div class="product-card__membership">
+                                    <span>
+                                        With ZEN:
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block text-center col-4">
+                                <span class="product-card__price">${{ product.price|mul:0.85|floatformat:2 }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card__bottom-row mt-auto">
+                        <button class="product-card__add-to-cart">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="product-card__buy-now">
+                            Buy Now   <i class="fa-solid fa-bag-shopping"></i>   
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {%  endfor %}
+        </div>
+    </div>
+        
+        
+        
+        {% endblock %}
+        
+        
