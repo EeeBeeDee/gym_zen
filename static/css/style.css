@@ -62,23 +62,23 @@ body {
 }
 
 .primary-color-dark {
-  color: #368F2E;
+  color: #368F2E !important;
 }
 
 .primary-color-darker {
-  color: #17421E;
+  color: #17421E !important;
 }
 
 .primary-bg {
-  background-color: #67DB5C;
+  background-color: #67DB5C !important;
 }
 
 .primary-bg-dark {
-  background-color: #368F2E;
+  background-color: #368F2E !important;
 }
 
 .primary-bg-darker {
-  background-color: #17421E;
+  background-color: #17421E !important;
 }
 
 .bg-video {
@@ -1143,8 +1143,12 @@ input[type=number] {
 
 .bag-items h3 {
   color: #5a5a5a;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+.bag-items__info {
+  text-align: left;
 }
 
 .index-title {

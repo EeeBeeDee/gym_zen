@@ -30,7 +30,11 @@
 
     & h3 {
         color: $grey-color-dark;
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
+    }
+
+    &__info {
+        text-align: left;
     }
 }

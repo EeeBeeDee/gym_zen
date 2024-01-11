@@ -24,8 +24,10 @@ def bag_contents(request):
         })
 
     # if user.is_member we want to take 15% off bag total
-
-
+    # if request.user.is_authenticated:
+    #     user = User.objects.get(email=request.user.email)
+    #     if user.is_member:
+    #         total = total * Decimal(settings.ZEN_MEMBERSHIP_DISCOUNT / 100)
     context = {
         'bag_items': bag_items,
         'total': total,

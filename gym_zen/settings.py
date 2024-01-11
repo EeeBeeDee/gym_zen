@@ -50,11 +50,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_sass',
     'mathfilters',
+    'crispy_forms',
 
 
     'home',
     'products',
     'bag',
+    'checkout'
 ]
 
 CLOUDINARY_STORAGE = {
@@ -102,6 +104,10 @@ TEMPLATES = [
                 'products.contexts.media_base_url',
                 'products.contexts.recommended_product',
             ],
+             'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -175,3 +181,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EXTRA GLOBAL VARIABLES
 
 ZEN_MEMBERSHIP_DISCOUNT = 15
+
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
