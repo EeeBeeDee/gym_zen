@@ -13,9 +13,6 @@ def recommended_product(request):
     """
     Return recommended products
     """
-    recommended_product = [
-        get_object_or_404(Product, pk=random.randint(1, 5)),
-        get_object_or_404(Product, pk=random.randint(6, 10)),
-        get_object_or_404(Product, pk=random.randint(11, 15)),
-    ]
+    products = list(Product.objects.all())
+    recommended_product = random.sample(products, 3)
     return {'recommended_product': recommended_product}
