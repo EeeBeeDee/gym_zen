@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import WorkoutClass
 
 def index(request):
     """
@@ -13,5 +13,8 @@ def memberships(request):
     """
     View that renders the membership page
     """
+    workout_classes = WorkoutClass.objects.all()
 
-    return render(request, 'home/memberships.html')
+    context = {'workout_classes': workout_classes}
+
+    return render(request, 'home/memberships.html', context)
