@@ -18,8 +18,8 @@ class WorkoutClassAdmin(admin.ModelAdmin):
 class QuoteAdmin(admin.ModelAdmin):
     model = Quote
     list_display = (
-        'quote',
         'origin',
+        'created_at'
     )
 
     ordering = ('created_at',)

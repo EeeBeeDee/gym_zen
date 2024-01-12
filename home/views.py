@@ -1,12 +1,18 @@
 from django.shortcuts import render
-from .models import WorkoutClass
+import random
+
+from .models import WorkoutClass, Quote
 
 def index(request):
     """
     View that renders the index/home page
     """
+    quotes = Quote.objects.all()
+    random_quote = random.sample(quotes, 1)
 
-    return render(request, 'home/index.html')
+    context = {'random_quote': random_quote}
+
+    return render(request, 'home/index.html', context)
 
 
 def memberships(request):
