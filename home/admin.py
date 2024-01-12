@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import WorkoutClass
+from .models import WorkoutClass, Quote
 
 
 @admin.register(WorkoutClass)
@@ -14,4 +14,12 @@ class WorkoutClassAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+@admin.register(Quote)
+class QuoteAdmin(admin.ModelAdmin):
+    model = Quote
+    list_display = (
+        'quote',
+        'origin',
+    )
 
+    ordering = ('created_at',)

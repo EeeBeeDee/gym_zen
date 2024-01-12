@@ -11,3 +11,11 @@ class WorkoutClass(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Quote(models.Model):
+    quote = models.TextField(max_length=200)
+    origin = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
