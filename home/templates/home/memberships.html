@@ -18,12 +18,17 @@
 
 <section class="memberships">
     <div class="container">
+        {% for class in workout_classes %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="row flex-column-reverse flex-lg-row-reverse">
+        {% else %}
         <div class="row flex-column-reverse flex-lg-row">
+        {% endif %}
             <div class="col-7">
                 <div class="memberships__info d-flex flex-column h-100  align-items-center">
-                    <h3>easy, affordable, reliable</h3>
-                    <h2 class="primary-color-darker">ZEN Membership</h2>
-                    <p>GYM ZEN offers 1 simple membership solution and doesn't lock anything out behind confusing and more expensive tiers of membership. Giving you access to all 3 of our locations in dublin, access to every and all classes and 15% off all, we want to keep your mind focused on your health and give you that piece of mind.</p>
+                    <h3>{{ class.tagline }}</h3>
+                    <h2 class="primary-color-darker">{{ class.name }}</h2>
+                    <p>{{ class.description }}</p>
                 </div>
             </div>
             <div class="col-5">
@@ -32,6 +37,7 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </section>
 
