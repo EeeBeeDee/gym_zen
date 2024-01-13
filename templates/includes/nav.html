@@ -7,16 +7,25 @@
                 <img class="navbar-items__logo-img" src="{% static 'media/alpha-logo-no-mark.png' %}" alt="Company logo">
             </a>
         </div>
-        <button class="navbar-toggler me-5 " type="button" id="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars primary-color fs-1"></i>
-        </button>
+        <div class="navbar__buttons">
+            <a href="{% url 'bag' %}" class="navbar-toggler" type="button" id="" aria-expanded="false" aria-label="open bag">
+                <i class="fa-solid fa-cart-shopping primary-color fs-1"></i>
+                {% if bag_items|length > 0 %}
+                <span class="">{{ bag_items|length }}</span>
+                {% endif %}
+            </a>
+            <button class="navbar-toggler me-5 " type="button" id="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars primary-color fs-1"></i>
+            </button>
+
+        </div>
     </div>
 </div>
 
 <a href="#" class="nav__close" id="nav-close-btn">
     <i class="fas fa-times"></i>
 </a>
-<nav id="nav" class="nav hide">
+<nav id="nav" class="nav animate hide">
     <a href="{% url 'home' %}" class="nav__link">
         <span>Home</span>
         <img class="nav__img" src="https://source.unsplash.com/sHfo3WOgGTU" alt="">
