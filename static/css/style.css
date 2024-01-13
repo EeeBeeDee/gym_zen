@@ -95,6 +95,15 @@ body {
   object-position: center;
 }
 
+.my-6rem {
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
+}
+
+.page-header {
+  font-size: 5.4rem;
+}
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -180,10 +189,16 @@ body {
 
 .carousel {
   margin: 5rem auto 0;
-  padding: 5rem;
+  padding: 0;
   position: relative;
   width: 100vw;
   z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    padding: 5rem;
+  }
 }
 
 .carousel::before {
@@ -200,12 +215,17 @@ body {
 .carousel__container {
   position: relative;
   height: 60vh;
-  width: 80vw;
   max-width: 132rem;
   display: flex;
   overflow-x: hidden;
   margin: 0 auto;
   border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .carousel__container {
+    width: 80vw;
+  }
 }
 
 .carousel ul {
@@ -217,6 +237,7 @@ body {
 
 .carousel img {
   min-width: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center center;
 }
@@ -259,9 +280,9 @@ body {
 .carousel__info {
   display: block;
   width: 100%;
-  height: 8rem;
+  height: 15rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   right: 0;
   text-align: right;
   overflow: hidden;
@@ -271,12 +292,18 @@ body {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .carousel__info {
+    height: 12rem;
+  }
+}
+
 .carousel__blurb {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   text-align: right;
   transform: translateY(100%);
@@ -286,6 +313,26 @@ body {
 
 .carousel__blurb.active {
   transform: translateY(0%);
+}
+
+.carousel__blurb h3 {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .carousel__blurb h3 {
+    font-size: 2.5rem;
+  }
+}
+
+.carousel__blurb p {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .carousel__blurb p {
+    font-size: 1.4rem;
+  }
 }
 
 .dot-elastic {
@@ -454,7 +501,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #000;
-  margin: 0 5rem;
+  margin: 0;
   padding: 1rem 5rem;
   border-radius: 2rem 5rem;
   opacity: 1;
@@ -463,9 +510,31 @@ body {
   z-index: 10;
 }
 
+@media (min-width: 768px) {
+  .index-info__box {
+    margin: 0 5rem;
+  }
+}
+
 .index-info__box h2 {
   font-size: calc(1.325rem + .9vw);
   font-weight: 500;
+}
+
+.index-info__box h3 {
+  color: #67DB5C;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin: 0;
+  align-self: flex-end;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .index-info__box h3 {
+    padding-right: 10rem;
+    font-size: 3rem;
+  }
 }
 
 .index-info__grid {
@@ -965,7 +1034,7 @@ input[type=number] {
 }
 
 .footer__social-icon {
-  margin: 0 2rem;
+  margin: 0 1rem;
   border: 1px solid #d9d9d9;
   padding: 1.5rem;
   border-radius: 50%;
@@ -993,6 +1062,25 @@ input[type=number] {
   padding: 0;
   margin: 0;
   z-index: 100;
+}
+
+.navbar__buttons a {
+  position: relative;
+}
+
+.navbar__buttons a span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  position: absolute;
+  top: 1rem;
+  right: .5rem;
+  color: #67DB5C;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .navbar-dark {
@@ -1037,13 +1125,21 @@ input[type=number] {
   background-color: #000;
   padding: clamp(1rem, 5vw, 6rem);
   z-index: 1000;
-  height: 1vh;
   transform: scale(1);
   transition: all .8s;
+  height: 150vh;
 }
 
-.nav.animate {
-  animation: 1s grow ease forwards;
+@media (min-width: 992px) {
+  .nav {
+    height: 1vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav.animate {
+    animation: 1s grow ease forwards;
+  }
 }
 
 @keyframes grow {
@@ -1055,8 +1151,6 @@ input[type=number] {
 
 .nav.hide {
   display: none;
-  transform: scale(0);
-  height: 0rem;
 }
 
 .nav__close {
@@ -1086,8 +1180,10 @@ input[type=number] {
   transition: all 0.1s ease-in-out;
 }
 
-.nav__link:first-child {
-  margin-top: 40vh;
+@media (min-width: 992px) {
+  .nav__link:first-child {
+    margin-top: 40vh;
+  }
 }
 
 .nav__link > span {
@@ -1302,6 +1398,15 @@ input[type=number] {
   margin-right: -3rem;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 5rem;
+}
+
+.memberships__info--reverse {
+  margin-right: 0;
+  margin-left: -3rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .memberships__info h3 {

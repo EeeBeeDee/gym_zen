@@ -41,6 +41,15 @@
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 5rem;
 
+        &--reverse {
+            margin-right: 0;
+            margin-left: -3rem;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 5rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
         & h3 {
             // display: block;
             width: 100%;
