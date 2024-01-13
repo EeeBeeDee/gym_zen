@@ -32,4 +32,4 @@ class SlideAdmin(admin.ModelAdmin):
         'description',
     )
 
-    ordering = ('id')
+    ordering = ('id',)

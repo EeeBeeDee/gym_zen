@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import random
 
-from .models import WorkoutClass, Quote
+from .models import WorkoutClass, Quote, Slide
 
 def index(request):
     """
@@ -10,7 +10,9 @@ def index(request):
     quotes = Quote.objects.all()
     random_quote = quotes.order_by('?').first()
 
-    context = {'random_quote': random_quote}
+    slides = Slide.objects.all()
+
+    context = {'random_quote': random_quote, 'slides': slides}
 
     return render(request, 'home/index.html', context)
 
