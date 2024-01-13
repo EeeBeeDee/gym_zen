@@ -100,11 +100,9 @@
     <div class="carousel__container" id="carousel">
 
         <ul class="d-flex" id="carousel-flex">
-            <img src="https://source.unsplash.com/random" id="slide-image" alt="">
-            <img src="https://source.unsplash.com/random/?water" alt="" id="slide-image">
-            <img src="https://source.unsplash.com/random/?flower" alt="" id="slide-image">
-            <img src="https://source.unsplash.com/random/?car" alt="" id="slide-image">
-            <img src="https://source.unsplash.com/random/?sky" alt="" id="slide-image">
+            {% for slide in slides %}
+            <img src="{{ MEDIA_BASE_URL }}{{ slide.image }}" id="slide-image" alt="">
+            {% endfor %}
         </ul>
         <div class="carousel__nav-btn carousel__nav-btn--left" id="carousel-left">
             <i class="fas fa-chevron-left"></i>
@@ -114,26 +112,16 @@
         </div>
 
         <div class="carousel__info">
+            {% for slide in slides %}
+            {% if forloop.first %}
             <div class="carousel__blurb active">
-                <h3>BLAH BLAH</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
-            </div>
+            {% else %}
             <div class="carousel__blurb">
-                <h3>BLAH BLAH 222</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
+            {% endif %}
+                <h3>{{ slide.heading }}</h3>
+                <p>{{ slide.description }}</p>
             </div>
-            <div class="carousel__blurb">
-                <h3>BLAH BLAH 333</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
-            </div>
-            <div class="carousel__blurb">
-                <h3>BLAH BLAH 444</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
-            </div>
-            <div class="carousel__blurb">
-                <h3>BLAH BLAH 555</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolor possimus asperiores, quo dolorum dicta unde voluptate ratione tempora!</p>
-            </div>
+            {% endfor %}
         </div>
         
     </div>
