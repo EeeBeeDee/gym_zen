@@ -15,11 +15,8 @@ def all_products(request):
 
     products = Product.objects.all()
     categories = Category.objects.all()
-    slideshow_products = [
-        get_object_or_404(Product, pk=random.randint(1, 5)),
-        get_object_or_404(Product, pk=random.randint(6, 10)),
-        get_object_or_404(Product, pk=random.randint(11, 15)),
-    ]
+    products_list = list(products)
+    slideshow_products = random.sample(products_list, 3)
     merch_heading = ''
 
     if 'category' in request.GET:
@@ -43,11 +40,9 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
-    recommended_products = [
-        get_object_or_404(Product, pk=random.randint(1, 5)),
-        get_object_or_404(Product, pk=random.randint(6, 10)),
-        get_object_or_404(Product, pk=random.randint(11, 15)),
-    ]
+
+    products = list(Product.objects.all())
+    recommended_products = random.sample(products, 3)
 
     context = {
         'product': product,
