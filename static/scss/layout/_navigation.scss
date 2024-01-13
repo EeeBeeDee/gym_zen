@@ -79,12 +79,18 @@
     background-color: #000;
     padding: clamp(1rem, 5vw, 6rem);
     z-index: 1000;
-    height: 1vh;
     transform: scale(1);
     transition: all .8s;
-    
+    height: 150vh;
+
+    @include atLarge {
+        height: 1vh;
+    }
     &.animate {
-        animation: 1s grow ease forwards;
+
+        @include atLarge {
+            animation: 1s grow ease forwards;
+        }
     }
 
     @keyframes grow {
@@ -97,8 +103,8 @@
     
     &.hide{
         display: none;
-        transform: scale(0);
-        height: 0rem;
+        // transform: scale(0);
+        // height: 0rem;
     }
 
     &__close {
@@ -131,7 +137,10 @@
         transition: all 0.1s ease-in-out;
 
         &:first-child {
-            margin-top: 40vh;
+
+            @include atLarge {
+                margin-top: 40vh;
+            }
         }
         
         & > span {

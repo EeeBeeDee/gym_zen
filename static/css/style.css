@@ -1082,13 +1082,21 @@ input[type=number] {
   background-color: #000;
   padding: clamp(1rem, 5vw, 6rem);
   z-index: 1000;
-  height: 1vh;
   transform: scale(1);
   transition: all .8s;
+  height: 150vh;
 }
 
-.nav.animate {
-  animation: 1s grow ease forwards;
+@media (min-width: 992px) {
+  .nav {
+    height: 1vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav.animate {
+    animation: 1s grow ease forwards;
+  }
 }
 
 @keyframes grow {
@@ -1100,8 +1108,6 @@ input[type=number] {
 
 .nav.hide {
   display: none;
-  transform: scale(0);
-  height: 0rem;
 }
 
 .nav__close {
@@ -1131,8 +1137,10 @@ input[type=number] {
   transition: all 0.1s ease-in-out;
 }
 
-.nav__link:first-child {
-  margin-top: 40vh;
+@media (min-width: 992px) {
+  .nav__link:first-child {
+    margin-top: 40vh;
+  }
 }
 
 .nav__link > span {
