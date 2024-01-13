@@ -8,7 +8,7 @@ def index(request):
     View that renders the index/home page
     """
     quotes = Quote.objects.all()
-    random_quote = random.sample(quotes, 1)
+    random_quote = quotes.order_by('?').first()
 
     context = {'random_quote': random_quote}
 

@@ -477,6 +477,15 @@ body {
   font-weight: 500;
 }
 
+.index-info__box h3 {
+  color: #67DB5C;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0;
+  align-self: flex-end;
+  padding-right: 10rem;
+}
+
 .index-info__grid {
   width: 15rem;
   height: 40rem;
