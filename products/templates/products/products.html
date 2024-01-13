@@ -72,27 +72,27 @@
 
                         </a>
                         <hr>
-                        <div class="row mb-5">
-                            <div class="col-12 text-center col-sm-4">
-                                <span class="product-card__price product-card__price--strikeout">${{ product.price }}</span>
-                            </div>
-                            <div class=" d-none d-sm-block col-4">
-                                <div class="product-card__membership">
-                                    <span>
-                                        With ZEN:
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="d-none d-sm-block text-center col-4">
-                                <span class="product-card__price">${{ product.price|mul:0.85|floatformat:2 }}</span>
+                        <div class="row mb-3 ">
+                            <div class="col-12 text-center">
+                                <span class="product-card__price">${{ product.price }}</span>
                             </div>
                         </div>
                     </div>
                     <div class="product-card__bottom-row mt-auto">
-                        <button class="product-card__add-to-cart">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></button>
-                        <button class="product-card__buy-now">
-                            Buy Now   <i class="fa-solid fa-bag-shopping"></i>   
-                        </button>
+                        <form class="form d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
+                            {% csrf_token %}
+                            <input class="qty-input__number" name="quantity" type="hidden" value="1">
+                            <button type="submit" class="product-card__add-to-cart">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></button>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
+                        <form class="form d-inline" action="{% url 'add_to_bag' product.id %}" method="POST">
+                                {% csrf_token %}
+                            <input class="qty-input__number" name="quantity" type="hidden" value="1">
+                            <button class="product-card__buy-now">
+                                Buy Now   <i class="fa-solid fa-bag-shopping"></i>   
+                            </button>
+                            <input type="hidden" name="redirect_url" value="{% url 'checkout' %}">
+                        </form>
                     </div>
                 </div>
             </div>
