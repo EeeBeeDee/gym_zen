@@ -5,7 +5,7 @@
     width: 100vw;
     z-index: 10;
     
-    @mixin atMedium {
+    @include atMedium {
         padding: 5rem;
 
     }
@@ -48,9 +48,8 @@
         margin: 0 auto;
         border-radius: 10px;   
         
-        @mixin atMedium {
-            width: 80vw;
-            
+        @include atMedium {
+            width: 80vw;   
         }
     }
 
@@ -118,7 +117,7 @@
             margin: 0;
         }
 
-        @mixin atMedium {
+        @include atMedium {
             height: 12rem;
         }
     }
@@ -143,7 +142,7 @@
         & h3 {
             font-size: 1.8rem;
             
-            @mixin atMedium {
+            @include atMedium {
                 font-size: 2.5rem;
             }
         }
@@ -151,7 +150,7 @@
         & p {
             font-size: 1rem;
             
-            @mixin atMedium {
+            @include atMedium {
                 font-size: 1.4rem;
             }
         }

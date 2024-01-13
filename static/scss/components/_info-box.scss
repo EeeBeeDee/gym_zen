@@ -23,7 +23,7 @@
         transition: opacity 3s ease-in;
         z-index: 10;
         
-        @mixin atMedium {
+        @include atMedium {
             margin: 0 5rem;
 
         }
@@ -41,7 +41,7 @@
             align-self: flex-end;
             padding-right: 0;
             
-            @mixin atMedium {
+            @include atMedium {
                 padding-right: 10rem;
                 font-size: 3rem;
             }
