@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import WorkoutClass, Quote
+from .models import WorkoutClass, Quote, Slide
 
 
 @admin.register(WorkoutClass)
@@ -23,3 +23,13 @@ class QuoteAdmin(admin.ModelAdmin):
     )
 
     ordering = ('created_at',)
+
+@admin.register(Slide)
+class SlideAdmin(admin.ModelAdmin):
+    model = Slide
+    list_display = (
+        'heading',
+        'description',
+    )
+
+    ordering = ('id')
