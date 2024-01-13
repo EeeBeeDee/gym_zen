@@ -1021,6 +1021,25 @@ input[type=number] {
   z-index: 100;
 }
 
+.navbar__buttons a {
+  position: relative;
+}
+
+.navbar__buttons a span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  position: absolute;
+  top: 1rem;
+  right: .5rem;
+  color: #67DB5C;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 .navbar-dark {
   background-color: #000;
   transition: all 1s;
