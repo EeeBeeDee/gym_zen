@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% load static %} 
+{% load mathfilters %} 
+
+{% block extra_js %}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{  stripe_client_secret|json_script:"id_stripe_client_secret" }}
+<script src="{% static 'checkout/js/stripe.js' %}" defer></script>
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
+{% block content %}
+<div class="mobile-filler"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col p-5">
+            <h1 class="my-5 text-uppercase">Checkout Success!</h1>
+            <hr>
+        </div>
+    </div>
+
+   
+    
+
+</div>{% endblock %}
