@@ -69,16 +69,11 @@
             </div>
         </div>
         <div class="col-12 col-lg-4 ms-auto p-5 p-md-0">
-            <h2 class="mb-5 fs-1">Thank you for shopping with Gym Zen</h2>
-            <h2 class="mb-5 fs-1">Your Grand total is :  €{{ total }}</h2>
-            <div class="d-flex flex-column">
-                <a href="{% url 'checkout' %}" class="btn-checkout mb-5 ">
-                    Checkout <i class="fas fa-shopping-cart"></i> 
-                </a>
-                <a href="{% url 'products' %}" class="btn-rounding m-0 mr-auto">
-                    <i class="fas fa-chevron-left"></i> Keep Shopping
-                </a>
-            </div>
+            <h2 class="mb-5">GRAND TOTAL AND MEMBERSHIP DISCOUNT</h2>
+            <h2 class="mb-5">CHECKOUT AND RETURN TO SHOPPING BUTTONS</h2>
+            <a href="{% url 'products' %}" class="btn-rounding m-0">
+                <i class="fas fa-chevron-left"></i> Keep Shopping
+            </a>
         </div>
     </div>
 

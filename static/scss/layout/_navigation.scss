@@ -9,6 +9,32 @@
     padding: 0;
     margin: 0;
     z-index: 100;
+
+    &__buttons {
+        
+        & a {
+            position: relative;
+
+            & .length-bubble {
+                width: 2.2rem;
+                height: 2.2rem;
+                position: absolute;
+                top: 1rem;
+                right: .5rem;
+                text-align: center;
+                background-color: #fff;
+                border-radius: 50%;
+
+                & span {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    font-weight: 900;
+                    color: #000;
+                }
+            }
+            
+        }
+    }
 }
 
 .navbar-dark {
@@ -57,12 +83,18 @@
     background-color: #000;
     padding: clamp(1rem, 5vw, 6rem);
     z-index: 1000;
-    height: 1vh;
     transform: scale(1);
     transition: all .8s;
-    
+    height: 150vh;
+
+    @include atLarge {
+        height: 1vh;
+    }
     &.animate {
-        animation: 1s grow ease forwards;
+
+        @include atLarge {
+            animation: 1s grow ease forwards;
+        }
     }
 
     @keyframes grow {
@@ -75,8 +107,8 @@
     
     &.hide{
         display: none;
-        transform: scale(0);
-        height: 0rem;
+        // transform: scale(0);
+        // height: 0rem;
     }
 
     &__close {
@@ -109,7 +141,10 @@
         transition: all 0.1s ease-in-out;
 
         &:first-child {
-            margin-top: 40vh;
+
+            @include atLarge {
+                margin-top: 40vh;
+            }
         }
         
         & > span {

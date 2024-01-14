@@ -20,3 +20,32 @@
 .primary-bg-darker {
     background-color: $primary-color-darker !important;
 }
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.my-6rem {
+    margin-top: 6rem !important;
+    margin-bottom: 6rem !important;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+// FONT SIZES
+
+.page-header {
+    font-size: 5.4rem;
+}
