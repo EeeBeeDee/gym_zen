@@ -32,6 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Sets the ID of your site's URL. 
+SITE_ID = 1
+
 
 # Application definition
 
@@ -59,6 +62,10 @@ INSTALLED_APPS = [
     'bag',
     'checkout'
 ]
+
+ACCOUNT_EMAIL_VERIFICATION = "none"
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 CLOUDINARY_STORAGE = {
 
@@ -160,6 +167,20 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# custom allauth singup forms
+ACCOUNT_FORMS = {
+    "add_email": "allauth.account.forms.AddEmailForm",
+    "change_password": "allauth.account.forms.ChangePasswordForm",
+    "disconnect": "allauth.socialaccount.forms.DisconnectForm",
+    "login": "allauth.account.forms.LoginForm",
+    "reset_password": "allauth.account.forms.ResetPasswordForm",
+    "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
+    "set_password": "allauth.account.forms.SetPasswordForm",
+    "signup": "user_profiles.forms.CustomSignupForm",
+    "user_token": "allauth.account.forms.UserTokenForm",
+}
+
 
 
 # Static files (CSS, JavaScript, Images)
