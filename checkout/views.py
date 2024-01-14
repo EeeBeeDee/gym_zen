@@ -45,6 +45,7 @@ def checkout(request):
                     quantity=item_data,
                 )
                 order_line_item.save()
+                
         return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
         bag = request.session.get('bag', {})
