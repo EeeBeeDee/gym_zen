@@ -80,3 +80,40 @@ def add_product(request):
     
 
     return render(request, 'products/add_product.html', context)
+
+@login_required
+@user_passes_test(lambda user: user.is_superuser)
+def edit_product(request, product_id):
+    """
+    Allows admin to edit a selected product.
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product successfully updated!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please check that all fields are valid and try again.')
+    else:
+        form = ProductForm(instance=product)
+
+    context = {
+        'product': product,
+        'form': form,
+    }
+
+
+    return render(request, 'products/edit_product.html', context)
+
+@login_required
+@user_passes_test(lambda user: user.is_superuser)
+def delete_product(request, product_id):
+    """
+    Allows admin to delete a selected product.
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product successfully deleted!')
+    return redirect(reverse('products'))

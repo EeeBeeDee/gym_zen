@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %} 
+{% load mathfilters %} 
+
+{% block extra_js %} 
+<script src="{% static 'js/change_qty.js' %}" defer></script>
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
+{% block content %}
+
+<div class="mobile-filler"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col p-5">
+            <h1 class="my-5 text-uppercase">Edit Product {{ product.name }}</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12 col-lg-6 px-5 bag-items">
+            <div class="row">
+                    <div class="col-12  text-center text-lg-start">
+                        <form method="POST" action="{% url 'edit_product' product.id %}" class="form my-5" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <button type="submit" class="btn-checkout my-2">Edit Product</button>
+                            <hr>
+                        </form>
+                        <a href="{% url 'products' %}" class="btn-rounding mx-0 my-5">View All Products</a>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 ms-auto p-5 p-md-0">
+           <div class="img-container primary-bg">
+            <img class="img" src="{% static 'media/alpha-logo-no-mark.png' %}" alt="">
+           </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

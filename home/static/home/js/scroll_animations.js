@@ -14,6 +14,13 @@ const carousel = document.getElementById('carousel')
 const carouselBtnLeft = document.getElementById('carousel-left')
 const carouselBtnRight = document.getElementById('carousel-right')
 
+// Alerts
+const alerts = document.getElementById('alerts');
+
+setTimeout(() => {
+    alerts?.classList.add('hide-alerts');
+}, 4000);
+
 
 // Expanded nav JS
 

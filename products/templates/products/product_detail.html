@@ -48,7 +48,11 @@
                         <div class="col-12">
                             <button type="submit" class="btn-rounding ms-0">
                                 <span class="p-2 mt-2 mx-1">Add To Cart   <i class="fa-solid fa-cart-shopping"></i></span>
-                            </button>    
+                            </button> 
+                            {% if user.is_superuser %}   
+                            <a type="button" class="btn-checkout me-5" href="{% url 'edit_product' product.id %}">Edit Product</a>
+                            <a type="button" class="btn-rounding btn-rounding--warning" href="{% url 'delete_product' product.id %}">Delete Product</a>
+                            {% endif %}
                         </div>
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
