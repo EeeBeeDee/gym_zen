@@ -13,7 +13,7 @@ def add_to_bag(request, item_id):
     Add a quantity of product to the shopping bag, used in product_detail.html and products.html found in the products app.
     """
 
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity')) or 1
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {} )
          

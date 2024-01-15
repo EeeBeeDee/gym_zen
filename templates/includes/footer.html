@@ -6,11 +6,18 @@
             <div class="col-6 col-lg-3 h-100 p-5 d-flex flex-column">
                 <span class="pb-3 fs-2">Navigation</span>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Merch</a></li>
-                    <li><a href="#">Membership</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'products' %}">Merch</a></li>
+                    <li><a href="{% url 'memberships' %}">Membership</a></li>
+                    <li><a href="{% url 'bag' %}">View Bag</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'account_login' %}">Login</a></li>
+                    {% endif %}
+                    {% if user.is_superuser %}
+                    <li><a href="{% url 'add_product' %}">Admin Add Product</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="col-6 d-md-none text-center">
@@ -18,39 +25,31 @@
                     <img class="footer__logo-img" src="{% static 'media/alpha-logo-no-mark.png' %}" alt="Company logo">
                 </a>
             </div>
-            <!-- <div class="d-none d-lg-flex flex-column col-3 p-5">
-                <span class="pb-3 fs-2">Hottest Merch</span>
-                <ul>
-                    {% for product in recommended_product %}
-                        <li><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div> -->
             <div class="col-12 col-md-6 p-5">
                 <span class="fs-2">Follow Us:</span>
                 <ul class="footer__socials mt-5 d-flex flex-md-column flex-lg-row">
                     <li>
-                        <a class="footer__social-icon" href="#"
+                        <a class="footer__social-icon" href="#" rel="external"
                             ><i class="fa-brands fa-facebook"></i
                         ></a>
                     </li>
                     <li>
-                        <a class="footer__social-icon" href="#"
+                        <a class="footer__social-icon" href="#" rel="external"
                             ><i class="fa-brands fa-instagram"></i
                         ></a>
                     </li>
                     <li>
-                        <a class="footer__social-icon" href="#"
+                        <a class="footer__social-icon" href="#" rel="external"
                             ><i class="fa-brands fa-twitter"></i
                         ></a>
                     </li>
                     <li>
-                        <a class="footer__social-icon" href="#"
+                        <a class="footer__social-icon" href="#" rel="external"
                             ><i class="fa-brands fa-whatsapp"></i
                         ></a>
                     </li>
                     <li>
-                        <a class="footer__social-icon" href="#"
+                        <a class="footer__social-icon" href="#" rel="external"
                             ><i class="fa-brands fa-youtube"></i
                         ></a>
                     </li>

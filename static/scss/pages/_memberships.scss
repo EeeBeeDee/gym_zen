@@ -37,17 +37,25 @@
     &__info {
         z-index: -1;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        margin-right: -3rem;
+        margin-right: -2rem;
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 5rem;
+        
+        @include atLarge {
+            margin-right: -3rem;
+        }
 
         &--reverse {
             margin-right: 0;
-            margin-left: -3rem;
+            margin-left: -1rem;
             border-top-right-radius: 2rem;
             border-bottom-right-radius: 5rem;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+
+            @include atLarge {
+                margin-right: -3rem;
+            }
         }
 
         & h3 {

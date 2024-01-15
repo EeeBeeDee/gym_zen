@@ -7,16 +7,35 @@
                 <img class="navbar-items__logo-img" src="{% static 'media/alpha-logo-no-mark.png' %}" alt="Company logo">
             </a>
         </div>
-        <button class="navbar-toggler me-5 " type="button" id="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars primary-color fs-1"></i>
-        </button>
+        <div class="navbar__buttons">
+            {% if user.is_authenticated %}
+            <a href="{% url 'account_logout' %}" type="button" class="navbar-toggler">
+                <i class="fa-solid fa-user primary-color fs-1"></i>
+            </a>
+            {% else %}
+            <a href="{% url 'account_login' %}" type="button" class="navbar-toggler">
+                <i class="far fa-user primary-color fs-1"></i>
+            {% endif %}
+            <a href="{% url 'bag' %}" class="navbar-toggler" type="button" id="" aria-expanded="false" aria-label="open bag">
+                <i class="fa-solid fa-cart-shopping primary-color fs-1"></i>
+                {% if bag_items|length > 0 %}
+                <div class="length-bubble">
+                    <span class="">{{ bag_items|length }}</span>
+                </div>
+                {% endif %}
+            </a>
+            <button class="navbar-toggler me-5 " type="button" id="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars primary-color fs-1"></i>
+            </button>
+
+        </div>
     </div>
 </div>
 
 <a href="#" class="nav__close" id="nav-close-btn">
     <i class="fas fa-times"></i>
 </a>
-<nav id="nav" class="nav hide">
+<nav id="nav" class="nav animate hide">
     <a href="{% url 'home' %}" class="nav__link">
         <span>Home</span>
         <img class="nav__img" src="https://source.unsplash.com/sHfo3WOgGTU" alt="">
@@ -29,8 +48,21 @@
         <span>Memberships</span>
         <img class="nav__img" src="https://source.unsplash.com/U2q73PfHFpM" alt="">
     </a>
-    <a href="#" class="nav__link">
-        <span>Account</span>
+    {% if user.is_authenticated %}
+    <a href="{% url 'account_logout' %}" class="nav__link">
+        <span>Logout</span>
         <img class="nav__img" src="https://source.unsplash.com/AVOADaTBtT4" alt="">
     </a>
+    {% else %}
+    <a href="{% url 'account_login' %}" class="nav__link">
+        <span>Login</span>
+        <img class="nav__img" src="https://source.unsplash.com/AVOADaTBtT4" alt="">
+    </a>
+    {% endif %}
+    {% if user.is_superuser %}
+    <a href="{% url 'add_product' %}" class="nav__link">
+        <span>Admin Add Product</span>
+        <img class="nav__img" src="https://source.unsplash.com/sHfo3WOgGTU" alt="">
+    </a>
+    {% endif %}
 </nav>

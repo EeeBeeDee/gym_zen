@@ -1,0 +1,85 @@
+.account-body {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    width: 80%;
+    border: 5px solid $primary-color-dark;
+
+    @include atLarge {
+        width: 50%;
+    }
+
+    & h1 {
+        color: $primary-color-darker;
+        margin-right: 40%;
+        font-size: 2.5rem;
+
+        @include atLarge {
+            font-size: 4rem;
+        }
+    }
+
+    & p {
+        font-size: 1.8rem;
+    }
+
+    & a {
+        text-decoration: none;
+        color: $primary-color-darker;
+        font-weight: 900;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.button {
+            font-size: 2rem;
+            display: block;
+        }
+    }
+
+    & form p {
+        display: flex;
+        flex-direction: column;
+
+        @include atMedium {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    & form input {
+       margin-left: 2rem;
+    }
+
+    & button {
+        text-decoration: none;
+        padding: 1.4rem 2.3rem;
+        margin: 1rem 2rem;
+        background-color: $primary-color-dark;
+        color: #fff;
+        font-size: 1.6rem;
+        transition: all 0.3s ease;
+        border: 5px solid $primary-color-dark;
+        
+        @include atMedium {
+            font-size: 2rem;
+            
+        }
+        
+        &:hover {
+            background-color: #fff;
+            color: $primary-color-dark;
+            border-radius: 2rem;
+        }
+    }
+}

@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.conf import settings
 
 import os
@@ -10,7 +12,6 @@ from products.models import Product
 from bag.contexts import bag_contents
 
 import stripe
-import json
 
 # Create your views here.
 
@@ -46,6 +47,8 @@ def checkout(request):
                     quantity=item_data,
                 )
                 order_line_item.save()
+                
+        return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -69,3 +72,37 @@ def checkout(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts and send conformation email.
+    """
+
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Your order went through succesfully \
+                     A confirmation email is on its way to {order.email}')
+    
+    cust_email = order.email
+    subject = render_to_string(
+        'email/confirmation_subject.txt',
+        {'order': order})
+    email_body = render_to_string(
+        'email/confirmation_body.txt',
+        {'order': order})
+    
+    send_mail(
+        subject,
+        email_body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+        ) 
+    
+    if 'bag' in request.session:
+        del request.session['bag']
+    
+    context = {
+        'order': order
+    }
+
+    return render(request, 'checkout/checkout_success.html', context)

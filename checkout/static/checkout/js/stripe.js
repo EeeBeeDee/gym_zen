@@ -1,9 +1,8 @@
 let stripePublicKey = document.getElementById('id_stripe_public_key').textContent.slice(1, -1)
-let ClientSecret = document.getElementById('id_stripe_client_secret').textContent.slice(1, -1)
+let clientSecret = document.getElementById('id_stripe_client_secret').textContent.slice(1, -1)
 let stripe = Stripe(stripePublicKey)
 let elements = stripe.elements()
 
-console.log("hello")
 
 // Custom styling and instantiating the card Element
 
@@ -62,23 +61,14 @@ form.addEventListener('submit', function(e) {
         'client_secret': clientSecret,
     }
 
-    let url = '/checkout/cache_checkout_data/'
-
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-    }).done(function() {
-        stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: card,
-                billing_details: {
-                    name: form.full_name.value.trim(),
-                }
+ 
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+            billing_details: {
+                name: form.full_name.value.trim(),
             }
-        })
+        }
     }).then((result) => {
         if (result.error) {
             let errorDiv = document.getElementById('card-errors')

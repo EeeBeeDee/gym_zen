@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n %} {% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +7,15 @@
     <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
     {% endblock %}
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- Custom bootstrap // grid and utilities -->
+     <link rel="stylesheet" href="{% static 'css/bootstrap-custom.css' %}">
+        
+     <!-- Personal CSS -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
   </head>
   <body>
     {% block body %}
@@ -22,22 +31,15 @@
     </div>
     {% endif %}
 
-    <div>
-      <strong>{% trans "Menu:" %}</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">{% trans "Change E-mail" %}</a></li>
-        <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
-        <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
-        {% endif %}
-      </ul>
+    <div class="mobile-filler"></div>
+    {% include '../includes/nav.html' %}
+    <div class="account-body">
+        {% block content %}
+        {% endblock %}
+        {% endblock %}
+        {% block extra_body %}
+        {% endblock %}
     </div>
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
+    {% include '../includes/footer.html' %}
   </body>
 </html>

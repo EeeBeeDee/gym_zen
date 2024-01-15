@@ -1,6 +1,13 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
+from django.contrib import messages
 from .models import Category, Product
+from .forms import ProductForm
+
+
 import random 
+
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
 
@@ -15,11 +22,8 @@ def all_products(request):
 
     products = Product.objects.all()
     categories = Category.objects.all()
-    slideshow_products = [
-        get_object_or_404(Product, pk=random.randint(1, 5)),
-        get_object_or_404(Product, pk=random.randint(6, 10)),
-        get_object_or_404(Product, pk=random.randint(11, 15)),
-    ]
+    products_list = list(products)
+    slideshow_products = random.sample(products_list, 3)
     merch_heading = ''
 
     if 'category' in request.GET:
@@ -43,11 +47,9 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
-    recommended_products = [
-        get_object_or_404(Product, pk=random.randint(1, 5)),
-        get_object_or_404(Product, pk=random.randint(6, 10)),
-        get_object_or_404(Product, pk=random.randint(11, 15)),
-    ]
+
+    products = list(Product.objects.all())
+    recommended_products = random.sample(products, 3)
 
     context = {
         'product': product,
@@ -57,7 +59,24 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
+@user_passes_test(lambda user: user.is_superuser)
 def add_product(request):
+    """
+    Allows admin to add a product to the store.
+    """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product successfully added!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please check that all fields are valid and try again.')
+
+    else:
+        form = ProductForm()
+    context = { 'form': form }
     
 
-    return render(request, 'products/add_product.html')
+    return render(request, 'products/add_product.html', context)
