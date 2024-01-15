@@ -3,8 +3,7 @@
 {% load mathfilters %} 
 
 {% block extra_js %}
-{{ stripe_public_key|json_script:"id_stripe_public_key" }}
-{{  stripe_client_secret|json_script:"id_stripe_client_secret" }}
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
 {% endblock %} 
 
 {% block content %}

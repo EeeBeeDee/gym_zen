@@ -177,7 +177,7 @@ ACCOUNT_FORMS = {
     "reset_password": "allauth.account.forms.ResetPasswordForm",
     "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
     "set_password": "allauth.account.forms.SetPasswordForm",
-    "signup": "user_profiles.forms.CustomSignupForm",
+    'signup': 'allauth.account.forms.SignupForm',
     "user_token": "allauth.account.forms.UserTokenForm",
 }
 
