@@ -84,8 +84,8 @@
                     <!-- Used to display form errors  -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
-                <span>Your card will be charged <strong>€{{ total|floatformat:2 }}</strong></span>                
-                <button class="btn-rounding primary-bg-darker" id="submit-button">
+                <h2>Your card will be charged <strong>€{{ total|floatformat:2 }}</strong></h2>                
+                <button class="btn-checkout mb-5 w-100" id="submit-button">
                     Complete Order <i class="fas fa-lock"></i>
                 </button>
                </form>

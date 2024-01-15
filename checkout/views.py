@@ -10,7 +10,6 @@ from products.models import Product
 from bag.contexts import bag_contents
 
 import stripe
-import json
 
 # Create your views here.
 
@@ -46,6 +45,8 @@ def checkout(request):
                     quantity=item_data,
                 )
                 order_line_item.save()
+                
+        return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -69,3 +70,22 @@ def checkout(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Your order went through succesfully \
+                     A confirmation email is on its way to {order.email}')
+    
+    if 'bag' in request.session:
+        del request.session['bag']
+    
+    context = {
+        'order': order
+    }
+
+    return render(request, 'checkout/checkout_success.html', context)
