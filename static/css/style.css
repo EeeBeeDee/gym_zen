@@ -1492,6 +1492,10 @@ input[type=number] {
   height: 80vh;
 }
 
+.error-container a {
+  color: #fff !important;
+}
+
 .index-title {
   color: blue;
   background-color: red;

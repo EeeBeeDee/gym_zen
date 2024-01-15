@@ -4,4 +4,8 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
+
+    & a {
+        color: #fff !important;
+    }
 }
