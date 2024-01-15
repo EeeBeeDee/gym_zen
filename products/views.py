@@ -1,5 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
+from django.contrib import messages
 from .models import Category, Product
+from .forms import ProductForm
+
+
 import random 
 
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -60,6 +65,18 @@ def add_product(request):
     """
     Allows admin to add a product to the store.
     """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product successfully added!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please check that all fields are valid and try again.')
+
+    else:
+        form = ProductForm()
+    context = { 'form': form }
     
 
-    return render(request, 'products/add_product.html')
+    return render(request, 'products/add_product.html', context)

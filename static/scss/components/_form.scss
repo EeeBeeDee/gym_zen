@@ -1,0 +1,12 @@
+.form {
+
+    & input,
+    & textarea,
+    & select {
+        width: 100%;
+        border: 2px $primary-color-dark solid;
+        border-radius: 0%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}

@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <div class="col p-5">
-            <h1 class="my-5 text-uppercase">Shopping Cart</h1>
+            <h1 class="my-5 text-uppercase">Add Product To Merch Store</h1>
             <hr>
         </div>
     </div>
@@ -22,58 +22,20 @@
     <div class="row">
         <div class="col-12 col-lg-8 p-5 bag-items">
             <div class="row">
-                {% if bag_items %}
-                    {% for item in bag_items %}
                     <div class="col-12 col-lg-6 text-center text-lg-start">
-                        <div class="mx-auto">
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                <img src="{{ MEDIA_BASE_URL }}{{ item.product.image }}" alt="">
-                            </a>
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                <h3 class="mb-0">{{ item.product.name }}</h3>
-                            </a>
-                            <form class="form" action="{% url 'update_bag' item.item_id %}" method="POST">
-                                {% csrf_token %}
-                                <div class=" qty-input--bag">
-                                    <span>QTY:</span>
-                                    <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
-                                    <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                        {% include 'includes/svg/plus-sign.html' %}
-                                    </button>
-                                    <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                        {% include 'includes/svg/minus-sign.html' %}
-                                    </button>
-                                </div>
-                                <div class="row my-4">
-                                    <div class="col-6">
-                                        <button type="submit" class="btn-rounding m-0">
-                                            <span class="">Update Cart</span>
-                                        </button>    
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="{% url 'remove_from_bag' item.item_id %}" class="btn-rounding btn-rounding--warning d-inline-block m-0">
-                                            <span class="">Remove Item</span>
-                                        </a>    
-                                    </div>
-                                </div>
-                                <!-- <input type="hidden" name="redirect_url" value="{{ request.path }}"> -->
-                            </form>
-                            <h3 class="mt-2">Total: ${{ item.product.price|mul:item.quantity }}</h3>
-                        </div>
-                    </div>  
-                    {% endfor %}
-                {% else %}
-                <h3 class="mb-5">You have nothing in your cart!</h3>
-                {% endif %}
+                        <form method="POST" action="{% url 'add_product' %}" class="form my-5" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <button type="submit" class="btn-checkout my-2">Add new Product</button>
+                            <hr>
+                        </form>
+                        <a href="{% url 'products' %}" class="btn-rounding mx-0 my-5">View All Products</a>
+                    </div>
 
             </div>
         </div>
         <div class="col-12 col-lg-4 ms-auto p-5 p-md-0">
-            <h2 class="mb-5">GRAND TOTAL AND MEMBERSHIP DISCOUNT</h2>
-            <h2 class="mb-5">CHECKOUT AND RETURN TO SHOPPING BUTTONS</h2>
-            <a href="{% url 'products' %}" class="btn-rounding m-0">
-                <i class="fas fa-chevron-left"></i> Keep Shopping
-            </a>
+           
         </div>
     </div>
 

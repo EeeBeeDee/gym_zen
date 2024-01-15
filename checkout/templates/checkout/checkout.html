@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-4 ms-auto p-5 p-md-0">
-            <form action="{% url 'checkout' %}" method="post" id="payment-form">
+            <form action="{% url 'checkout' %}" method="post" id="payment-form" class="form">
                 {% csrf_token %}
                 <fieldset>
                     <legend class="">Delivery Details</legend>

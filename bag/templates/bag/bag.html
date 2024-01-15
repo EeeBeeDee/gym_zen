@@ -32,7 +32,7 @@
                             <a href="{% url 'product_detail' item.product.id %}">
                                 <h3 class="mb-0">{{ item.product.name }}</h3>
                             </a>
-                            <form class="form" action="{% url 'update_bag' item.item_id %}" method="POST">
+                            <form action="{% url 'update_bag' item.item_id %}" method="POST">
                                 {% csrf_token %}
                                 <div class=" qty-input--bag">
                                     <span>QTY:</span>
