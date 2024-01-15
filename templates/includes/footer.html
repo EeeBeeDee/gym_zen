@@ -15,6 +15,9 @@
                     {% else %}
                     <li><a href="{% url 'account_login' %}">Login</a></li>
                     {% endif %}
+                    {% if user.is_superuser %}
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="col-6 d-md-none text-center">

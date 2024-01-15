@@ -59,4 +59,10 @@
         <img class="nav__img" src="https://source.unsplash.com/AVOADaTBtT4" alt="">
     </a>
     {% endif %}
+    {% if user.is_superuser %}
+    <a href="{% url 'home' %}" class="nav__link">
+        <span>Home</span>
+        <img class="nav__img" src="https://source.unsplash.com/sHfo3WOgGTU" alt="">
+    </a>
+    {% endif %}
 </nav>
