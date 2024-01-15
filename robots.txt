@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /products/add/
+Disallow: /products/edit/
+Sitemap: https://gym-zen-28414054e650.herokuapp.com/sitemap.xml
