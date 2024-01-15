@@ -16,7 +16,7 @@
                     <li><a href="{% url 'account_login' %}">Login</a></li>
                     {% endif %}
                     {% if user.is_superuser %}
-                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'add_product' %}">Admin Add Product</a></li>
                     {% endif %}
                 </ul>
             </div>
