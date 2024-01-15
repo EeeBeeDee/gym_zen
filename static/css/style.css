@@ -151,6 +151,7 @@ body {
   border-radius: 2rem;
   text-align: center;
   margin-top: 1rem;
+  text-decoration: none;
 }
 
 .btn-hollow i {
@@ -955,7 +956,7 @@ input[type=number] {
 }
 
 .classes__blurb {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
 }
 
@@ -1318,6 +1319,7 @@ input[type=number] {
 
 .services p {
   text-align: center;
+  font-size: 1.4rem;
 }
 
 .account-body {

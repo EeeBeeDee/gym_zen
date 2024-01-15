@@ -6,11 +6,15 @@
             <div class="col-6 col-lg-3 h-100 p-5 d-flex flex-column">
                 <span class="pb-3 fs-2">Navigation</span>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Merch</a></li>
-                    <li><a href="#">Membership</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'products' %}">Merch</a></li>
+                    <li><a href="{% url 'memberships' %}">Membership</a></li>
+                    <li><a href="{% url 'bag' %}">View Bag</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'account_login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="col-6 d-md-none text-center">
