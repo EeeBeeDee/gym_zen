@@ -204,6 +204,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # EXTRA GLOBAL VARIABLES
 
+DEFAULT_FROM_EMAIL = 'gymzen@example.ie'
+
 ZEN_MEMBERSHIP_DISCOUNT = 15
 
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
