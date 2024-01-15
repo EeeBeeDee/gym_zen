@@ -1,0 +1,17 @@
+Hi {{ order.full_name }},
+
+Thank you for shopping with Gym Zen!
+
+Please find below all your order details:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Order Total: {{ order.grand_total}}
+
+With a delivery address of:
+
+{{ order.street_address }},
+{{ order.city }},
+{{ order.country }}
+
+Thank you from all at Gym Zen and we hope to see you soon!

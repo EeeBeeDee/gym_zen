@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.conf import settings
 
 import os
@@ -74,12 +76,27 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts and send conformation email.
     """
 
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Your order went through succesfully \
                      A confirmation email is on its way to {order.email}')
+    
+    cust_email = order.email
+    subject = render_to_string(
+        'email/confirmation_subject.txt',
+        {'order': order})
+    email_body = render_to_string(
+        'email/confirmation_body.txt',
+        {'order': order})
+    
+    send_mail(
+        subject,
+        email_body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+        ) 
     
     if 'bag' in request.session:
         del request.session['bag']
