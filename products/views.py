@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 import random 
 
+from django.contrib.auth.decorators import login_required, user_passes_test
+
 # Create your views here.
 
 
@@ -52,7 +54,12 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
+@user_passes_test(lambda user: user.is_superuser)
 def add_product(request):
+    """
+    Allows admin to add a product to the store.
+    """
     
 
     return render(request, 'products/add_product.html')
