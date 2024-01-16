@@ -1,8 +1,10 @@
+/* jshint esversion: 11 */
+
 // Nav Elements
-const nav = document.getElementById('nav')
-const navbar = document.getElementById('navbar')
-const navBtn = document.getElementById('navbar-toggler')
-const navCloseBtn = document.getElementById('nav-close-btn')
+const nav = document.getElementById('nav');
+const navbar = document.getElementById('navbar');
+const navBtn = document.getElementById('navbar-toggler');
+const navCloseBtn = document.getElementById('nav-close-btn');
 
 
 
@@ -22,47 +24,47 @@ const navSlideDown = [
   ];
 
 navBtn.addEventListener('click', () => {
-    nav.classList.toggle('hide')
-    nav.classList.add('animate')
-    navCloseBtn.style.visibility = 'visible'
-    navCloseBtn.style.opacity = 1
+    nav.classList.toggle('hide');
+    nav.classList.add('animate');
+    navCloseBtn.style.visibility = 'visible';
+    navCloseBtn.style.opacity = 1;
     navbar.animate(navSlideDown, {duration: 500});
-})
+});
 
 navCloseBtn.addEventListener('click', () => {
-    nav.classList.toggle('hide')
-    navCloseBtn.style.visibility = 'hidden'
-    navCloseBtn.style.opacity = 0
-})
+    nav.classList.toggle('hide');
+    navCloseBtn.style.visibility = 'hidden';
+    navCloseBtn.style.opacity = 0;
+});
 
 for(const link of nav.getElementsByTagName('a')) {
     link.onmousemove = (e) => {
-        const rect = link.getBoundingClientRect()
-        img = link.querySelector("img")
+        const rect = link.getBoundingClientRect();
+        img = link.querySelector("img");
 
-        img.style.left = `${e.clientX - rect.left}px`
-        img.style.top = `${e.clientY - rect.top}px`
-    }
+        img.style.left = `${e.clientX - rect.left}px`;
+        img.style.top = `${e.clientY - rect.top}px`;
+    };
 }
 
 window.onmousemove = e => {
     const percent = e.clientY / window.innerHeight;
     
     nav.animate({
-      transform: `translateY(${(percent * nav.offsetHeight /2) * -1}px)`
+      transform: `translateY(${(percent * nav.offsetHeight /2) * -1}px)`,
     }, {
       fill: "forwards",
       duration: 4000
-    })
-  }
+    });
+  };
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
-        navbar.classList.add('navbar-dark')
+        navbar.classList.add('navbar-dark');
     } else {
-        navbar.classList.remove('navbar-dark')
+        navbar.classList.remove('navbar-dark');
     }
-})
+});
 
 
 

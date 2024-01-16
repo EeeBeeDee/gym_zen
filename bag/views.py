@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
-# Create your views here.
+
 
 def view_bag(request):
 
@@ -10,13 +10,14 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """
-    Add a quantity of product to the shopping bag, used in product_detail.html and products.html found in the products app.
+    Add a quantity of product to the shopping bag, used in product_detail.html
+    and products.html found in the products app.
     """
 
     quantity = int(request.POST.get('quantity')) or 1
     redirect_url = request.POST.get('redirect_url')
-    bag = request.session.get('bag', {} )
-         
+    bag = request.session.get('bag', {})
+
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
     else:
@@ -34,7 +35,7 @@ def update_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-         
+
     if quantity > 0:
         bag[item_id] = quantity
     else:
@@ -44,13 +45,14 @@ def update_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('bag'))
 
+
 def remove_from_bag(request, item_id):
     """
     Remove a quantity of product to the shopping bag, used in bag.html.
     """
 
-    bag = request.session.get('bag', {} )
-         
+    bag = request.session.get('bag', {})
+
     bag.pop(item_id)
 
     messages.success(request, 'Item removed from your bag!')

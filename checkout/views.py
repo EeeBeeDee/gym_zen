@@ -15,6 +15,7 @@ import stripe
 
 # Create your views here.
 
+
 def checkout(request):
     """
     A view to return the checkout page when GET request is made,
@@ -47,7 +48,7 @@ def checkout(request):
                     quantity=item_data,
                 )
                 order_line_item.save()
-                
+
         return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
         bag = request.session.get('bag', {})
@@ -82,7 +83,7 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Your order went through succesfully \
                      A confirmation email is on its way to {order.email}')
-    
+
     cust_email = order.email
     subject = render_to_string(
         'email/confirmation_subject.txt',
@@ -90,17 +91,17 @@ def checkout_success(request, order_number):
     email_body = render_to_string(
         'email/confirmation_body.txt',
         {'order': order})
-    
+
     send_mail(
         subject,
         email_body,
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
-        ) 
-    
+        )
+
     if 'bag' in request.session:
         del request.session['bag']
-    
+
     context = {
         'order': order
     }

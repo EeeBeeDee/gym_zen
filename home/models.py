@@ -11,7 +11,8 @@ class WorkoutClass(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
 class Quote(models.Model):
     quote = models.TextField(max_length=200)
     origin = models.CharField(max_length=100)
@@ -19,7 +20,8 @@ class Quote(models.Model):
 
     def __str__(self):
         return self.origin
-    
+
+
 class Slide(models.Model):
     heading = models.CharField(max_length=100)
     description = models.TextField(max_length=500)

@@ -1,12 +1,14 @@
 from django.conf import settings
-from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
-from decimal import Decimal
 
 from products.models import Product
 
 
 def bag_contents(request):
+    """
+    This function will be available to all templates across the entire site to
+    control the contents of the shopping bag.
+    """
 
     bag_items = []
     total = 0
@@ -23,11 +25,6 @@ def bag_contents(request):
             'product': product
         })
 
-    # if user.is_member we want to take 15% off bag total
-    # if request.user.is_authenticated:
-    #     user = User.objects.get(email=request.user.email)
-    #     if user.is_member:
-    #         total = total * Decimal(settings.ZEN_MEMBERSHIP_DISCOUNT / 100)
     context = {
         'bag_items': bag_items,
         'total': total,

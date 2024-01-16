@@ -5,13 +5,9 @@ from .models import Category, Product
 from .forms import ProductForm
 
 
-import random 
+import random
 
 from django.contrib.auth.decorators import login_required, user_passes_test
-
-# Create your views here.
-
-
 
 
 def all_products(request):
@@ -77,9 +73,10 @@ def add_product(request):
     else:
         form = ProductForm()
     context = { 'form': form }
-    
+
 
     return render(request, 'products/add_product.html', context)
+
 
 @login_required
 @user_passes_test(lambda user: user.is_superuser)
@@ -103,7 +100,6 @@ def edit_product(request, product_id):
         'product': product,
         'form': form,
     }
-
 
     return render(request, 'products/edit_product.html', context)
 

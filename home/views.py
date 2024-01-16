@@ -3,6 +3,7 @@ import random
 
 from .models import WorkoutClass, Quote, Slide
 
+
 def index(request):
     """
     View that renders the index/home page

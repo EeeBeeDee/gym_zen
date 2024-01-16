@@ -15,14 +15,19 @@ class Order(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     country = models.CharField(max_length=40, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
 
     def update_grand_total(self):
         """
-        Update grand total when lineitems are changed after order is saved through form. Creates a query set of all line items in the order, then uses the aggregate method to sum the lineitem_total field of each line item.
+        Update grand total when lineitems are changed after order is saved
+        through form. Creates a query set of all line items in the order,
+        then uses the aggregate method to sum the lineitem_total
+        field of each line item.
         """
 
-        self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.grand_total = (self.lineitems.aggregate(Sum('lineitem_total'))
+                            ['lineitem_total__sum'])
         self.save()
 
 

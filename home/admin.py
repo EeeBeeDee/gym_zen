@@ -14,6 +14,7 @@ class WorkoutClassAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+
 @admin.register(Quote)
 class QuoteAdmin(admin.ModelAdmin):
     model = Quote
@@ -23,6 +24,7 @@ class QuoteAdmin(admin.ModelAdmin):
     )
 
     ordering = ('created_at',)
+
 
 @admin.register(Slide)
 class SlideAdmin(admin.ModelAdmin):
