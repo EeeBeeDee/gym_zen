@@ -274,7 +274,7 @@ body {
   }
 }
 
-.carousel ul {
+.carousel__list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1152,6 +1152,8 @@ input[type=number] {
 }
 
 .navbar-toggler {
+  display: inline-block;
+  height: 60px;
   padding: 1.4rem;
   background: transparent;
   border: none;

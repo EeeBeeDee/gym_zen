@@ -1,3 +1,50 @@
+# Technologies Used
+
+## Languages and Frameworks Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python3](https://www.python.org/)
+-   [Django](https://www.djangoproject.com/)
+-   [Sass](https://sass-lang.com/)
+
+## Libraries and Django Plugins Used
+
+- [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used for the chevron arrows used for navigation through the site
+- [Bootstrap:](https://getbootstrap.com/)
+    - Bootstrap was used manly for formatting, positioning and responsive design throughout the project.
+- [Django-Allauth:](https://django-allauth.readthedocs.io/en/latest/index.html)
+    - Used to control user profile functionality.
+- [whitenoise:](https://whitenoise.readthedocs.io/en/latest/)
+    - Used to serve the static files like css etc to the live heroku site.
+
+## Tools Used
+
+- [VScode](https://code.visualstudio.com/)
+    - Vscode was my code editor for this project.
+- [Git](https://git-scm.com/)
+    - Git was used for version control and to Push to GitHub.
+- [GitHub:](https://github.com/)
+    - GitHub is used to store the project's code remotely and then to host the static website on GitHub Pages.
+- [Heroku:](https://signup.heroku.com/login)
+    - Heroku is where the app is hosted and deployed online.
+- [ElephantSQL:](https://www.elephantsql.com/)
+    - ElephantSQL is where the database is hosted using postgreSQL
+- [Cloudinary:](https://cloudinary.com/)
+    - Cloudinary is connected to the project but not fully utilized due to time constraints, future plans are to have it host pictures restaurants can use for their own generated 
+
+## Linters used 
+
+-   [W3C - HTML](https://validator.w3.org/)
+-   [Jigsaw - CSS](https://jigsaw.w3.org/css-validator/)
+-   [JSHint - JS](https://jshint.com/)
+-   [PEP8CI - Python](https://pep8ci.herokuapp.com/)
+
+
+You can find all validation information in the [TESTING.md](/TESTING.md) file.
+
 # Deployment
 
 The live deployed application can be found deployed on [Heroku](https://gym-zen-28414054e650.herokuapp.com).
@@ -190,3 +237,28 @@ You can fork this repository by using the following steps:
 # Testing
 
 All Testing is documented separately in the [TESTING.md](/TESTING.md) file.
+
+# Credits
+
+[GalAbra](https://stackoverflow.com/questions/24193272/overflow-xhidden-on-mobile-device-not-working) ~~ How to fix issue of x overflow still appearing on mobile devices due to rotated divs
+
+[Box Shadow Examples](https://getcssscan.com/css-box-shadow-examples) ~~ cool box shadow ideas 
+
+[Zuchamo](https://codepen.io/zuchamo/pen/GOwdaG) ~~ help understanding how to get the animation effect I was looking for after a few iterations
+
+[remove.bg](https://www.remove.bg/upload) ~~ Used to remove the background of images used in product cards
+
+[unsplash](https://unsplash.com/@good_citizen) as always the best place for amazing quality pictures available for free use, especially [Victor Freitas](https://unsplash.com/@victorfreitas) as a good few of their pictures were used in slides!
+
+[rd.com](https://www.rd.com/article/workout-quotes/) ~~ quotes model text
+
+
+# Acknowledgements
+
+[Tim_nelson](https://tim.2bn.dev/) - My CI mentor who I am completely happy in saying is one of the main reasons this project even saw the light of day!
+
+The CI slack channel for all the tips, tricks.
+
+[The Student Care Team at CI](https://codeinstitute.net/ie/) - They were more than generous with accommodations when I needed to step away from the course briefly.
+
+And my mother Barbara who somehow managed to keep my morale and motivation up when I thought I had none.

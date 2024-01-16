@@ -100,11 +100,11 @@
 <div class="carousel">
     <div class="carousel__container" id="carousel">
 
-        <ul class="d-flex" id="carousel-flex">
+        <div class="d-flex carousel__list" id="carousel-flex">
             {% for slide in slides %}
-            <img src="{{ MEDIA_BASE_URL }}{{ slide.image }}" id="slide-image" alt="">
+            <img src="{{ MEDIA_BASE_URL }}{{ slide.image }}" alt="">
             {% endfor %}
-        </ul>
+        </div>
         <div class="carousel__nav-btn carousel__nav-btn--left" id="carousel-left">
             <i class="fas fa-chevron-left"></i>
         </div>

@@ -9,14 +9,15 @@
         </div>
         <div class="navbar__buttons">
             {% if user.is_authenticated %}
-            <a href="{% url 'account_logout' %}" type="button" class="navbar-toggler">
+            <a href="{% url 'account_logout' %}"  class="navbar-toggler">
                 <i class="fa-solid fa-user primary-color fs-1"></i>
             </a>
             {% else %}
-            <a href="{% url 'account_login' %}" type="button" class="navbar-toggler">
+            <a href="{% url 'account_login' %}" class="navbar-toggler">
                 <i class="far fa-user primary-color fs-1"></i>
+            </a>
             {% endif %}
-            <a href="{% url 'bag' %}" class="navbar-toggler" type="button" id="" aria-expanded="false" aria-label="open bag">
+            <a href="{% url 'bag' %}" class="navbar-toggler" aria-expanded="false" aria-label="open bag">
                 <i class="fa-solid fa-cart-shopping primary-color fs-1"></i>
                 {% if bag_items|length > 0 %}
                 <div class="length-bubble">
