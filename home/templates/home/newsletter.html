@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{% load static %} 
+
+{% block extra_js %} 
+<script src="{% static 'home/js/scroll_animations.js' %}" defer></script>
+{% endblock %} 
+
+{% block content %}
+<div class="mobile-filler"></div>
+<div class="container error-container">
+    <div class="account-flex">
+        <div class="text-center">
+            <h1 class="primary-color-darker">Newsletter</h1>
+            <p>Sign up to our newsletter to get the latest news and offers from Gym Zen!</p>
+            <form class="form" action="{% url 'newsletter' %}" method="POST">
+                {% csrf_token %}
+                <input type="email" class="mx-0" placeholder="Enter your email..." name="" id="">
+                <button class="btn-rounding" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

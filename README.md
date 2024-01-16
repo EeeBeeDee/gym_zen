@@ -209,6 +209,12 @@ The checkout success screen is only seen after a conformation of payment on stri
 
 The checkout success screen is only seen after a conformation of payment on stripes end. It then displays all relevant information to your purchase along with an email of the same sent to you.
 
+### Newsletter Signup
+
+![Newsletter](documentation/newsletter.png)
+
+With a link found in the footer. a simple view gives you the option of joining our newsletter at Gym Zen
+
 # Surface Plane
 
 ## Design 

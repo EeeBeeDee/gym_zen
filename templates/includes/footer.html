@@ -10,6 +10,7 @@
                     <li><a href="{% url 'products' %}">Merch</a></li>
                     <li><a href="{% url 'memberships' %}">Membership</a></li>
                     <li><a href="{% url 'bag' %}">View Bag</a></li>
+                    <li><a href="{% url 'newsletter' %}">Newsletter</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}

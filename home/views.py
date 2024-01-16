@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.contrib import messages
+
 import random
 
 from .models import WorkoutClass, Quote, Slide
@@ -27,3 +30,16 @@ def memberships(request):
     context = {'workout_classes': workout_classes}
 
     return render(request, 'home/memberships.html', context)
+
+
+def newsletter(request):
+    """
+    View that renders the contact page
+    """
+    if request.method == 'POST':
+
+        messages.success(request, 'Thank you for subscribing to'
+                                  'our newsletter!')
+        return redirect(reverse('home'))
+
+    return render(request, 'home/newsletter.html')
