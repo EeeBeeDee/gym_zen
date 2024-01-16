@@ -1,3 +1,24 @@
+### New Site Users
+
+- As a new site user, I would like to be able to navigate the website quickly and easily.
+- As a new site user, I would like to be able to view the website on any device.
+- As a new site user, I want the websites main goals and selling points clear and easily seen.
+- As a new site user, I would like to filter what I am looking for so I can find it easier.
+- As a new site user, I would like to save items in a cart so I can pay all at once.
+- As a new site user, I would like to feel there is offers or services geared to new customers.
+
+### Returning Site Users
+
+- As a returning site user, I would like to see any updates or new information on the website .
+- As a returning site user, I would like to see that the website is updated.
+- As a returning site user, I would like to feel there will be reasons for me to keep returning.
+
+### Site Admin
+
+- As a site administrator, I should be able to make changes to the site while I view it.
+- As a site administrator, I should be able to update the store front quickly.
+- As a site administrator, I should be able to edit existing offerings and fix any mistakes made.
+
 # Technologies Used
 
 ## Languages and Frameworks Used
