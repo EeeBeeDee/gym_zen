@@ -111,5 +111,8 @@ def delete_product(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
+
+    if 'bag' in request.session:
+        del request.session['bag']
     messages.success(request, 'Product successfully deleted!')
     return redirect(reverse('products'))

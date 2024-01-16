@@ -218,6 +218,7 @@ body {
   font-size: 1.6rem;
   transition: all 0.3s ease;
   border: 5px solid #368F2E;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
