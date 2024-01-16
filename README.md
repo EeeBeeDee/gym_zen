@@ -48,7 +48,7 @@ This can be seen implemented on my projects [Kanban.](https://github.com/users/E
 
 ## Epics and Tasks
 
-The First 6 Epics are essential and the minimum needed to deliver the basic application so their tasks were prioritized with any following epics designated as extras with descending priority.
+Due to the nature of Django it is easy to base the majority of your epics off each app you plan to develop, the only one outside this paradigm is the first, which is used to set up the hosting environment, connect the database and generally initialize the project.
 
 ### **Epic 1: Project Initialization & Deployment**
 
@@ -99,7 +99,7 @@ I wanted to created user profile models or extend the built in user model to all
 
 ## Figma
 
-I used figma to plan out my homepage as in my head it was a lot more involved stylistically than any of the other pages. Having it prototyped out like this made it very smooth to develop and it is the way I will taclke things going forward.
+I used figma to plan out my homepage as in my head it was a lot more involved stylistically than any of the other pages. Having it prototyped out like this made it very smooth to develop and it is the way I will tackle things going forward. Even though you can see changes I am very happy that the original plan was followed so closely.
 
 ![Figma Homepage](documentation/figma-index.png)
 
@@ -227,7 +227,7 @@ The logo was generated using dall-e. I had a clear image in my head and in fairn
 
 ### Typography 
 
-For typography I decided to go for a singular font again, feeling I didn't do it justice in my last project. I chose Ubuntu as its a font I look at almost every day and have really grown to like. I feel it quite versatile too and with just a change in font weights you can create different feelings. more so than any other font I have used up to this point. 
+For typography I decided to go for a singular font again, feeling I didn't do it justice in my last project. I chose Ubuntu as its a font I look at almost every day and have really grown to like. I feel it quite versatile too and with just a change in font weights you can create different feelings. More so than any other font I have used up to this point. 
 
 It can be found on [Google Fonts](https://fonts.google.com) here [Ubuntu](https://fonts.google.com/specimen/Ubuntu). After trying a few out I felt it meshes well with the soft, rounded feel I have aimed for with the design. 
 

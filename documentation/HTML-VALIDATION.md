@@ -34,5 +34,4 @@
 ## Register
 ![Registration Validation](/documentation/w3-signup.png)
 
-documentation
 
