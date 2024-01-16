@@ -37,10 +37,10 @@
                                 <div class=" qty-input--bag">
                                     <span>QTY:</span>
                                     <input class="qty-input__number" name="quantity" type="number" value="{{ item.quantity}}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{  product.id }}">
-                                    <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                    <button type="button" class="qty-input__add-sub add" data-item_id="{{ product.id }}" >
                                         {% include 'includes/svg/plus-sign.html' %}
                                     </button>
-                                    <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                    <button type="button" class="qty-input__add-sub sub mx-auto" data-item_id="{{ product.id }}" >
                                         {% include 'includes/svg/minus-sign.html' %}
                                     </button>
                                 </div>
