@@ -10,6 +10,14 @@
     color: $primary-color-darker !important;
 }
 
+.primary-white {
+    color: #fff !important;
+}
+
+.primary-white:hover {
+    color: #000 !important;
+}
+
 .primary-bg {
     background-color: $primary-color !important;
 }

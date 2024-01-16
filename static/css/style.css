@@ -102,6 +102,14 @@ body {
   color: #17421E !important;
 }
 
+.primary-white {
+  color: #fff !important;
+}
+
+.primary-white:hover {
+  color: #000 !important;
+}
+
 .primary-bg {
   background-color: #67DB5C !important;
 }
