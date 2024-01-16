@@ -1,3 +1,115 @@
+# UX
+
+# Strategy Plane
+
+## Agile Planning
+
+This project has been approached with an Agile mindset. As this is the biggest project I have attempted in both size and scope, the compartmentalization and digestible  nature of agile was extremely helpful this time around.
+
+
+This can be seen implemented on my projects [Kanban.](https://github.com/users/EeeBeeDee/projects/4/views/1)
+
+## Epics and Tasks
+
+The First 6 Epics are essential and the minimum needed to deliver the basic application so their tasks were prioritized with any following epics designated as extras with descending priority.
+
+### **Epic 1: Project Initialization & Deployment**
+
+This includes the initial project setup, installing the framework, dependencies and libraries. Setting up ElephantSQL. Configuring our settings.py file and Heroku Application so that everything is connected and running on the live site as early as possible.
+
+---
+
+### **Epic 2: Homepage & memberships**
+
+I had planned from the start to try really make the homepage pop. I feel on some of my other projects I had over designed throughout but at the same time I do love trying to make interesting styles work. So the plan was to make the rest of the site less busy. Hit viewers with a burst of information first and then tone it down. As I had put a good bit of effort into the homepage I was happy to place 2 of my custom models within it too to give it a modular feeling.
+
+
+---
+
+### **Epic 3: Products app**
+
+The core model to the sites functionality, I wanted to make movement between each one as seamless as possible, using featured and recommended widgets was planned from the start and I think it works well through out the products App.  
+
+---
+
+### **Epic 4: Bag App**
+
+The main focus here was to get both local storage and custom context processors working consistently without any issue as handled incorrectly they can both cause havoc to a website. I wanted to make the bag page feel almost like it was still part of the products page. I went with big containers for each item in the bag and a layout similar to the product detail for each.
+
+---
+
+### **Epic 5: Checkout & Stripe** 
+
+Outside of creating properly working functionality to actually pass this assessment my main goal here was to make sure I really understood how Django, the stripe API and the client side browser were really interacting as it was the most difficult part of the course for me to understand. So I purposefully tried to do things slightly differently and see if what I thought was correct was actually the case  
+
+---
+
+### **Epic 6: Documentation and Testing**
+
+Create both my TESTING.md and this README.md to document the creation and implementation to this project.
+
+---
+
+## **Unresolved Epics**
+
+### **Epic 7: User Accounts**
+
+I wanted to created user profile models or extend the built in user model to allow for different levels of memberships. Some that would give a blanket discount on all goods or give access to all "Locations" of the gym, that is one thing I will be implementing after this course is finished. 
+
+---
+
+# Surface Plane
+
+## Design 
+
+### Colour pallette 
+
+![Colour pallette](/documentation/colour-palette.png)
+
+For this project I knew I wanted to work with gradients. In most things I have built up to this point I feel I have been using too many colours too liberally. This along with the basic premise of a gym in my head I choose green as it embodies energy and life. I feel leaning into the gradient helped me come up with some of my best design features to date.
+
+### Typography 
+
+For typography I decided to go for a singular font again, feeling I didn't do it justice in my last project. I chose Ubuntu as its a font I look at almost every day and have really grown to like. I feel it quite versatile too and with just a change in font weights you can create different feelings. more so than any other font I have used up to this point. 
+
+It can be found on [Google Fonts](https://fonts.google.com) here [Ubuntu](https://fonts.google.com/specimen/Ubuntu). After trying a few out I felt it meshes well with the soft, rounded feel I have aimed for with the design. 
+
+## Search Engine Optimization (SEO) & Social Media Marketing
+
+### Keywords
+
+I've identified some appropriate keywords to align with my site, that should help users
+when searching online to find my page easily from a search engine.
+This included a series of the following keyword types
+
+- Short-tail (head terms) keywords
+- Long-tail keywords
+
+### Sitemap
+
+I've used [XML-Sitemaps](https://www.xml-sitemaps.com) to generate a sitemap.xml file.
+This was generated using my deployed site URL: https://gym-zen-28414054e650.herokuapp.com
+
+After it finished crawling the entire site, it created a
+[sitemap.xml](sitemap.xml) which I've downloaded and included in the repository.
+
+### Robots
+
+I've created the [robots.txt](robots.txt) file at the root-level.
+Inside, I've included the default settings:
+
+```
+User-agent: *
+Disallow: /accounts/
+Disallow: /products/add/
+Disallow: /products/edit/
+Sitemap: https://gym-zen-28414054e650.herokuapp.com/sitemap.xml
+```
+I have disallowed pages that would required admin access.
+
+
+## User Stories
+
 ### New Site Users
 
 - As a new site user, I would like to be able to navigate the website quickly and easily.
@@ -63,6 +175,7 @@
 -   [JSHint - JS](https://jshint.com/)
 -   [PEP8CI - Python](https://pep8ci.herokuapp.com/)
 
+## Testing
 
 You can find all validation information in the [TESTING.md](/TESTING.md) file.
 
