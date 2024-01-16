@@ -231,6 +231,29 @@ For typography I decided to go for a singular font again, feeling I didn't do it
 
 It can be found on [Google Fonts](https://fonts.google.com) here [Ubuntu](https://fonts.google.com/specimen/Ubuntu). After trying a few out I felt it meshes well with the soft, rounded feel I have aimed for with the design. 
 
+## Business model for Gym Zen
+
+### Application types 
+
+As a public gym that sells mechandise. The application types that apply in this business case are:
+
+-B2C
+-Products
+-Services
+-Single Payment
+-recurring payment
+
+### Features 
+
+With the application types in mind I feel the best features to aim for are as follows:
+
+- Simple, elegant payment system 
+- Cart or bag system to make shopping easier
+- High resolution images of items for sale
+- The ability to filter products to create a quicker shopping experience  
+- Clear communication of what services are provided with a membership
+ 
+
 ## Search Engine Optimization (SEO) & Social Media Marketing
 
 ### Keywords
