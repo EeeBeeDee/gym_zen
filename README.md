@@ -251,8 +251,7 @@ With the application types in mind I feel the best features to aim for are as fo
 - Cart or bag system to make shopping easier
 - High resolution images of items for sale
 - The ability to filter products to create a quicker shopping experience  
-- Clear communication of what services are provided with a membership
- 
+- Clear communication of what services are provided with a membership 
 
 ## Search Engine Optimization (SEO) & Social Media Marketing
 
