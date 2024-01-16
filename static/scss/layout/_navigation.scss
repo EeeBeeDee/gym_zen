@@ -144,7 +144,7 @@
 
         &:first-child {
 
-            @include atLarge {
+            @include atXLarge {
                 margin-top: 40vh;
             }
         }

@@ -109,3 +109,72 @@ All custom files were passed through Code Institutes liniting app and all were r
 You can find Screenshots of all validation [Here.](/documentation/PEP8-VALIDATION.md)
 
 ---
+
+## Manual Testing 
+
+### Homepage & Nav
+
+Feature Tested | Expected Result | Pass/Fail
+---------------|-----------------|-----------
+Homepage background img responsiveness | Img and filter look and size correct at all widths | &check;
+Hero responsiveness | Hero blurb resizes accordingly | &check;
+Quotes Feature | Draws quotes from the quote model accordingly | &check;
+Carousel Feature | Looks good at all sizes and its shape is responsive | &check;
+Navbar options | Navbar options changed depending on users logged in/out status | &check;
+Navbar responsiveness | At all size looks appropriate  | &check;
+Nav responsiveness | Only at the large breakpoint are the mouse effects active   | &check;
+Footer responsiveness | Footer is sized correctly at all widths down to 350px | &check;
+
+### Accounts 
+
+Feature Tested | Expected Result | Pass/Fail
+---------------|-----------------|-----------
+Registration | A new account can be made with the site | &check;
+Login | An already registered account can be logged into | &check;
+Logout | A user can log out of the account they are signed into | &check;
+
+### Product
+
+Feature Tested | Expected Result | Pass/Fail
+---------------|-----------------|-----------
+Product view | All products from the product model are viewable | &check;
+category selectors | Category selectors to refine your view work as they should | &check;
+Straight to checkout | Button simultaneously adds to bag and bring you to checkout | &check;
+Random Featured | On both product and product detail you get a selection of random items suggested to you | &check;
+Random Featured | On both product and product detail you get a selection of random items suggested to you | &check;
+Breadcrumb | Breadcrumb above product detail to lead back to products or its category | &check;
+Quantity control | Quantity of items added to the bag can be controlled | &check;
+
+
+### Bag
+
+Feature Tested | Expected Result | Pass/Fail
+---------------|-----------------|-----------
+View Items | All items in current session available to see on bag page | &check;
+Price Breakdown | Both Item totals and grand total a viewable | &check;
+Update bag item | Quantity of bag items can be updated on this screen | &check;
+Delete bag item | Bag item can be Deleted on this screen | &check;
+quickview | Customer can always see easily through nav how many items are in the bag | &check;
+
+### Checkout
+
+Feature Tested | Expected Result | Pass/Fail
+---------------|-----------------|-----------
+Order Summary | Customers can clearly see what they are about to pay for | &check;
+Price Breakdown | Both Item totals and grand total a viewable | &check;
+Stripe integration | stripes api is contactable from this page | &check;
+Stripe Validation | Stripe will return with valid or invalid payments on this screen | &check;
+Form Validation | From will not validate and process order until card validation is received | &check;
+Delete bag item | Bag item can be Deleted on this screen | &check;
+quickview | Customer can always see easily through nav how many items are in the bag | &check;
+conformation | Customer gets an alert, an email and a success page with all important email pertaining to their order | &check;
+
+### Admin
+
+Feature Tested | Expected Result | Pass/Fail
+---------------|-----------------|-----------
+Product Creation | Superuser can create a completely new product using frontend form | &check;
+Product Update | Superuser can update an existing product using frontend form | &check;
+Product Deletion | Superuser can delete an existing product using frontend Button | &check;
+
+

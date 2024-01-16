@@ -1154,7 +1154,7 @@ input[type=number] {
   transition: all 0.1s ease-in-out;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .nav__link:first-child {
     margin-top: 40vh;
   }
