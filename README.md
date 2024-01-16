@@ -95,6 +95,27 @@ I wanted to created user profile models or extend the built in user model to all
 
 ---
 
+# Skeleton Plane
+
+## Figma
+
+I used figma to plan out my homepage as in my head it was a lot more involved stylistically than any of the other pages. Having it prototyped out like this made it very smooth to develop and it is the way I will taclke things going forward.
+
+![Figma Homepage](documentation/figma-index.png)
+
+## Facebook mockup 
+
+I made a Facebook page mock up. Something that would be required for most website being developed for a business.
+
+![Facebook](documentation/facebook.png)
+
+## Wireframes
+
+The rest of the original mock up were done using Balsamiq. These pages were the Products and product detail page respectively
+
+![Product wireframe](documentation/wireframe-products.png)
+![Productdetail wireframe](documentation/wireframe-detail.png)
+
 # Scope Plane
 
 - Landing page which conveys what the website is used for.
@@ -172,13 +193,19 @@ I aimed to have the bag view as close to the product detail view as I could to m
 
 ### Checkout
 
-![Bag](documentation/checkout.png)
+![Checkout](documentation/checkout.png)
 
 The checkout is less busy than the bag with just more straight info. You are given a breakdown of each bag items price plus a grand total. The form is used to then give you your order confirmation once payment is confirmed by the stripe API.
 
 ### Checkout Success
 
-![Bag](documentation/checkout-success.png)
+![Checkout success](documentation/checkout-success.png)
+
+The checkout success screen is only seen after a conformation of payment on stripes end. It then displays all relevant information to your purchase along with an email of the same sent to you.
+
+### Add/Edit product
+
+![add Product](documentation/edit-product.png)
 
 The checkout success screen is only seen after a conformation of payment on stripes end. It then displays all relevant information to your purchase along with an email of the same sent to you.
 
