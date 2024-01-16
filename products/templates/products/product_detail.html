@@ -13,11 +13,11 @@
 
     <div class="container p-0">
         <div class="row">
-            <ul class="detail__breadcrumb">
+            <div class="detail__breadcrumb">
                 <a href="{% url 'products' %}">Merch</a>
                 <span>/</span>
                 <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}</a>
-            </ul>
+            </div>
         </div>
         
         <div class="row my-5">
