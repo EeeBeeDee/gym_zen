@@ -9,5 +9,3 @@ addBtns.forEach((btn, idx) => {
         } 
     })
 });
-
-print('hello')

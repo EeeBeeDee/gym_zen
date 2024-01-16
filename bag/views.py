@@ -23,7 +23,6 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
 
     request.session['bag'] = bag
-    print(bag)
     return redirect(redirect_url)
 
 
@@ -41,7 +40,6 @@ def update_bag(request, item_id):
         bag.pop(item_id)
 
     request.session['bag'] = bag
-    print(bag)
     return redirect(reverse('bag'))
 
 def remove_from_bag(request, item_id):
@@ -54,5 +52,4 @@ def remove_from_bag(request, item_id):
     bag.pop(item_id)
 
     request.session['bag'] = bag
-    print(bag)
     return redirect(reverse('bag'))
