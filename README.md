@@ -1,3 +1,40 @@
+# GYM ZEN
+
+![Website homepage](documentation/landing.png)
+
+Gym Zen aims to be a friendly, affordable and professional gym where you train both your body and your mind.
+
+[Link to Gym Zen](https://gym-zen-28414054e650.herokuapp.com/)
+
+## **Contents**
+
+1. [U/X](#ux)
+    - [The Strategy Plane](#strategy-plane)
+        - [Agile Planning](#agile-planning)  
+        - [Epics and tasks](#epics-and-tasks)
+    - [The Skeleton Plane](#skeleton-plane) 
+        - [Wireframes](#wireframes)
+    - [The Scope Plane](#scope-plane) 
+    - [The Structure Plane](#structure-plane)  
+      - [Features](#features)  
+   - [The Surface Plane](#surface-plane) 
+      - [Design](#design)   
+        - [Colour pallette](#colour-pallette)
+        - [Typography](#typography)
+4. [Technologies Used](#technologies-used)  
+    - [Languages and frameworks used](#languages-and-frameworks-used)
+    - [Libraries and Django Plugins Used](#libraries-and-django-plugins-used)
+    - [Tools Used](#tools-used)
+    - [Linters used](#linters-used)
+6. [Deployment](#deployment)    
+    - [ElephantSQL DataBase](#elephantsql-database)
+    - [Cloudinary API](#cloudinary-api)
+    - [Heroku Deployment](#heroku-deployment)
+    - [Local Deployment](#local-deployment)
+5. [Testing](#testing)
+7. [Credits](#credits)
+8. [Acknowledgements](#acknowledgements)  
+
 # UX
 
 # Strategy Plane
@@ -58,6 +95,93 @@ I wanted to created user profile models or extend the built in user model to all
 
 ---
 
+# Scope Plane
+
+- Landing page which conveys what the website is used for.
+- Allow a user to purchase multiple items and pay online seamlessly.
+- Make sure the website is functional and presentable in all formats and screen sizes.
+
+# Structure Plane 
+
+## Features
+
+### Hero/Landing
+
+![hero](documentation/landing.png)
+
+The plan with the Hero was to grab attention with the video, but not have a huge amount going on in said video, so eyes would still wander around the screen.
+
+### Navbar
+
+![navbar](documentation/navbar.png)
+![navbar](documentation/navbar-seethrough.png)
+
+I wanted a minimal design with the navbar at first glance, thats why I opted for a menu burger button at all sizes. On scroll the background of the nav eventually turns to black. This happens once the user scrolls past the hero
+
+### Menu
+
+![menu](documentation/menu.png)
+![menu mobile](documentation/menu-mobile.png)
+
+I wanted to go with a bombastic menu and incorporated my own take on some mouse movement animations I had learned a few months ago from [Hyperplexed](https://www.youtube.com/@Hyperplexed) on youtube
+
+For mobile I removed all movement animations and just went with the full screen stark black background, the bottom option as seen in the mobile picture only appears for admin users
+
+### Quotes
+
+![Quotes](documentation/quotes.png)
+![Quotes](documentation/quote-model.png)
+
+Just below the hero I wanted what in my opinion is the best section of work I did on this. On top of the styling I was very happy with, it incorporates two animations with JS I made from scratch and a custom model used to display a random quote every time the page is refreshed 
+
+### Slides
+
+![Slides](documentation/slides.png)
+![Slides model](documentation/slides-model.png)
+
+I wanted to implement in a model to this carousel I built from scratch as I ended up being every happy with it. The JS is also future proofed and scalable as this should work perfectly with any amount of pictures
+
+### Classes
+
+![Classes](documentation/classes.png)
+![Classes Model](documentation/classes-model.png)
+
+With my Third custom model it seemed to make sense that someone running a gym website would like to be able to update class offerings cleanly and efficiently
+
+### Products Page
+
+![Products Landing](documentation/products-landing.png)
+![Products](documentation/products.png)
+
+I really tried to design with the green gradient in mind for this page. I also wanted to try use the url calls in interesting way, like having a button add one of the item to your bag and bring you straight to checkout.
+
+### Product Detail Page
+
+![Product detail](documentation/product-detail.png)
+![Product detail admin](documentation/product-detail-admin.png)
+
+In the first picture is the normal view for a general viewer. I tried to keep it clean and flat and quickly understood as this is the screen where the decision to spend money is made.
+
+The second picture is an admins view of the page with an edit and delete button. I wanted to make the admins front end use for updating products as similar to the general publics use of the site
+
+### Bag
+
+![Bag](documentation/bag.png)
+
+I aimed to have the bag view as close to the product detail view as I could to make it feel as you could still shop on this screen and not just check what is here. Options to update the quantity and delete each bag item are found here. Along with your grand total and access to checkout.
+
+### Checkout
+
+![Bag](documentation/checkout.png)
+
+The checkout is less busy than the bag with just more straight info. You are given a breakdown of each bag items price plus a grand total. The form is used to then give you your order confirmation once payment is confirmed by the stripe API.
+
+### Checkout Success
+
+![Bag](documentation/checkout-success.png)
+
+The checkout success screen is only seen after a conformation of payment on stripes end. It then displays all relevant information to your purchase along with an email of the same sent to you.
+
 # Surface Plane
 
 ## Design 
@@ -67,6 +191,12 @@ I wanted to created user profile models or extend the built in user model to all
 ![Colour pallette](/documentation/colour-palette.png)
 
 For this project I knew I wanted to work with gradients. In most things I have built up to this point I feel I have been using too many colours too liberally. This along with the basic premise of a gym in my head I choose green as it embodies energy and life. I feel leaning into the gradient helped me come up with some of my best design features to date.
+
+### Logo
+
+![Gym Zen](documentation/dall-e.png)
+
+The logo was generated using dall-e. I had a clear image in my head and in fairness within 5 iterations its was pretty much bang on. I would have spend hours in photoshop if I hadn't decided to give it a try.
 
 ### Typography 
 
@@ -167,6 +297,10 @@ I have disallowed pages that would required admin access.
     - ElephantSQL is where the database is hosted using postgreSQL
 - [Cloudinary:](https://cloudinary.com/)
     - Cloudinary is connected to the project but not fully utilized due to time constraints, future plans are to have it host pictures restaurants can use for their own generated 
+- [Figma](https://www.figma.com/)
+    - Figma was used to create the mockup of of the homepage
+- [DALL-E;](https://openai.com/research/dall-e)
+    - Dall-e was used in the generation of the gym zen logo
 
 ## Linters used 
 

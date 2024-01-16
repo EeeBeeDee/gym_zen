@@ -66,23 +66,14 @@
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
                     {{ order_form.eircode | as_crispy_field }}
-                    <div class="">
-                        {% if user.is_authenticated %}
-                        {% else %}
-                        <label for="id-save-info" class="form-check-label">
-                            <a href="" class="text-info">Create an account</a> or
-                            <a href="" class="text-info">login</a> to save this information for next time!
-                        </label>
-                        {% endif  %}
-                    </div>
                 </fieldset>
                 <fieldset class="px-3 ">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <legend class="fs-1 text-black px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
-                    <div class="mb-3" id="card-element"></div>
+                    <div class="mb-5" id="card-element"></div>
     
                     <!-- Used to display form errors  -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <div class="mb-5 fs-1 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
                 <h2>Your card will be charged <strong>€{{ total|floatformat:2 }}</strong></h2>                
                 <button class="btn-checkout mb-5 w-100" id="submit-button">
